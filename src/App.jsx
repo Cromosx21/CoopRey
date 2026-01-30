@@ -1,52 +1,69 @@
-import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header.jsx';
-import { HeroSection } from './components/HeroSection.jsx';
-import { ServicesSection } from './components/ServicesSection.jsx';
-import { BenefitsSection } from './components/BenefitsSection.jsx';
-import { StatsSection } from './components/StatsSection.jsx';
-import { TestimonialsSection } from './components/TestimonialsSection.jsx';
-import { CTASection } from './components/CTASection.jsx';
-import { Footer } from './components/Footer.jsx';
-import Nosotros from './pages/Nosotros.jsx';
+import React, { useState, useEffect } from "react";
+import Home from "./pages/Home.jsx";
+import Nosotros from "./pages/Nosotros.jsx";
+import Ahorros from "./pages/Ahorros.jsx";
+import Creditos from "./pages/Creditos.jsx";
+import Beneficios from "./pages/Beneficios.jsx";
+import Requisitos from "./pages/Requisitos.jsx";
+import Estatutos from "./pages/Estatutos.jsx";
+import EstadosFinancieros from "./pages/EstadosFinancieros.jsx";
+import DocumentosInstitucionales from "./pages/DocumentosInstitucionales.jsx";
+import Noticias from "./pages/Noticias.jsx";
+import Contacto from "./pages/Contacto.jsx";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+	const [currentPage, setCurrentPage] = useState("/");
 
-  useEffect(() => {
-    // Listen to hash changes for navigation
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash === '#/nosotros') {
-        setCurrentPage('nosotros');
-      } else {
-        setCurrentPage('home');
-      }
-    };
+	useEffect(() => {
+		// Parse URL pathname
+		const path = window.location.pathname;
+		setCurrentPage(path);
 
-    // Check initial hash
-    handleHashChange();
+		// Listen to popstate for back/forward buttons
+		const handlePopState = () => {
+			setCurrentPage(window.location.pathname);
+		};
 
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+		window.addEventListener("popstate", handlePopState);
+		return () => window.removeEventListener("popstate", handlePopState);
+	}, []);
 
-  // Render based on current page
-  if (currentPage === 'nosotros') {
-    return <Nosotros />;
-  }
+	// Navigate function
+	const navigate = (path) => {
+		window.history.pushState({}, "", path);
+		setCurrentPage(path);
+		window.scrollTo(0, 0);
+	};
 
-  return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <BenefitsSection />
-        <StatsSection />
-        <TestimonialsSection />
-        <CTASection />
-      </main>
-      <Footer />
-    </div>
-  );
+	// Route matching
+	const renderPage = () => {
+		switch (currentPage) {
+			case "/":
+				return <Home />;
+			case "/nosotros":
+				return <Nosotros />;
+			case "/ahorros":
+				return <Ahorros />;
+			case "/creditos":
+				return <Creditos />;
+			case "/beneficios":
+				return <Beneficios />;
+			case "/requisitos":
+				return <Requisitos />;
+			case "/estatutos":
+				return <Estatutos />;
+			case "/estados-financieros":
+				return <EstadosFinancieros />;
+			case "/documentos-institucionales":
+				return <DocumentosInstitucionales />;
+			case "/noticias":
+				return <Noticias />;
+			case "/contacto":
+				return <Contacto />;
+			default:
+				return <Home />;
+		}
+	};
+
+	return renderPage();
 }
