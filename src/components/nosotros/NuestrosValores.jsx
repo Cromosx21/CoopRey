@@ -1,60 +1,16 @@
 import React from "react";
 import { motion } from "motion/react";
-import SectionHeading from "../SectionHeading.jsx";
-import { Heart, Users, Shield, Lightbulb, Handshake, Star } from "lucide-react";
-
-const valores = [
-	{
-		icon: Heart,
-		title: "Solidaridad",
-		description:
-			"Trabajamos unidos por el bienestar de todos nuestros socios y la comunidad.",
-		color: "from-red-500 to-pink-500",
-	},
-	{
-		icon: Shield,
-		title: "Confianza",
-		description:
-			"La transparencia y honestidad son la base de nuestra relación contigo.",
-		color: "from-emerald-500 to-teal-600",
-	},
-	{
-		icon: Users,
-		title: "Compromiso Social",
-		description:
-			"Contribuimos activamente al desarrollo de las comunidades donde operamos.",
-		color: "from-blue-500 to-cyan-500",
-	},
-	{
-		icon: Lightbulb,
-		title: "Innovación",
-		description:
-			"Nos adaptamos constantemente para ofrecerte los mejores servicios.",
-		color: "from-yellow-500 to-orange-500",
-	},
-	{
-		icon: Handshake,
-		title: "Respeto",
-		description:
-			"Valoramos a cada persona y tratamos a todos con dignidad y equidad.",
-		color: "from-purple-500 to-pink-500",
-	},
-	{
-		icon: Star,
-		title: "Excelencia",
-		description:
-			"Buscamos la calidad en cada servicio y atención que brindamos.",
-		color: "from-amber-500 to-yellow-500",
-	},
-];
+import { SectionHeading } from "../ui";
+import { valores } from "../../data/nosotros";
+import { Heart } from "lucide-react";
 
 export function NuestrosValores() {
 	return (
-		<section className="relative py-32 overflow-hidden bg-gradient-to-br from-gray-50 to-emerald-50/30">
+		<section className="relative py-32 overflow-hidden bg-linear-to-br from-gray-50 to-emerald-50/30">
 			{/* Organic Background */}
 			<div className="absolute inset-0 overflow-hidden">
 				<motion.div
-					className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-yellow-200/20 to-emerald-200/20 rounded-full blur-3xl"
+					className="absolute top-20 right-0 w-96 h-96 bg-linear-to-br from-yellow-200/20 to-emerald-200/20 rounded-full blur-3xl"
 					animate={{
 						x: [0, 50, 0],
 						y: [0, 30, 0],
@@ -106,7 +62,7 @@ export function NuestrosValores() {
 							>
 								{/* Organic background shape */}
 								<motion.div
-									className={`absolute -inset-2 bg-gradient-to-br ${valor.color} opacity-0 group-hover:opacity-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] transition-opacity duration-300 blur-xl`}
+									className={`absolute -inset-2 bg-linear-to-br ${valor.color} opacity-0 group-hover:opacity-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] transition-opacity duration-300 blur-xl`}
 									whileHover={{
 										borderRadius: [
 											"30% 70% 70% 30% / 30% 30% 70% 70%",
@@ -123,7 +79,7 @@ export function NuestrosValores() {
 								<div className="relative h-full bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
 									{/* Icon */}
 									<motion.div
-										className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${valor.color} rounded-2xl mb-6 shadow-lg`}
+										className={`inline-flex items-center justify-center w-16 h-16 bg-linear-to-br ${valor.color} rounded-2xl mb-6 shadow-lg`}
 										whileHover={{ scale: 1.1, rotate: 5 }}
 										transition={{
 											type: "spring",
@@ -155,7 +111,7 @@ export function NuestrosValores() {
 				>
 					<div className="max-w-4xl mx-auto bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
 						<div className="flex items-center justify-center mb-6">
-							<div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-yellow-500 rounded-2xl flex items-center justify-center">
+							<div className="w-16 h-16 bg-linear-to-br from-emerald-500 to-yellow-500 rounded-2xl flex items-center justify-center">
 								<Heart className="w-8 h-8 text-white" />
 							</div>
 						</div>

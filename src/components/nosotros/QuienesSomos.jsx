@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Target, Eye, Award, Users } from "lucide-react";
-import SectionHeading from "../SectionHeading.jsx";
+import { Users } from "lucide-react";
+import { SectionHeading } from "../ui";
+import { quienesSomosData } from "../../data/nosotros";
 
 export function QuienesSomos() {
 	return (
@@ -17,54 +18,22 @@ export function QuienesSomos() {
 						transition={{ duration: 0.8 }}
 					>
 						<SectionHeading
-							badge="¿Quiénes Somos?"
-							title="Una institución sólida"
-							subtitle="con valores humanos"
+							badge={quienesSomosData.badge}
+							title={quienesSomosData.title}
+							subtitle={quienesSomosData.subtitle}
 						/>
 
 						<div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-							<p>
-								La{" "}
-								<strong className="text-gray-900">
-									Cooperativa de Ahorro y Crédito Niño Rey
-								</strong>{" "}
-								nació en 1999 con el sueño de ofrecer servicios
-								financieros accesibles, justos y orientados al
-								desarrollo de las familias peruanas.
-							</p>
-							<p>
-								Durante más de 25 años, hemos crecido junto a
-								nuestros socios, construyendo una relación
-								basada en la confianza, la transparencia y el
-								compromiso mutuo. No somos solo una institución
-								financiera, somos una comunidad que trabaja por
-								el bienestar común.
-							</p>
-							<p>
-								Hoy, con presencia a nivel nacional y más de
-								15,000 socios activos, continuamos innovando
-								para ofrecer productos y servicios que se
-								adapten a las necesidades de nuestros tiempos,
-								sin perder la calidez y cercanía que nos
-								caracteriza.
-							</p>
+							{quienesSomosData.content.map(
+								(paragraph, index) => (
+									<p key={index}>{paragraph}</p>
+								),
+							)}
 						</div>
 
 						{/* Key Features */}
 						<div className="grid sm:grid-cols-2 gap-6 pt-8">
-							{[
-								{
-									icon: Target,
-									title: "Enfoque al socio",
-									description:
-										"Cada decisión pensada en tu beneficio",
-								},
-								{
-									icon: Award,
-									title: "Excelencia",
-									description: "Calidad en cada servicio",
-								},
-							].map((feature, index) => {
+							{quienesSomosData.features.map((feature, index) => {
 								const Icon = feature.icon;
 								return (
 									<motion.div

@@ -1,155 +1,24 @@
 import React from "react";
-import { Header } from "../components/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { CTASection } from "../components/CTASection.jsx";
+import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
-import SectionHeading from "../components/SectionHeading.jsx";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
+import { Award, CheckCircle } from "lucide-react";
 import {
-	Gift,
-	DollarSign,
-	BookOpen,
-	Users,
-	Shield,
-	Zap,
-	CheckCircle,
-	Award,
-	Percent,
-	TrendingUp,
-} from "lucide-react";
+	beneficiosItems,
+	beneficiosEspeciales,
+	beneficiosHeroData,
+} from "../data/beneficios.js";
 
 export default function Beneficios() {
-	const beneficiosItems = [
-		{
-			id: 1,
-			titulo: "Tasas Preferenciales",
-			descripcion:
-				"Acceso a tasas de interés más bajas en créditos y más altas en ahorros",
-			icon: Percent,
-			imagen: "https://images.unsplash.com/photo-1579621970563-ebec5855551f?w=500&h=400&fit=crop",
-			dato: "Hasta 2% más de rentabilidad",
-			detalles: [
-				"Tasas exclusivas para socios",
-				"Mejoras periódicas en nuestras condiciones",
-				"Descuentos en productos especiales",
-			],
-		},
-		{
-			id: 2,
-			titulo: "Descuentos Comerciales",
-			descripcion: "Convenios con empresas y servicios locales",
-			icon: Gift,
-			imagen: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=500&h=400&fit=crop",
-			dato: "Hasta 30% descuento",
-			detalles: [
-				"Descuentos en comercios aliados",
-				"Promociones exclusivas para socios",
-				"Rebajas en servicios de salud y educación",
-			],
-		},
-		{
-			id: 3,
-			titulo: "Educación Financiera",
-			descripcion: "Acceso a talleres y capacitaciones gratuitas",
-			icon: BookOpen,
-			imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
-			dato: "12 talleres anuales",
-			detalles: [
-				"Talleres mensuales de finanzas personales",
-				"Seminarios de emprendimiento",
-				"Asesoramiento personalizado gratuito",
-			],
-		},
-		{
-			id: 4,
-			titulo: "Programa de Retorno",
-			descripcion: "Dividendos y excedentes cooperativos",
-			icon: TrendingUp,
-			imagen: "https://images.unsplash.com/photo-1607624814075-e51df1bdc82f?w=500&h=400&fit=crop",
-			dato: "+25% retorno anual",
-			detalles: [
-				"Participación en los excedentes anuales",
-				"Bonificaciones por antigüedad",
-				"Premios por referencias exitosas",
-			],
-		},
-		{
-			id: 5,
-			titulo: "Atención Prioritaria",
-			descripcion: "Servicio al cliente preferente y personalizado",
-			icon: Zap,
-			imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
-			dato: "Respuesta en 24 horas",
-			detalles: [
-				"Atención rápida en caja y servicios",
-				"Línea telefónica exclusiva",
-				"Gestor personal asignado",
-			],
-		},
-		{
-			id: 6,
-			titulo: "Protección y Seguridad",
-			descripcion: "Cobertura adicional y protección de inversiones",
-			icon: Shield,
-			imagen: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=400&fit=crop",
-			dato: "100% protegido",
-			detalles: [
-				"Seguro de depósitos garantizado",
-				"Cobertura de vida en créditos",
-				"Protección patrimonial",
-			],
-		},
-	];
-
-	const beneficiosEspeciales = [
-		{
-			titulo: "Acceso a Productos Exclusivos",
-			items: [
-				"Créditos con condiciones especiales",
-				"Productos de inversión avanzada",
-				"Servicios financieros personalizados",
-				"Seguros y protección adicional",
-			],
-		},
-		{
-			titulo: "Participación Cooperativa",
-			items: [
-				"Voz y voto en asambleas",
-				"Participación en decisiones corporativas",
-				"Acceso a información financiera",
-				"Oportunidad de ser directivo",
-			],
-		},
-		{
-			titulo: "Beneficios Familiares",
-			items: [
-				"Incorporación de familiares dependientes",
-				"Descuentos para familia directa",
-				"Herencia de la calidad de socio",
-				"Protección multigeneracional",
-			],
-		},
-		{
-			titulo: "Beneficios Comunitarios",
-			items: [
-				"Apoyo a iniciativas locales",
-				"Participación en eventos cooperativos",
-				"Red de socios a nivel nacional",
-				"Compromiso social compartido",
-			],
-		},
-	];
-
 	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-
+		<>
 			{/* Hero Section */}
 			<div className="relative overflow-hidden pt-32 pb-20 md:pb-24">
 				{/* Background Image */}
 				<div
 					className="absolute inset-0 z-0"
 					style={{
-						backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop')`,
+						backgroundImage: `url('${beneficiosHeroData.image}')`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 						backgroundAttachment: "fixed",
@@ -157,14 +26,7 @@ export default function Beneficios() {
 				/>
 
 				{/* Gradient Overlay */}
-				<div
-					className="absolute inset-0 z-1"
-					style={{
-						background:
-							"linear-gradient(135deg, rgba(16, 185, 129, 0.85) 0%, rgba(234, 179, 8, 0.75) 100%)",
-						mixBlendMode: "multiply",
-					}}
-				/>
+				<div className="absolute inset-0 z-1 bg-linear-to-br from-emerald-500/85 to-yellow-500/75 mix-blend-multiply" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">
@@ -174,9 +36,9 @@ export default function Beneficios() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6 }}
 						>
-							<Award className="w-4 h-4 text-white" />
+							<beneficiosHeroData.badgeIcon className="w-4 h-4 text-white" />
 							<span className="text-white text-sm font-medium">
-								Privilegios de Ser Socio
+								{beneficiosHeroData.badge}
 							</span>
 						</motion.div>
 
@@ -186,11 +48,11 @@ export default function Beneficios() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
-							Disfruta de{" "}
+							{beneficiosHeroData.title}{" "}
 							<span className="text-yellow-200">
-								beneficios exclusivos
+								{beneficiosHeroData.titleHighlight}
 							</span>{" "}
-							como socio
+							{beneficiosHeroData.titleSuffix}
 						</motion.h1>
 
 						<motion.p
@@ -199,8 +61,7 @@ export default function Beneficios() {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 						>
-							Tu inversión en la cooperativa te abre puertas a
-							oportunidades financieras y personales
+							{beneficiosHeroData.description}
 						</motion.p>
 					</div>
 				</div>
@@ -249,7 +110,7 @@ export default function Beneficios() {
 											alt={beneficio.titulo}
 											className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
 										/>
-										<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+										<div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent" />
 
 										{/* Dato destacado */}
 										<div className="absolute bottom-4 left-4 right-4">
@@ -282,7 +143,7 @@ export default function Beneficios() {
 														key={i}
 														className="flex items-start space-x-2"
 													>
-														<CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+														<CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
 														<span className="text-sm text-gray-700">
 															{detalle}
 														</span>
@@ -323,7 +184,7 @@ export default function Beneficios() {
 			</svg>
 
 			{/* Special Benefits Section */}
-			<div className="py-20 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+			<div className="py-20 md:py-24 bg-linear-to-b from-gray-50 to-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
 						<SectionHeading
@@ -338,14 +199,7 @@ export default function Beneficios() {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						{beneficiosEspeciales.map((seccion, idx) => {
-							// Iconos para cada sección
-							const sectionIcons = [
-								<Gift className="w-8 h-8" />,
-								<Users className="w-8 h-8" />,
-								<DollarSign className="w-8 h-8" />,
-								<Award className="w-8 h-8" />,
-							];
-
+							const Icon = seccion.icon;
 							return (
 								<motion.div
 									key={idx}
@@ -359,13 +213,13 @@ export default function Beneficios() {
 									viewport={{ once: true }}
 								>
 									{/* Fondo gradiente sutil */}
-									<div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-emerald-100 to-yellow-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+									<div className="absolute -top-10 -right-10 w-40 h-40 bg-linear-to-br from-emerald-100 to-yellow-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
 
 									{/* Encabezado con icono */}
 									<div className="relative mb-8 flex items-start space-x-4">
-										<div className="flex-shrink-0">
-											<div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-100 to-yellow-100 text-emerald-600 group-hover:from-emerald-200 group-hover:to-yellow-200 transition-all">
-												{sectionIcons[idx]}
+										<div className="shrink-0">
+											<div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br from-emerald-100 to-yellow-100 text-emerald-600 group-hover:from-emerald-200 group-hover:to-yellow-200 transition-all">
+												<Icon className="w-8 h-8" />
 											</div>
 										</div>
 										<h3 className="text-2xl font-bold text-gray-900 pt-1">
@@ -393,7 +247,7 @@ export default function Beneficios() {
 												}}
 												viewport={{ once: true }}
 											>
-												<div className="flex-shrink-0">
+												<div className="shrink-0">
 													<div className="flex items-center justify-center h-6 w-6 rounded-full bg-emerald-100 mt-1">
 														<CheckCircle className="h-4 w-4 text-emerald-600" />
 													</div>
@@ -504,13 +358,13 @@ export default function Beneficios() {
 								whileHover={{ y: -5 }}
 							>
 								{/* Imagen de perfil */}
-								<div className="relative h-32 overflow-hidden bg-gradient-to-r from-emerald-400 to-yellow-300">
+								<div className="relative h-32 overflow-hidden bg-linear-to-r from-emerald-400 to-yellow-300">
 									<img
 										src={testimonial.imagen}
 										alt={testimonial.nombre}
 										className="w-full h-full object-cover"
 									/>
-									<div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+									<div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
 								</div>
 
 								{/* Contenido */}
@@ -566,8 +420,6 @@ export default function Beneficios() {
 
 			{/* Call to Action */}
 			<CTASection />
-
-			<Footer />
-		</div>
+		</>
 	);
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Shield, Users, Heart, TrendingUp } from "lucide-react";
+import { Shield, TrendingUp, Users, Heart } from "lucide-react";
+import { nosotrosHeroData } from "../../data/nosotros";
 
 export function NosotrosHero() {
 	return (
@@ -15,18 +16,7 @@ export function NosotrosHero() {
 					}}
 				/>
 				{/* Máscara con degradado verde a amarillo con transparencia */}
-				<div
-					className="absolute inset-0"
-					style={{
-						background: `linear-gradient(135deg, 
-              rgba(16, 185, 129, 0.6) 0%, 
-              rgba(34, 197, 94, 0.4) 25%,
-              rgba(134, 239, 172, 0.3) 50%,
-              rgba(250, 204, 21, 0.4) 75%,
-              rgba(253, 224, 71, 0.3) 100%)`,
-						mixBlendMode: "multiply",
-					}}
-				/>
+				<div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(16,185,129,0.6)_0%,rgba(34,197,94,0.4)_25%,rgba(134,239,172,0.3)_50%,rgba(250,204,21,0.4)_75%,rgba(253,224,71,0.3)_100%)] mix-blend-multiply" />
 				{/* Shapes animados */}
 				<motion.div
 					className="absolute -top-40 right-0 w-[500px] h-[500px] bg-linear-to-br from-emerald-200/40 to-yellow-200/40 rounded-full blur-3xl"
@@ -65,7 +55,7 @@ export function NosotrosHero() {
 					>
 						<Shield className="w-4 h-4 text-emerald-600" />
 						<span className="text-emerald-700 text-sm font-medium">
-							Conoce nuestra historia
+							{nosotrosHeroData.badge}
 						</span>
 					</motion.div>
 
@@ -76,9 +66,9 @@ export function NosotrosHero() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 					>
-						Somos más que una
+						{nosotrosHeroData.title}
 						<span className="block mt-2 bg-linear-to-r from-emerald-600 to-yellow-500 bg-clip-text text-transparent">
-							cooperativa
+							{nosotrosHeroData.titleHighlight}
 						</span>
 					</motion.h1>
 
@@ -89,9 +79,7 @@ export function NosotrosHero() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
 					>
-						Somos una familia financiera comprometida con el
-						bienestar y el progreso de cada uno de nuestros socios.
-						Construyendo juntos un futuro más próspero.
+						{nosotrosHeroData.description}
 					</motion.p>
 
 					{/* Stats */}

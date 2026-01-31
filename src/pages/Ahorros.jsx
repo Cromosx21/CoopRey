@@ -1,78 +1,25 @@
 import React from "react";
-import { Header } from "../components/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { CTASection } from "../components/CTASection.jsx";
+import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
-import SectionHeading from "../components/SectionHeading.jsx";
-import { TrendingUp, Percent, Lock, Award, Clock, Shield } from "lucide-react";
+import { Shield, Percent } from "lucide-react";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
+import { productosAhorros, ahorrosHeroData } from "../data/ahorros.js";
+import AhorroProductCard from "../components/ahorros/AhorroProductCard.jsx";
 
 export default function Ahorros() {
-	const productosAhorros = [
-		{
-			id: 1,
-			nombre: "Ahorro Básico",
-			descripcion: "Cuenta de ahorros flexible con acceso inmediato",
-			tasa: "2.5%",
-			minimo: "$50",
-			beneficios: [
-				"Sin comisiones",
-				"Retiro inmediato",
-				"Seguridad garantizada",
-			],
-			icon: TrendingUp,
-		},
-		{
-			id: 2,
-			nombre: "Ahorro Plazo",
-			descripcion: "Maximiza tu rendimiento con plazo fijo",
-			tasa: "4.8%",
-			minimo: "$500",
-			beneficios: [
-				"Tasa fija",
-				"Plazo flexible (6-24 meses)",
-				"Renovación automática",
-			],
-			icon: Clock,
-		},
-		{
-			id: 3,
-			nombre: "Ahorro Infantil",
-			descripcion: "Enseña a tus hijos el valor del ahorro",
-			tasa: "3.0%",
-			minimo: "$25",
-			beneficios: [
-				"Cuenta especial",
-				"Incentivos por logros",
-				"Educación financiera",
-			],
-			icon: Award,
-		},
-	];
-
 	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-
+		<>
 			{/* Hero Section */}
 			<section className="relative min-h-[60vh] flex items-center pt-28 pb-20 overflow-hidden">
 				<div className="absolute inset-0 overflow-hidden">
 					<div
 						className="absolute inset-0 bg-cover bg-center"
 						style={{
-							backgroundImage: `url('https://images.unsplash.com/photo-1579621970563-430f63602022?w=1200&h=800&fit=crop')`,
+							backgroundImage: `url('${ahorrosHeroData.image}')`,
 							opacity: 0.2,
 						}}
 					/>
-					<div
-						className="absolute inset-0"
-						style={{
-							background: `linear-gradient(135deg, 
-                rgba(16, 185, 129, 0.5) 0%, 
-                rgba(59, 130, 246, 0.3) 50%,
-                rgba(79, 70, 229, 0.2) 100%)`,
-							mixBlendMode: "multiply",
-						}}
-					/>
+					<div className="absolute inset-0 bg-linear-to-br from-emerald-500/50 via-blue-500/30 to-indigo-500/20 mix-blend-multiply" />
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -83,9 +30,9 @@ export default function Ahorros() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6 }}
 						>
-							<Lock className="w-4 h-4 text-emerald-600" />
+							<ahorrosHeroData.badgeIcon className="w-4 h-4 text-emerald-600" />
 							<span className="text-emerald-700 text-sm font-medium">
-								Productos de Ahorro Seguros
+								{ahorrosHeroData.badge}
 							</span>
 						</motion.div>
 
@@ -95,11 +42,11 @@ export default function Ahorros() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
-							Haz crecer tu{" "}
-							<span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
-								dinero
+							{ahorrosHeroData.title}{" "}
+							<span className="bg-linear-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+								{ahorrosHeroData.titleHighlight}
 							</span>{" "}
-							con nosotros
+							{ahorrosHeroData.titleSuffix}
 						</motion.h1>
 
 						<motion.p
@@ -108,15 +55,14 @@ export default function Ahorros() {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 						>
-							Opciones de ahorro flexibles y seguras diseñadas
-							para cumplir tus metas financieras
+							{ahorrosHeroData.description}
 						</motion.p>
 					</div>
 				</div>
 			</section>
 
 			{/* Productos de Ahorro */}
-			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-gray-50">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-16">
 						<SectionHeading
@@ -131,67 +77,13 @@ export default function Ahorros() {
 					</div>
 
 					<div className="grid md:grid-cols-3 gap-8">
-						{productosAhorros.map((producto, idx) => {
-							const IconComponent = producto.icon;
-							return (
-								<motion.div
-									key={producto.id}
-									className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all"
-									initial={{ opacity: 0, y: 30 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{
-										duration: 0.6,
-										delay: idx * 0.1,
-									}}
-									whileHover={{ y: -5 }}
-								>
-									<div className="flex items-center mb-6">
-										<div className="p-3 bg-emerald-50 rounded-lg">
-											<IconComponent className="w-6 h-6 text-emerald-600" />
-										</div>
-										<h3 className="text-2xl font-bold text-gray-900 ml-4">
-											{producto.nombre}
-										</h3>
-									</div>
-
-									<p className="text-gray-600 mb-6">
-										{producto.descripcion}
-									</p>
-
-									<div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-xl p-6 mb-6">
-										<p className="text-gray-600 text-sm">
-											Tasa de Rendimiento Anual
-										</p>
-										<p className="text-4xl font-bold text-emerald-600">
-											{producto.tasa}
-										</p>
-										<p className="text-gray-600 text-sm mt-2">
-											Depósito Mínimo: {producto.minimo}
-										</p>
-									</div>
-
-									<div className="space-y-3 mb-6">
-										{producto.beneficios.map(
-											(beneficio, i) => (
-												<div
-													key={i}
-													className="flex items-center space-x-3"
-												>
-													<div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-													<p className="text-gray-700">
-														{beneficio}
-													</p>
-												</div>
-											),
-										)}
-									</div>
-
-									<button className="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all">
-										Abrir Cuenta
-									</button>
-								</motion.div>
-							);
-						})}
+						{productosAhorros.map((producto, idx) => (
+							<AhorroProductCard
+								key={producto.id}
+								producto={producto}
+								idx={idx}
+							/>
+						))}
 					</div>
 				</div>
 			</section>
@@ -248,7 +140,6 @@ export default function Ahorros() {
 			</section>
 
 			<CTASection />
-			<Footer />
-		</div>
+		</>
 	);
 }

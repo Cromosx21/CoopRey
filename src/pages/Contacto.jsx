@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Header } from "../components/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
 import { motion } from "motion/react";
-import SectionHeading from "../components/SectionHeading.jsx";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
 import {
 	MapPin,
 	Phone,
@@ -11,8 +9,8 @@ import {
 	Send,
 	MessageSquare,
 	CheckCircle,
-	AlertCircle,
 } from "lucide-react";
+import { sedes } from "../data/contacto";
 
 export default function Contacto() {
 	const [formData, setFormData] = useState({
@@ -24,64 +22,6 @@ export default function Contacto() {
 	});
 	const [enviado, setEnviado] = useState(false);
 	const [cargando, setCargando] = useState(false);
-
-	const sedes = [
-		{
-			id: 1,
-			nombre: "Sede Principal",
-			tipo: "Oficina Administrativa",
-			direccion: "Av. Principal 1500, Centro",
-			telefono: "+1 (555) 123-4567",
-			email: "info@cooprey.com",
-			horarios: "Lun - Vier: 8:00 AM - 5:00 PM\nSáb: 9:00 AM - 1:00 PM",
-			icono: "🏢",
-			destacada: true,
-		},
-		{
-			id: 2,
-			nombre: "Sucursal Centro",
-			tipo: "Oficina de Atención",
-			direccion: "Calle 5 No. 250, Centro",
-			telefono: "+1 (555) 234-5678",
-			email: "sucursal.centro@cooprey.com",
-			horarios: "Lun - Vier: 8:30 AM - 4:30 PM\nSáb: 9:30 AM - 12:00 PM",
-			icono: "🏦",
-			destacada: false,
-		},
-		{
-			id: 3,
-			nombre: "Sucursal Norte",
-			tipo: "Oficina de Atención",
-			direccion: "Av. Norte 800, Zona Residencial",
-			telefono: "+1 (555) 345-6789",
-			email: "sucursal.norte@cooprey.com",
-			horarios: "Lun - Vier: 8:00 AM - 5:00 PM\nSáb: 9:00 AM - 1:00 PM",
-			icono: "🏬",
-			destacada: false,
-		},
-		{
-			id: 4,
-			nombre: "Sucursal Sur",
-			tipo: "Oficina de Atención",
-			direccion: "Av. Sur 1200, Centro Comercial",
-			telefono: "+1 (555) 456-7890",
-			email: "sucursal.sur@cooprey.com",
-			horarios: "Lun - Vier: 9:00 AM - 5:30 PM\nSáb: 10:00 AM - 2:00 PM",
-			icono: "🏪",
-			destacada: false,
-		},
-		{
-			id: 5,
-			nombre: "Atención Virtual 24/7",
-			tipo: "Servicio en Línea",
-			direccion: "Disponible en www.cooprey.com",
-			telefono: "+1 (555) 111-2222",
-			email: "atencion.virtual@cooprey.com",
-			horarios: "Disponible 24 horas, 7 días a la semana",
-			icono: "💻",
-			destacada: false,
-		},
-	];
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -113,11 +53,9 @@ export default function Contacto() {
 	};
 
 	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-
+		<>
 			{/* Hero Section con Wave */}
-			<div className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-emerald-50 to-yellow-50">
+			<div className="relative pt-32 pb-20 overflow-hidden bg-linear-to-br from-emerald-50 to-yellow-50">
 				{/* Wave SVG de fondo */}
 				<svg
 					className="absolute inset-0 w-full h-full"
@@ -267,7 +205,7 @@ export default function Contacto() {
 			</svg>
 
 			{/* Formulario y Sede Principal */}
-			<div className="bg-gradient-to-b from-green-50 to-white py-20">
+			<div className="bg-linear-to-b from-green-50 to-white py-20">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 						{/* Formulario de Contacto */}
@@ -383,7 +321,7 @@ export default function Contacto() {
 								<button
 									type="submit"
 									disabled={cargando}
-									className="w-full px-8 py-4 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-xl hover:from-emerald-700 hover:to-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed font-semibold inline-flex items-center justify-center space-x-2 transition-all"
+									className="w-full px-8 py-4 bg-linear-to-r from-emerald-600 to-emerald-700 text-white rounded-xl hover:from-emerald-700 hover:to-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed font-semibold inline-flex items-center justify-center space-x-2 transition-all"
 								>
 									<span>
 										{cargando
@@ -423,11 +361,11 @@ export default function Contacto() {
 							</div>
 
 							{/* Detalles de la Sede Principal */}
-							<div className="bg-gradient-to-br from-emerald-50 to-yellow-50 rounded-2xl p-8 border-2 border-emerald-300 shadow-lg">
+							<div className="bg-linear-to-br from-emerald-50 to-yellow-50 rounded-2xl p-8 border-2 border-emerald-300 shadow-lg">
 								<div className="space-y-4">
 									{/* Dirección */}
 									<div className="flex items-start space-x-4">
-										<div className="flex-shrink-0">
+										<div className="shrink-0">
 											<MapPin className="w-6 h-6 text-emerald-600 mt-1" />
 										</div>
 										<div>
@@ -442,7 +380,7 @@ export default function Contacto() {
 
 									{/* Teléfono */}
 									<div className="flex items-start space-x-4">
-										<div className="flex-shrink-0">
+										<div className="shrink-0">
 											<Phone className="w-6 h-6 text-emerald-600 mt-1" />
 										</div>
 										<div>
@@ -460,7 +398,7 @@ export default function Contacto() {
 
 									{/* Email */}
 									<div className="flex items-start space-x-4">
-										<div className="flex-shrink-0">
+										<div className="shrink-0">
 											<Mail className="w-6 h-6 text-emerald-600 mt-1" />
 										</div>
 										<div>
@@ -478,7 +416,7 @@ export default function Contacto() {
 
 									{/* Horarios */}
 									<div className="flex items-start space-x-4 pt-4 border-t border-emerald-200">
-										<div className="flex-shrink-0">
+										<div className="shrink-0">
 											<Clock className="w-6 h-6 text-emerald-600 mt-1" />
 										</div>
 										<div>
@@ -519,7 +457,7 @@ export default function Contacto() {
 			</svg>
 
 			{/* Todas las Sucursales */}
-			<div className="bg-gradient-to-b from-green-50 to-white py-20">
+			<div className="bg-linear-to-b from-green-50 to-white py-20">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<motion.div
 						className="text-center mb-16"
@@ -568,7 +506,7 @@ export default function Contacto() {
 								<div className="space-y-3 pt-4 border-t border-gray-200">
 									{/* Dirección */}
 									<div className="flex items-start space-x-2">
-										<MapPin className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-1" />
+										<MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-1" />
 										<span className="text-sm text-gray-700">
 											{sede.direccion}
 										</span>
@@ -576,7 +514,7 @@ export default function Contacto() {
 
 									{/* Teléfono */}
 									<div className="flex items-center space-x-2">
-										<Phone className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+										<Phone className="w-4 h-4 text-emerald-600 shrink-0" />
 										<a
 											href={`tel:${sede.telefono}`}
 											className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
@@ -587,7 +525,7 @@ export default function Contacto() {
 
 									{/* Email */}
 									<div className="flex items-center space-x-2">
-										<Mail className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+										<Mail className="w-4 h-4 text-emerald-600 shrink-0" />
 										<a
 											href={`mailto:${sede.email}`}
 											className="text-sm text-emerald-600 hover:text-emerald-700 font-medium truncate"
@@ -598,7 +536,7 @@ export default function Contacto() {
 
 									{/* Horarios */}
 									<div className="flex items-start space-x-2 pt-2 border-t border-gray-100">
-										<Clock className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-1" />
+										<Clock className="w-4 h-4 text-emerald-600 shrink-0 mt-1" />
 										<div className="text-xs text-gray-600">
 											<div className="whitespace-pre-line">
 												{sede.horarios}
@@ -611,8 +549,6 @@ export default function Contacto() {
 					</div>
 				</div>
 			</div>
-
-			<Footer />
-		</div>
+		</>
 	);
 }

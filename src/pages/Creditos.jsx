@@ -1,139 +1,24 @@
 import React from "react";
-import { Header } from "../components/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { CTASection } from "../components/CTASection.jsx";
+import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
-import {
-	Zap,
-	Home,
-	Briefcase,
-	GraduationCap,
-	Percent,
-	CheckCircle,
-	FileText,
-	Clock,
-	BadgeCheck,
-	DollarSign,
-} from "lucide-react";
-import SectionHeading from "../components/SectionHeading.jsx";
-import { Button } from "react-day-picker";
+import { Percent, CheckCircle } from "lucide-react";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
+import { tiposCreditos, pasos, creditosHeroData } from "../data/creditos.js";
 
 export default function Creditos() {
-	const tiposCreditos = [
-		{
-			id: 1,
-			nombre: "Crédito Personal",
-			descripcion: "Para tus gastos y proyectos personales",
-			tasa: "Desde 8.5%",
-			plazo: "12-60 meses",
-			monto: "Hasta $50,000",
-			imagen: "https://images.unsplash.com/photo-1579621970563-ebec5855551f?w=600&h=500&fit=crop",
-			beneficios: [
-				"Trámite rápido",
-				"Sin avalistas",
-				"Desembolso inmediato",
-			],
-			icon: Zap,
-		},
-		{
-			id: 2,
-			nombre: "Crédito Hipotecario",
-			descripcion: "Realiza el sueño de tu vivienda propia",
-			tasa: "Desde 6.2%",
-			plazo: "5-25 años",
-			monto: "Hasta $500,000",
-			imagen: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=500&fit=crop",
-			beneficios: [
-				"Tasas preferenciales",
-				"Tramitación ágil",
-				"Asesoramiento completo",
-			],
-			icon: Home,
-		},
-		{
-			id: 3,
-			nombre: "Crédito Empresarial",
-			descripcion: "Impulsa tu negocio con financiamiento accesible",
-			tasa: "Desde 7.8%",
-			plazo: "12-84 meses",
-			monto: "Hasta $200,000",
-			imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop",
-			beneficios: [
-				"Capital de trabajo",
-				"Equipo e instalaciones",
-				"Asesoría empresarial",
-			],
-			icon: Briefcase,
-		},
-		{
-			id: 4,
-			nombre: "Crédito Educativo",
-			descripcion: "Invierte en tu formación profesional",
-			tasa: "Desde 5.5%",
-			plazo: "12-120 meses",
-			monto: "Hasta $80,000",
-			imagen: "https://images.unsplash.com/photo-1427504494785-cdcb0f67ef48?w=600&h=500&fit=crop",
-			beneficios: [
-				"Cuota diferida",
-				"Tasas especiales",
-				"Periodo de gracia",
-			],
-			icon: GraduationCap,
-		},
-	];
-
-	const pasos = [
-		{
-			numero: "01",
-			titulo: "Solicitud",
-			descripcion:
-				"Completa tu solicitud en línea o en nuestras oficinas",
-			icon: FileText,
-		},
-		{
-			numero: "02",
-			titulo: "Evaluación",
-			descripcion: "Analizamos tu perfil crediticio en 24-48 horas",
-			icon: Clock,
-		},
-		{
-			numero: "03",
-			titulo: "Aprobación",
-			descripcion: "Recibe la confirmación de aprobación vía correo",
-			icon: BadgeCheck,
-		},
-		{
-			numero: "04",
-			titulo: "Desembolso",
-			descripcion: "El dinero se deposita en tu cuenta el mismo día",
-			icon: DollarSign,
-		},
-	];
-
 	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-
+		<>
 			{/* Hero Section */}
 			<section className="relative min-h-[60vh] flex items-center pt-28 pb-20 overflow-hidden">
 				<div className="absolute inset-0 overflow-hidden">
 					<div
 						className="absolute inset-0 bg-cover bg-center"
 						style={{
-							backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop')`,
+							backgroundImage: `url('${creditosHeroData.image}')`,
 							opacity: 0.2,
 						}}
 					/>
-					<div
-						className="absolute inset-0"
-						style={{
-							background: `linear-gradient(135deg, 
-                rgba(59, 130, 246, 0.5) 0%, 
-                rgba(99, 102, 241, 0.3) 50%,
-                rgba(139, 92, 246, 0.2) 100%)`,
-							mixBlendMode: "multiply",
-						}}
-					/>
+					<div className="absolute inset-0 bg-linear-to-br from-blue-500/50 via-indigo-500/30 to-violet-500/20 mix-blend-multiply" />
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -144,8 +29,10 @@ export default function Creditos() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6 }}
 						>
-							<Percent className="w-4 h-4 text-emerald-600" />
-							<span className="text-emerald-700 text-sm font-medium"></span>
+							<creditosHeroData.badgeIcon className="w-4 h-4 text-emerald-600" />
+							<span className="text-emerald-700 text-sm font-medium">
+								{creditosHeroData.badge}
+							</span>
 						</motion.div>
 
 						<motion.h1
@@ -154,11 +41,11 @@ export default function Creditos() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
-							Financia tus{" "}
-							<span className="bg-gradient-to-r from-emerald-600 to-yellow-500 bg-clip-text text-transparent">
-								sueños
+							{creditosHeroData.title}{" "}
+							<span className="bg-linear-to-r from-emerald-600 to-yellow-500 bg-clip-text text-transparent">
+								{creditosHeroData.titleHighlight}
 							</span>{" "}
-							con confianza
+							{creditosHeroData.titleSuffix}
 						</motion.h1>
 
 						<motion.p
@@ -167,15 +54,14 @@ export default function Creditos() {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 						>
-							Créditos accesibles con trámites ágiles y tasas
-							preferenciales para socios cooperativistas
+							{creditosHeroData.description}
 						</motion.p>
 					</div>
 				</div>
 			</section>
 
 			{/* Tipos de Créditos */}
-			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-gray-50">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-20">
 						{/* Section heading */}
@@ -212,7 +98,7 @@ export default function Creditos() {
 										<div className="space-y-6">
 											{/* Header con icono */}
 											<div className="flex items-start space-x-4">
-												<div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center shadow-lg">
+												<div className="shrink-0 w-14 h-14 bg-linear-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center shadow-lg">
 													<IconComponent className="w-7 h-7 text-white" />
 												</div>
 												<div>
@@ -304,7 +190,7 @@ export default function Creditos() {
 												alt={credito.nombre}
 												className="w-full h-96 object-cover"
 											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
+											<div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/20 to-transparent" />
 
 											{/* Badge de información */}
 											<div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-xl p-4 shadow-lg">
@@ -438,7 +324,6 @@ export default function Creditos() {
 			</svg>
 
 			<CTASection />
-			<Footer />
-		</div>
+		</>
 	);
 }

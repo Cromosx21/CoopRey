@@ -1,71 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
-import SectionHeading from "./SectionHeading.jsx";
-import {
-	Wallet,
-	PiggyBank,
-	CreditCard,
-	TrendingUp,
-	Home,
-	Users,
-} from "lucide-react";
-
-const services = [
-	{
-		icon: PiggyBank,
-		title: "Cuentas de Ahorro",
-		description:
-			"Haz crecer tu dinero con tasas de interés competitivas y retiros flexibles.",
-		gradient: "from-emerald-500 to-emerald-600",
-		color: "emerald",
-		href: "/ahorros",
-	},
-	{
-		icon: CreditCard,
-		title: "Créditos",
-		description:
-			"Financiamiento accesible para tus proyectos personales y empresariales.",
-		gradient: "from-yellow-500 to-yellow-600",
-		color: "yellow",
-		href: "/creditos",
-	},
-	{
-		icon: Home,
-		title: "Crédito Hipotecario",
-		description:
-			"Convierte el sueño de tu casa propia en realidad con nuestros planes flexibles.",
-		gradient: "from-emerald-600 to-teal-600",
-		color: "teal",
-		href: "/creditos",
-	},
-	{
-		icon: TrendingUp,
-		title: "Inversiones",
-		description:
-			"Multiplica tu capital con opciones de inversión seguras y rentables.",
-		gradient: "from-yellow-600 to-orange-500",
-		color: "orange",
-		href: "/ahorros",
-	},
-	{
-		icon: Wallet,
-		title: "Aportaciones",
-		description:
-			"Participa activamente en la cooperativa y disfruta de beneficios exclusivos.",
-		gradient: "from-teal-500 to-emerald-600",
-		color: "teal",
-		href: "/nosotros",
-	},
-	{
-		icon: Users,
-		title: "Crédito Grupal",
-		description:
-			"Soluciones de financiamiento colectivo para grupos solidarios.",
-		gradient: "from-orange-500 to-yellow-500",
-		color: "orange",
-		href: "/creditos",
-	},
-];
+import { services } from "../../data/home";
+import { SectionHeading } from "../ui";
 
 export function ServicesSection() {
 	return (
@@ -136,7 +72,7 @@ export function ServicesSection() {
 							>
 								{/* Organic background shape */}
 								<motion.div
-									className={`absolute -inset-2 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] transition-opacity duration-300 blur-xl`}
+									className={`absolute -inset-2 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] transition-opacity duration-300 blur-xl`}
 									whileHover={{
 										borderRadius: [
 											"30% 70% 70% 30% / 30% 30% 70% 70%",
@@ -153,7 +89,7 @@ export function ServicesSection() {
 								<div className="relative h-full bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
 									{/* Icon */}
 									<motion.div
-										className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl mb-6 shadow-lg`}
+										className={`inline-flex items-center justify-center w-16 h-16 bg-linear-to-br ${service.gradient} rounded-2xl mb-6 shadow-lg`}
 										whileHover={{ scale: 1.1, rotate: 5 }}
 										transition={{
 											type: "spring",

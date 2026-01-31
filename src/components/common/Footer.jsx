@@ -30,13 +30,13 @@ const socialLinks = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="relative bg-gray-900 text-white overflow-hidden" id="contacto">
       {/* Organic background shapes */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute -top-40 right-0 w-96 h-96 bg-gradient-to-br from-emerald-500 to-yellow-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-yellow-500 to-emerald-500 rounded-full blur-3xl" />
+        <div className="absolute -top-40 right-0 w-96 h-96 bg-linear-to-br from-emerald-500 to-yellow-500 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-linear-to-br from-yellow-500 to-emerald-500 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -50,7 +50,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center transform rotate-6">
+              <div className="w-12 h-12 bg-linear-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center transform rotate-6">
                 <span className="text-white font-bold text-xl transform -rotate-6">NR</span>
               </div>
               <div className="flex flex-col">
@@ -91,7 +91,7 @@ export function Footer() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <span>Av. Principal 123, Lima, Perú</span>
@@ -106,7 +106,7 @@ export function Footer() {
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-emerald-500 hover:to-yellow-500 transition-all duration-300"
+                    className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-linear-to-br hover:from-emerald-500 hover:to-yellow-500 transition-all duration-300"
                     aria-label={social.label}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, Lock, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-export function Header() {
+export default function Header() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState(null);
@@ -71,11 +71,11 @@ export function Header() {
 					{/* Logo */}
 					<motion.a
 						href="/"
-						className="flex items-center space-x-3 flex-shrink-0 cursor-pointer"
+						className="flex items-center space-x-3 shrink-0 cursor-pointer"
 						whileHover={{ scale: 1.02 }}
 					>
 						<div className="relative">
-							<div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center transform rotate-6">
+							<div className="w-14 h-14 bg-linear-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center transform rotate-6">
 								<span className="text-white font-bold text-2xl transform -rotate-6">
 									NR
 								</span>
@@ -207,10 +207,10 @@ export function Header() {
 					</nav>
 
 					{/* CTA Buttons - Desktop */}
-					<div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
+					<div className="hidden lg:flex items-center space-x-4 shrink-0">
 						<motion.a
 							href="#hazte-socio"
-							className="flex items-center px-7 py-2.5 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-full hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-[15px]"
+							className="flex items-center px-7 py-2.5 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-full hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-[15px]"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 						>
@@ -335,7 +335,7 @@ export function Header() {
 							<div className="pt-6 space-y-3 border-t border-gray-100 mt-6">
 								<a
 									href="#hazte-socio"
-									className="block w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-full text-center hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg font-medium"
+									className="block w-full px-6 py-3 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-full text-center hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg font-medium"
 									onClick={() => {
 										setIsMobileMenuOpen(false);
 										setMobileExpandedMenu(null);

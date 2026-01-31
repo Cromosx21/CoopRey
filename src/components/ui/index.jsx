@@ -45,7 +45,10 @@ export {
 } from "./hover-card.jsx";
 
 // Utilidades
-export { cn } from "./utils.jsx";
+export { cn } from "../../utils/cn";
 
 // Hooks
-export { useIsMobile } from "./hooks.jsx";
+export { useIsMobile } from "../../hooks/use-mobile";
+
+// Componentes generales
+export { default as SectionHeading } from "./SectionHeading.jsx";

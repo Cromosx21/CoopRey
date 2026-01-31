@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import MainLayout from "./layouts/MainLayout.jsx";
 import Home from "./pages/Home.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
 import Ahorros from "./pages/Ahorros.jsx";
@@ -65,5 +66,5 @@ export default function App() {
 		}
 	};
 
-	return renderPage();
+	return <MainLayout>{renderPage()}</MainLayout>;
 }

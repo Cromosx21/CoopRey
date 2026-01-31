@@ -1,214 +1,21 @@
 import React, { useState } from "react";
-import { Header } from "../components/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { CTASection } from "../components/CTASection.jsx";
+import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
-import SectionHeading from "../components/SectionHeading.jsx";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
+import { BarChart3, PieChart, Download, CheckCircle } from "lucide-react";
 import {
-	BarChart3,
-	TrendingUp,
-	DollarSign,
-	Users,
-	PieChart,
-	Download,
-	Calendar,
-	CheckCircle,
-} from "lucide-react";
+	estadosFinancieros,
+	indicadoresFinancieros,
+	ratiosFinancieros,
+	composicionActivos,
+	composicionPasivos,
+} from "../data/estadosFinancieros";
 
 export default function EstadosFinancieros() {
 	const [selectedYear, setSelectedYear] = useState(2024);
 
-	const estadosFinancieros = [
-		{
-			id: 1,
-			año: 2024,
-			disponible: true,
-			reportes: [
-				{
-					titulo: "Balance General",
-					descripcion:
-						"Estado de situación financiera al 31 de diciembre",
-					tamaño: "1.2 MB",
-				},
-				{
-					titulo: "Estado de Resultados",
-					descripcion: "Ingresos, gastos y utilidades del ejercicio",
-					tamaño: "0.9 MB",
-				},
-				{
-					titulo: "Flujo de Caja",
-					descripcion: "Movimiento de recursos durante el período",
-					tamaño: "0.8 MB",
-				},
-				{
-					titulo: "Notas a los Estados",
-					descripcion:
-						"Explicaciones y detalles de rubros principales",
-					tamaño: "1.5 MB",
-				},
-			],
-		},
-		{
-			id: 2,
-			año: 2023,
-			disponible: true,
-			reportes: [
-				{
-					titulo: "Balance General",
-					descripcion:
-						"Estado de situación financiera al 31 de diciembre",
-					tamaño: "1.1 MB",
-				},
-				{
-					titulo: "Estado de Resultados",
-					descripcion: "Ingresos, gastos y utilidades del ejercicio",
-					tamaño: "0.8 MB",
-				},
-				{
-					titulo: "Flujo de Caja",
-					descripcion: "Movimiento de recursos durante el período",
-					tamaño: "0.7 MB",
-				},
-				{
-					titulo: "Notas a los Estados",
-					descripcion:
-						"Explicaciones y detalles de rubros principales",
-					tamaño: "1.3 MB",
-				},
-			],
-		},
-		{
-			id: 3,
-			año: 2022,
-			disponible: true,
-			reportes: [
-				{
-					titulo: "Balance General",
-					descripcion:
-						"Estado de situación financiera al 31 de diciembre",
-					tamaño: "1.0 MB",
-				},
-				{
-					titulo: "Estado de Resultados",
-					descripcion: "Ingresos, gastos y utilidades del ejercicio",
-					tamaño: "0.8 MB",
-				},
-				{
-					titulo: "Flujo de Caja",
-					descripcion: "Movimiento de recursos durante el período",
-					tamaño: "0.7 MB",
-				},
-				{
-					titulo: "Notas a los Estados",
-					descripcion:
-						"Explicaciones y detalles de rubros principales",
-					tamaño: "1.2 MB",
-				},
-			],
-		},
-	];
-
-	const indicadoresFinancieros = [
-		{
-			titulo: "Activo Total",
-			valor: "$125,450,000",
-			cambio: "+12.5%",
-			icono: BarChart3,
-			color: "emerald",
-		},
-		{
-			titulo: "Capital Social",
-			valor: "$45,230,000",
-			cambio: "+8.3%",
-			icono: DollarSign,
-			color: "yellow",
-		},
-		{
-			titulo: "Depósitos de Socios",
-			valor: "$95,670,000",
-			cambio: "+15.2%",
-			icono: Users,
-			color: "blue",
-		},
-		{
-			titulo: "Cartera de Créditos",
-			valor: "$85,340,000",
-			cambio: "+11.8%",
-			icono: TrendingUp,
-			color: "green",
-		},
-	];
-
-	const ratiosFinancieros = [
-		{
-			nombre: "Razón de Liquidez",
-			valor: "1.45",
-			rango: "Excelente (>1.2)",
-			descripcion:
-				"Capacidad de la cooperativa para cumplir obligaciones a corto plazo",
-		},
-		{
-			nombre: "Ratio de Capital",
-			valor: "18.2%",
-			rango: "Excelente (>12%)",
-			descripcion: "Solidez financiera y capacidad de absorber pérdidas",
-		},
-		{
-			nombre: "Rentabilidad (ROA)",
-			valor: "3.8%",
-			rango: "Muy Bueno (>3%)",
-			descripcion: "Retorno sobre los activos totales de la cooperativa",
-		},
-		{
-			nombre: "Rentabilidad (ROE)",
-			valor: "9.5%",
-			rango: "Muy Bueno (>8%)",
-			descripcion: "Retorno sobre el capital invertido por los socios",
-		},
-		{
-			nombre: "Morosidad",
-			valor: "2.1%",
-			rango: "Muy Bajo (<3%)",
-			descripcion: "Cartera de créditos vencida sobre cartera total",
-		},
-		{
-			nombre: "Cobertura de Provisiones",
-			valor: "85%",
-			rango: "Excelente (>80%)",
-			descripcion:
-				"Reservas disponibles para posibles pérdidas crediticias",
-		},
-	];
-
-	const composicionActivos = [
-		{ concepto: "Disponibilidades", porcentaje: 12, monto: "$15,054,000" },
-		{ concepto: "Inversiones", porcentaje: 18, monto: "$22,581,000" },
-		{
-			concepto: "Cartera de Créditos",
-			porcentaje: 65,
-			monto: "$81,542,500",
-		},
-		{ concepto: "Bienes y Otros", porcentaje: 5, monto: "$6,272,500" },
-	];
-
-	const composicionPasivos = [
-		{
-			concepto: "Depósitos de Socios",
-			porcentaje: 75,
-			monto: "$75,000,000",
-		},
-		{
-			concepto: "Obligaciones Financieras",
-			porcentaje: 15,
-			monto: "$15,000,000",
-		},
-		{ concepto: "Cuentas por Pagar", porcentaje: 10, monto: "$10,000,000" },
-	];
-
 	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-
+		<>
 			{/* Hero Section */}
 			<div className="relative overflow-hidden pt-32 pb-20 md:pb-24">
 				{/* Background Image */}
@@ -223,14 +30,7 @@ export default function EstadosFinancieros() {
 				/>
 
 				{/* Gradient Overlay */}
-				<div
-					className="absolute inset-0 z-1"
-					style={{
-						background:
-							"linear-gradient(135deg, rgba(16, 185, 129, 0.85) 0%, rgba(234, 179, 8, 0.75) 100%)",
-						mixBlendMode: "multiply",
-					}}
-				/>
+				<div className="absolute inset-0 z-1 bg-linear-to-br from-emerald-500/85 to-yellow-500/75 mix-blend-multiply" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">
@@ -389,7 +189,7 @@ export default function EstadosFinancieros() {
 
 									<motion.a
 										href="#descargar"
-										className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all"
+										className="inline-flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all"
 										whileHover={{ scale: 1.05 }}
 										whileTap={{ scale: 0.95 }}
 									>
@@ -483,7 +283,7 @@ export default function EstadosFinancieros() {
 										</div>
 										<div className="w-full bg-gray-200 rounded-full h-2">
 											<div
-												className="bg-gradient-to-r from-emerald-500 to-emerald-600 h-2 rounded-full"
+												className="bg-linear-to-r from-emerald-500 to-emerald-600 h-2 rounded-full"
 												style={{
 													width: `${item.porcentaje}%`,
 												}}
@@ -524,7 +324,7 @@ export default function EstadosFinancieros() {
 										</div>
 										<div className="w-full bg-gray-200 rounded-full h-2">
 											<div
-												className="bg-gradient-to-r from-yellow-500 to-yellow-600 h-2 rounded-full"
+												className="bg-linear-to-r from-yellow-500 to-yellow-600 h-2 rounded-full"
 												style={{
 													width: `${item.porcentaje}%`,
 												}}
@@ -577,8 +377,6 @@ export default function EstadosFinancieros() {
 
 			{/* Call to Action */}
 			<CTASection />
-
-			<Footer />
-		</div>
+		</>
 	);
 }

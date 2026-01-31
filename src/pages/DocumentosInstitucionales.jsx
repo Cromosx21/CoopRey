@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Header } from "../components/Header.jsx";
-import { Footer } from "../components/Footer.jsx";
-import { CTASection } from "../components/CTASection.jsx";
+import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion, AnimatePresence } from "motion/react";
-import SectionHeading from "../components/SectionHeading.jsx";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
 import {
 	FileText,
 	Download,
@@ -11,210 +9,15 @@ import {
 	Folder,
 	Calendar,
 	CheckCircle,
-	Shield,
-	Briefcase,
-	Users,
 	Lock,
-	Eye,
 } from "lucide-react";
+import {
+	documentosCategorias,
+	documentosHeroData,
+} from "../data/documentosInstitucionales";
 
 export default function DocumentosInstitucionales() {
 	const [expandedCategory, setExpandedCategory] = useState(null);
-
-	const documentosCategorias = [
-		{
-			id: 1,
-			categoria: "Documentos de Gobernanza",
-			icono: Users,
-			color: "emerald",
-			documentos: [
-				{
-					titulo: "Actas de Asambleas Generales",
-					descripcion:
-						"Registro de decisiones y acuerdos de asambleas",
-					fecha: "Actualizado 2024",
-					tamaño: "3.2 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Políticas del Consejo Directivo",
-					descripcion:
-						"Normativas de funcionamiento y responsabilidades",
-					fecha: "Vigente 2023",
-					tamaño: "1.8 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Reglamento de Junta de Vigilancia",
-					descripcion: "Funciones y procedimientos de supervisión",
-					fecha: "Vigente 2022",
-					tamaño: "1.2 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Política de Remuneraciones",
-					descripcion:
-						"Criterios para compensación de directivos y empleados",
-					fecha: "Actualizado 2024",
-					tamaño: "0.9 MB",
-					acceso: "Restringido",
-				},
-			],
-		},
-		{
-			id: 2,
-			categoria: "Políticas y Procedimientos",
-			icono: Shield,
-			color: "blue",
-			documentos: [
-				{
-					titulo: "Política de Riesgos",
-					descripcion:
-						"Gestión de riesgos crediticio, operativo y de mercado",
-					fecha: "Actualizado 2024",
-					tamaño: "2.5 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Política de Cumplimiento Normativo",
-					descripcion:
-						"Procedimientos antilavado de dinero y cumplimiento legal",
-					fecha: "Vigente 2024",
-					tamaño: "2.1 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Manual de Procedimientos Crediticios",
-					descripcion:
-						"Guía para evaluación y otorgamiento de créditos",
-					fecha: "Actualizado 2023",
-					tamaño: "3.8 MB",
-					acceso: "Restringido",
-				},
-				{
-					titulo: "Política de Atención al Socio",
-					descripcion:
-						"Estándares de servicio y resolución de reclamos",
-					fecha: "Vigente 2024",
-					tamaño: "1.5 MB",
-					acceso: "Público",
-				},
-			],
-		},
-		{
-			id: 3,
-			categoria: "Informes y Reportes",
-			icono: Briefcase,
-			color: "yellow",
-			documentos: [
-				{
-					titulo: "Informe de Gestión Anual",
-					descripcion: "Resumen de actividades y logros del año",
-					fecha: "2024",
-					tamaño: "4.2 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Informe de Responsabilidad Social",
-					descripcion: "Iniciativas comunitarias y sostenibilidad",
-					fecha: "2024",
-					tamaño: "2.8 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Reporte de Cumplimiento Regulatorio",
-					descripcion:
-						"Cumplimiento de normativas y regulaciones aplicables",
-					fecha: "2024",
-					tamaño: "1.6 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Informe de Auditoría Interna",
-					descripcion: "Evaluación de controles y conformidad",
-					fecha: "2024",
-					tamaño: "2.3 MB",
-					acceso: "Restringido",
-				},
-			],
-		},
-		{
-			id: 4,
-			categoria: "Legislación y Normativas",
-			icono: Lock,
-			color: "green",
-			documentos: [
-				{
-					titulo: "Ley General de Cooperativas",
-					descripcion:
-						"Marco legal que rige el movimiento cooperativista",
-					fecha: "Vigente",
-					tamaño: "0.6 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Normativa de Superintendencia",
-					descripcion:
-						"Regulaciones específicas para cooperativas financieras",
-					fecha: "Actualizado 2023",
-					tamaño: "1.3 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Normas de Seguridad Bancaria",
-					descripcion: "Estándares técnicos de operación y seguridad",
-					fecha: "Vigente 2024",
-					tamaño: "1.9 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Regulación de Protección de Datos",
-					descripcion:
-						"Cumplimiento de leyes de privacidad de información",
-					fecha: "Vigente 2024",
-					tamaño: "0.8 MB",
-					acceso: "Público",
-				},
-			],
-		},
-		{
-			id: 5,
-			categoria: "Transparencia e Integridad",
-			icono: Eye,
-			color: "purple",
-			documentos: [
-				{
-					titulo: "Política Anticorrupción",
-					descripcion: "Medidas contra fraude y prácticas corruptas",
-					fecha: "Vigente 2024",
-					tamaño: "1.4 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Código de Conducta para Empleados",
-					descripcion: "Normas éticas de comportamiento laboral",
-					fecha: "Actualizado 2024",
-					tamaño: "1.7 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Política de Conflicto de Intereses",
-					descripcion:
-						"Procedimientos para evitar conflictos de intereses",
-					fecha: "Vigente 2023",
-					tamaño: "1.1 MB",
-					acceso: "Público",
-				},
-				{
-					titulo: "Política de Denuncias y Whistleblowing",
-					descripcion: "Canal seguro para reportar irregularidades",
-					fecha: "Vigente 2024",
-					tamaño: "0.9 MB",
-					acceso: "Público",
-				},
-			],
-		},
-	];
 
 	const toggleCategory = (id) => {
 		setExpandedCategory(expandedCategory === id ? null : id);
@@ -238,16 +41,14 @@ export default function DocumentosInstitucionales() {
 	};
 
 	return (
-		<div className="min-h-screen bg-white">
-			<Header />
-
+		<>
 			{/* Hero Section */}
 			<div className="relative overflow-hidden pt-32 pb-20 md:pb-24">
 				{/* Background Image */}
 				<div
 					className="absolute inset-0 z-0"
 					style={{
-						backgroundImage: `url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop')`,
+						backgroundImage: `url('${documentosHeroData.image}')`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 						backgroundAttachment: "fixed",
@@ -255,14 +56,7 @@ export default function DocumentosInstitucionales() {
 				/>
 
 				{/* Gradient Overlay */}
-				<div
-					className="absolute inset-0 z-1"
-					style={{
-						background:
-							"linear-gradient(135deg, rgba(16, 185, 129, 0.85) 0%, rgba(234, 179, 8, 0.75) 100%)",
-						mixBlendMode: "multiply",
-					}}
-				/>
+				<div className="absolute inset-0 z-1 bg-linear-to-br from-emerald-500/85 to-yellow-500/75 mix-blend-multiply" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">
@@ -272,9 +66,9 @@ export default function DocumentosInstitucionales() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6 }}
 						>
-							<Folder className="w-4 h-4 text-white" />
+							<documentosHeroData.badgeIcon className="w-4 h-4 text-white" />
 							<span className="text-white text-sm font-medium">
-								Centro de Documentos
+								{documentosHeroData.badge}
 							</span>
 						</motion.div>
 
@@ -284,9 +78,9 @@ export default function DocumentosInstitucionales() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
-							Documentos{" "}
+							{documentosHeroData.title}{" "}
 							<span className="text-yellow-200">
-								Institucionales
+								{documentosHeroData.titleHighlight}
 							</span>
 						</motion.h1>
 
@@ -296,8 +90,7 @@ export default function DocumentosInstitucionales() {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 						>
-							Acceso a información oficial, políticas y normativas
-							de la cooperativa
+							{documentosHeroData.description}
 						</motion.p>
 					</div>
 				</div>
@@ -308,7 +101,7 @@ export default function DocumentosInstitucionales() {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div className="flex items-start space-x-3">
-							<CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+							<CheckCircle className="w-6 h-6 text-emerald-600 shrink-0 mt-1" />
 							<div>
 								<h3 className="font-semibold text-gray-900">
 									Documentos Públicos
@@ -320,7 +113,7 @@ export default function DocumentosInstitucionales() {
 							</div>
 						</div>
 						<div className="flex items-start space-x-3">
-							<Lock className="w-6 h-6 text-yellow-600 flex-shrink-0 mt-1" />
+							<Lock className="w-6 h-6 text-yellow-600 shrink-0 mt-1" />
 							<div>
 								<h3 className="font-semibold text-gray-900">
 									Documentos Restringidos
@@ -368,7 +161,7 @@ export default function DocumentosInstitucionales() {
 										onClick={() =>
 											toggleCategory(categoria.id)
 										}
-										className="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors group"
+										className="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer group"
 									>
 										<div className="flex items-center space-x-4 text-left">
 											<div
@@ -482,7 +275,7 @@ export default function DocumentosInstitucionales() {
 																	</div>
 																	<motion.a
 																		href="#descargar"
-																		className="ml-4 inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all flex-shrink-0"
+																		className="ml-4 inline-flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all shrink-0"
 																		whileHover={{
 																			scale: 1.05,
 																		}}
@@ -564,7 +357,7 @@ export default function DocumentosInstitucionales() {
 			{/* Contacto para Solicitudes */}
 			<div className="py-20 md:py-24 bg-white">
 				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="bg-gradient-to-r from-emerald-50 to-yellow-50 rounded-2xl p-8 border border-emerald-200">
+					<div className="bg-linear-to-r from-emerald-50 to-yellow-50 rounded-2xl p-8 border border-emerald-200">
 						<h3 className="text-2xl font-bold text-gray-900 mb-4">
 							¿Necesitas acceso a documentos restringidos?
 						</h3>
@@ -603,8 +396,6 @@ export default function DocumentosInstitucionales() {
 
 			{/* Call to Action */}
 			<CTASection />
-
-			<Footer />
-		</div>
+		</>
 	);
 }
