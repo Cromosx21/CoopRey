@@ -63,7 +63,7 @@ export function CTASection() {
 				</svg>
 			</div>
 
-			<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				<div className="text-center">
 					<motion.div
 						className="space-y-8"
@@ -112,11 +112,11 @@ export function CTASection() {
 						</motion.p>
 
 						{/* Benefits List */}
-						<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+						<div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-items-center">
 							{ctaBenefits.map((benefit, index) => (
 								<motion.div
 									key={index}
-									className="flex items-center space-x-3 text-white"
+									className="flex items-center gap-1 text-white"
 									initial={{ opacity: 0, x: -20 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									viewport={{ once: true }}

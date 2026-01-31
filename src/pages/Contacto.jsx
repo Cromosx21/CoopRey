@@ -7,10 +7,9 @@ import {
 	Mail,
 	Clock,
 	Send,
-	MessageSquare,
 	CheckCircle,
 } from "lucide-react";
-import { sedes } from "../data/contacto";
+import { sedes, contactHeroData, contactChannels } from "../data/contacto";
 
 export default function Contacto() {
 	const [formData, setFormData] = useState({
@@ -54,141 +53,120 @@ export default function Contacto() {
 
 	return (
 		<>
-			{/* Hero Section con Wave */}
-			<div className="relative pt-32 pb-20 overflow-hidden bg-linear-to-br from-emerald-50 to-yellow-50">
-				{/* Wave SVG de fondo */}
-				<svg
-					className="absolute inset-0 w-full h-full"
-					viewBox="0 0 1200 600"
-					preserveAspectRatio="none"
-					style={{ opacity: 0.1 }}
-				>
-					<defs>
-						<pattern
-							id="waveContact"
-							x="0"
-							y="0"
-							width="120"
-							height="120"
-							patternUnits="userSpaceOnUse"
-						>
-							<path
-								d="M0,60 Q30,30 60,60 T120,60"
-								fill="none"
-								stroke="#059669"
-								strokeWidth="2"
-							/>
-						</pattern>
-					</defs>
-					<rect width="1200" height="600" fill="url(#waveContact)" />
-				</svg>
-
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+			{/* Hero Section */}
+			<section className="relative min-h-[60vh] flex items-center pt-32 pb-20 overflow-hidden">
+				{/* Fondo con imagen y máscara */}
+				<div className="absolute inset-0 overflow-hidden">
+					<div
+						className="absolute inset-0 bg-cover bg-center"
+						style={{
+							backgroundImage: `url('${contactHeroData.image}')`,
+							opacity: 0.3,
+						}}
+					/>
+					{/* Máscara con degradado */}
+					<div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(16,185,129,0.8)_0%,rgba(34,197,94,0.6)_50%,rgba(250,204,21,0.5)_100%)] mix-blend-multiply" />
+					
+					{/* Shapes animados */}
 					<motion.div
-						className="text-center space-y-6 mb-12"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
-					>
-						<h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-							¿Cómo podemos{" "}
-							<span className="text-emerald-600">ayudarte?</span>
-						</h1>
-						<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-							Contáctanos a través de nuestros múltiples canales.
-							Estamos aquí para responder tus preguntas y servir
-							mejor
-						</p>
-					</motion.div>
+						className="absolute -top-40 right-0 w-[500px] h-[500px] bg-linear-to-br from-emerald-200/40 to-yellow-200/40 rounded-full blur-3xl"
+						animate={{
+							scale: [1, 1.2, 1],
+							x: [0, 50, 0],
+						}}
+						transition={{
+							duration: 20,
+							repeat: Infinity,
+							ease: "easeInOut",
+						}}
+					/>
+					<motion.div
+						className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-linear-to-br from-yellow-200/30 to-emerald-200/30 rounded-full blur-3xl"
+						animate={{
+							scale: [1, 1.3, 1],
+							x: [0, -30, 0],
+						}}
+						transition={{
+							duration: 25,
+							repeat: Infinity,
+							ease: "easeInOut",
+						}}
+					/>
 				</div>
 
-				{/* Wave decorativo */}
-				<svg
-					className="absolute bottom-0 left-0 w-full"
-					viewBox="0 0 1200 120"
-					preserveAspectRatio="none"
-				>
-					<path
-						d="M0,50 Q300,20 600,50 T1200,50 L1200,120 L0,120 Z"
-						fill="#ffffff"
-					/>
-				</svg>
-			</div>
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+					<div className="max-w-4xl mx-auto text-center space-y-8">
+						{/* Badge */}
+						<motion.div
+							className="inline-flex items-center space-x-2 px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.6 }}
+						>
+							<contactHeroData.badgeIcon className="w-4 h-4 text-white" />
+							<span className="text-white text-sm font-medium">
+								{contactHeroData.badge}
+							</span>
+						</motion.div>
+
+						{/* Main Heading */}
+						<motion.h1
+							className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, delay: 0.2 }}
+						>
+							{contactHeroData.title}{" "}
+							<span className="text-yellow-200">
+								{contactHeroData.titleHighlight}
+							</span>
+						</motion.h1>
+
+						{/* Description */}
+						<motion.p
+							className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto"
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, delay: 0.4 }}
+						>
+							{contactHeroData.description}
+						</motion.p>
+					</div>
+				</div>
+			</section>
 
 			{/* Canales de Contacto Rápido */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-12 relative z-20">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 -mt-20 relative z-20">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{/* Teléfono */}
-					<motion.div
-						className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl hover:border-emerald-300 transition-all"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
-						whileHover={{ y: -5 }}
-					>
-						<div className="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-full mb-4">
-							<Phone className="w-6 h-6 text-emerald-600" />
-						</div>
-						<h3 className="text-lg font-bold text-gray-900 mb-2">
-							Teléfono
-						</h3>
-						<p className="text-gray-600 mb-3">
-							Llamadas de lunes a viernes
-						</p>
-						<a
-							href="tel:+15551234567"
-							className="text-emerald-600 font-semibold hover:text-emerald-700 text-lg"
-						>
-							+1 (555) 123-4567
-						</a>
-					</motion.div>
-
-					{/* Email */}
-					<motion.div
-						className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl hover:border-emerald-300 transition-all"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.1 }}
-						whileHover={{ y: -5 }}
-					>
-						<div className="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-full mb-4">
-							<Mail className="w-6 h-6 text-emerald-600" />
-						</div>
-						<h3 className="text-lg font-bold text-gray-900 mb-2">
-							Email
-						</h3>
-						<p className="text-gray-600 mb-3">
-							Respuesta en 24 horas
-						</p>
-						<a
-							href="mailto:info@cooprey.com"
-							className="text-emerald-600 font-semibold hover:text-emerald-700 break-all"
-						>
-							info@cooprey.com
-						</a>
-					</motion.div>
-
-					{/* Chat */}
-					<motion.div
-						className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl hover:border-emerald-300 transition-all"
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.2 }}
-						whileHover={{ y: -5 }}
-					>
-						<div className="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-full mb-4">
-							<MessageSquare className="w-6 h-6 text-emerald-600" />
-						</div>
-						<h3 className="text-lg font-bold text-gray-900 mb-2">
-							Chat en Vivo
-						</h3>
-						<p className="text-gray-600 mb-3">
-							Disponible en nuestro sitio
-						</p>
-						<button className="text-emerald-600 font-semibold hover:text-emerald-700">
-							Inicia una conversación
-						</button>
-					</motion.div>
+					{contactChannels.map((channel, idx) => {
+						const Icon = channel.icon;
+						return (
+							<motion.div
+								key={idx}
+								className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl hover:border-emerald-300 transition-all"
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6, delay: idx * 0.1 }}
+								whileHover={{ y: -5 }}
+							>
+								<div className="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-full mb-4">
+									<Icon className="w-6 h-6 text-emerald-600" />
+								</div>
+								<h3 className="text-lg font-bold text-gray-900 mb-2">
+									{channel.title}
+								</h3>
+								<p className="text-gray-600 mb-3">
+									{channel.subtitle}
+								</p>
+								<a
+									href={channel.href}
+									className="text-emerald-600 font-semibold hover:text-emerald-700 text-lg break-all"
+								>
+									{channel.action}
+								</a>
+							</motion.div>
+						);
+					})}
 				</div>
 			</div>
 
@@ -340,12 +318,15 @@ export default function Contacto() {
 							transition={{ duration: 0.6 }}
 							viewport={{ once: true }}
 						>
-							<SectionHeading
-								badge="Sucursales"
-								title="Sede Principal"
-								subtitle="Visítanos"
-								className="mb-6"
-							/>
+							<div className="mb-8">
+								<h2 className="text-3xl font-bold text-gray-900 mb-2">
+									Sede Principal
+								</h2>
+								<p className="text-gray-600">
+									Encuéntranos en nuestra oficina central para
+									atención personalizada.
+								</p>
+							</div>
 
 							{/* Mapa */}
 							<div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg mb-6 border-2 border-emerald-200">

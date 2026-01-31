@@ -28,7 +28,7 @@ export const beneficiosItems = [
 		descripcion:
 			"Acceso a tasas de interés más bajas en créditos y más altas en ahorros",
 		icon: Percent,
-		imagen: "https://images.unsplash.com/photo-1579621970563-ebec5855551f?w=500&h=400&fit=crop",
+		imagen: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		dato: "Hasta 2% más de rentabilidad",
 		detalles: [
 			"Tasas exclusivas para socios",
@@ -68,7 +68,7 @@ export const beneficiosItems = [
 		descripcion:
 			"Participación en las utilidades anuales de la cooperativa",
 		icon: TrendingUp,
-		imagen: "https://images.unsplash.com/photo-1565514020176-dbf2277f240e?w=500&h=400&fit=crop",
+		imagen: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1106&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		dato: "Rentabilidad anual",
 		detalles: [
 			"Reparto de excedentes según aportaciones",
@@ -81,7 +81,7 @@ export const beneficiosItems = [
 		titulo: "Atención Prioritaria",
 		descripcion: "Canales de atención exclusivos y agilidad en trámites",
 		icon: Zap,
-		imagen: "https://images.unsplash.com/photo-1521791136064-7985c2717883?w=500&h=400&fit=crop",
+		imagen: "https://images.unsplash.com/photo-1564846824194-346b7871b855?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		dato: "Trámites en minutos",
 		detalles: [
 			"Atención personalizada en sucursales",

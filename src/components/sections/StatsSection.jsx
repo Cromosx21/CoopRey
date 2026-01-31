@@ -5,34 +5,6 @@ import { stats } from "../../data/home";
 export function StatsSection() {
 	return (
 		<section className="relative py-24 overflow-hidden">
-			{/* Curved background transition */}
-			<div className="absolute inset-0">
-				<svg
-					className="absolute bottom-0 left-0 w-full"
-					viewBox="0 0 1440 320"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,208C960,192,1056,160,1152,154.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-						fill="url(#statsGradient)"
-						fillOpacity="0.1"
-					/>
-					<defs>
-						<linearGradient
-							id="statsGradient"
-							x1="0%"
-							y1="0%"
-							x2="100%"
-							y2="0%"
-						>
-							<stop offset="0%" stopColor="#10b981" />
-							<stop offset="50%" stopColor="#eab308" />
-							<stop offset="100%" stopColor="#10b981" />
-						</linearGradient>
-					</defs>
-				</svg>
-			</div>
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Section Header */}

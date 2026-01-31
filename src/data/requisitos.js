@@ -1,4 +1,4 @@
-import { FileText } from "lucide-react";
+import { FileText, ClipboardList, Send, ShieldCheck, UserCheck } from "lucide-react";
 
 export const requisitosHeroData = {
 	badge: "Requisitos y Proceso",
@@ -14,6 +14,7 @@ export const procesoPasos = [
 	{
 		numero: "1",
 		titulo: "Reúne tus Documentos",
+		icon: ClipboardList,
 		descripcion:
 			"Prepara la documentación necesaria según tu tipo de solicitud",
 		detalles: [
@@ -25,6 +26,7 @@ export const procesoPasos = [
 	{
 		numero: "2",
 		titulo: "Presenta tu Solicitud",
+		icon: Send,
 		descripcion: "Visita nuestras oficinas o inicia el proceso en línea",
 		detalles: [
 			"Llenado de formulario",
@@ -35,6 +37,7 @@ export const procesoPasos = [
 	{
 		numero: "3",
 		titulo: "Verificación y Análisis",
+		icon: ShieldCheck,
 		descripcion:
 			"Evaluamos tu perfil para garantizar tu seguridad financiera",
 		detalles: [
@@ -46,6 +49,7 @@ export const procesoPasos = [
 	{
 		numero: "4",
 		titulo: "¡Bienvenido Socio!",
+		icon: UserCheck,
 		descripcion:
 			"Formaliza tu ingreso y comienza a disfrutar los beneficios",
 		detalles: ["Firma de contrato", "Aporte inicial", "Entrega de carnet"],

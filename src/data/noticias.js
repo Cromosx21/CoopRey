@@ -19,7 +19,7 @@ export const noticias = [
 			"Mejoramos nuestras tasas de rendimiento para que tu dinero trabaje más por ti",
 		contenido:
 			"A partir de este mes, ofrecemos nuevas opciones de ahorro a plazo con tasas competitivas que van desde 4.5% hasta 6.2% anual, dependiendo del plazo elegido.",
-		imagen: "https://images.unsplash.com/photo-1579621970563-ebec5855551f?w=500&h=300&fit=crop",
+		imagen: "https://plus.unsplash.com/premium_photo-1688821131205-52f5c633ce69?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		fecha: "25 de enero, 2026",
 		autor: "Área de Productos",
 		categoria: "productos",
@@ -45,7 +45,7 @@ export const noticias = [
 			"Nuestras plataformas digitales ahora ofrecen más funcionalidades para facilitar tu experiencia",
 		contenido:
 			"La nueva versión de nuestra app móvil incluye: transferencias instantáneas, consulta de saldos en tiempo real, solicitud de créditos y atención al cliente 24/7.",
-		imagen: "https://images.unsplash.com/photo-1516534775068-bb57013de58f?w=500&h=300&fit=crop",
+		imagen: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		fecha: "15 de enero, 2026",
 		autor: "Tecnología",
 		categoria: "tecnologia",

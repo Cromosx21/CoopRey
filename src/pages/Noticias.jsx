@@ -295,49 +295,6 @@ export default function Noticias() {
 				</div>
 			</div>
 
-			{/* Wave divisor final */}
-			<svg
-				className="w-full"
-				viewBox="0 0 1200 100"
-				preserveAspectRatio="none"
-			>
-				<path
-					d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z"
-					fill="#f0fdf4"
-				/>
-			</svg>
-
-			{/* Newsletter */}
-			<div className="bg-linear-to-r from-emerald-600 to-emerald-700 py-16">
-				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<motion.div
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
-						viewport={{ once: true }}
-					>
-						<h2 className="text-3xl font-bold text-white mb-4">
-							¿Quieres recibir nuestras noticias?
-						</h2>
-
-						<p className="text-emerald-100 mb-8 max-w-2xl mx-auto">
-							Suscríbete a nuestro boletín y recibe las últimas
-							actualizaciones directamente en tu correo
-						</p>
-
-						<div className="flex gap-3 max-w-md mx-auto">
-							<input
-								type="email"
-								placeholder="Tu correo electrónico"
-								className="flex-1 px-6 py-3 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-300"
-							/>
-							<button className="px-8 py-3 bg-yellow-400 text-emerald-900 font-semibold rounded-full hover:bg-yellow-300 transition-colors">
-								Suscribirse
-							</button>
-						</div>
-					</motion.div>
-				</div>
-			</div>
 		</>
 	);
 }

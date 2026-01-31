@@ -2,7 +2,7 @@ import React from "react";
 import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { Award, CheckCircle } from "lucide-react";
+import { Award, CheckCircle, Quote, Star } from "lucide-react";
 import {
 	beneficiosItems,
 	beneficiosEspeciales,
@@ -171,18 +171,6 @@ export default function Beneficios() {
 				/>
 			</svg>
 
-			{/* Wave divisor inverso */}
-			<svg
-				className="w-full"
-				viewBox="0 0 1200 100"
-				preserveAspectRatio="none"
-			>
-				<path
-					d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z"
-					fill="#f9fafb"
-				/>
-			</svg>
-
 			{/* Special Benefits Section */}
 			<div className="py-20 md:py-24 bg-linear-to-b from-gray-50 to-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -278,7 +266,7 @@ export default function Beneficios() {
 			</svg>
 
 			{/* Testimonials Section */}
-			<div className="py-20 md:py-24 bg-white relative overflow-hidden">
+			<div className="py-20 md:py-24 bg-linear-to-b from-[#f0fdf4] to-white relative overflow-hidden">
 				{/* Decorative waves */}
 				<svg
 					className="absolute inset-0 w-full h-full"
@@ -347,69 +335,76 @@ export default function Beneficios() {
 						].map((testimonial, idx) => (
 							<motion.div
 								key={idx}
-								className="bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-emerald-300 hover:shadow-xl transition-all group"
-								initial={{ opacity: 0, y: 20 }}
+								className="relative group"
+								initial={{ opacity: 0, y: 30 }}
 								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
 								transition={{
-									duration: 0.6,
+									duration: 0.5,
 									delay: idx * 0.1,
 								}}
-								viewport={{ once: true }}
-								whileHover={{ y: -5 }}
 							>
-								{/* Imagen de perfil */}
-								<div className="relative h-32 overflow-hidden bg-linear-to-r from-emerald-400 to-yellow-300">
-									<img
-										src={testimonial.imagen}
-										alt={testimonial.nombre}
-										className="w-full h-full object-cover"
-									/>
-									<div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
-								</div>
+								{/* Organic background shape */}
+								<motion.div
+									className="absolute -inset-2 bg-linear-to-br from-emerald-400/10 to-yellow-400/10 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] group-hover:from-emerald-400/20 group-hover:to-yellow-400/20 transition-all duration-300"
+									whileHover={{
+										borderRadius: [
+											"30% 70% 70% 30% / 30% 30% 70% 70%",
+											"70% 30% 30% 70% / 70% 70% 30% 30%",
+											"30% 70% 70% 30% / 30% 30% 70% 70%",
+										],
+									}}
+									transition={{
+										duration: 4,
+										repeat: Infinity,
+									}}
+								/>
 
-								{/* Contenido */}
-								<div className="p-6">
-									{/* Stars */}
-									<div className="flex space-x-1 mb-4">
+								<div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
+									{/* Quote Icon */}
+									<div className="mb-6">
+										<div className="inline-flex items-center justify-center w-12 h-12 bg-linear-to-br from-emerald-500 to-yellow-500 rounded-2xl">
+											<Quote className="w-6 h-6 text-white" />
+										</div>
+									</div>
+
+									{/* Rating */}
+									<div className="flex items-center space-x-1 mb-4">
 										{[...Array(testimonial.rating)].map(
 											(_, i) => (
-												<motion.div
+												<Star
 													key={i}
 													className="w-5 h-5 text-yellow-400 fill-current"
-													initial={{
-														opacity: 0,
-														scale: 0,
-													}}
-													whileInView={{
-														opacity: 1,
-														scale: 1,
-													}}
-													transition={{
-														delay: i * 0.1,
-													}}
-													viewport={{
-														once: true,
-													}}
-												>
-													★
-												</motion.div>
+												/>
 											),
 										)}
 									</div>
 
-									{/* Comentario */}
-									<p className="text-gray-700 mb-6 italic leading-relaxed">
+									{/* Content */}
+									<p className="text-gray-700 leading-relaxed mb-6 grow italic">
 										"{testimonial.comentario}"
 									</p>
 
-									{/* Info */}
-									<div className="border-t border-gray-100 pt-4">
-										<p className="font-semibold text-gray-900">
-											{testimonial.nombre}
-										</p>
-										<p className="text-sm text-emerald-600 font-medium">
-											{testimonial.rol}
-										</p>
+									{/* Author */}
+									<div className="flex items-center space-x-4 pt-6 border-t border-gray-100">
+										<motion.div
+											className="relative w-14 h-14 rounded-2xl overflow-hidden shrink-0"
+											whileHover={{ scale: 1.1 }}
+										>
+											<img
+												src={testimonial.imagen}
+												alt={testimonial.nombre}
+												className="w-full h-full object-cover"
+											/>
+										</motion.div>
+										<div>
+											<p className="font-bold text-gray-900">
+												{testimonial.nombre}
+											</p>
+											<p className="text-sm text-gray-600">
+												{testimonial.rol}
+											</p>
+										</div>
 									</div>
 								</div>
 							</motion.div>

@@ -29,7 +29,7 @@ export const tiposCreditos = [
 		tasa: "Desde 8.5%",
 		plazo: "12-60 meses",
 		monto: "Hasta $50,000",
-		imagen: "https://images.unsplash.com/photo-1579621970563-ebec5855551f?w=600&h=500&fit=crop",
+		imagen: "https://images.unsplash.com/photo-1672380135241-c024f7fbfa13?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		beneficios: ["Trámite rápido", "Sin avalistas", "Desembolso inmediato"],
 		icon: Zap,
 	},
