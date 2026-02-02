@@ -285,7 +285,24 @@ export default function Header() {
 												onClick={() =>
 													toggleMobileMenu(item.label)
 												}
-												className="flex items-center justify-between w-full text-left px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 rounded-xl transition-all duration-200"
+												className={`flex items-center justify-between w-full text-left px-4 py-3 rounded-xl transition-all duration-200 ${
+													(item.subItems &&
+														item.subItems.some(
+															(sub) =>
+																currentPage.replace(
+																	/\/$/,
+																	"",
+																) ===
+																sub.href.replace(
+																	/\/$/,
+																	"",
+																),
+														)) ||
+													mobileExpandedMenu ===
+														item.label
+														? "text-emerald-600 bg-emerald-50/50 font-medium"
+														: "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50"
+												}`}
 											>
 												<span className="font-medium">
 													{item.label}
@@ -330,7 +347,18 @@ export default function Header() {
 																	href={
 																		subItem.href
 																	}
-																	className="block px-4 py-2.5 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/50 rounded-lg transition-all duration-200"
+																	className={`block px-4 py-2.5 rounded-lg transition-all duration-200 ${
+																		currentPage.replace(
+																			/\/$/,
+																			"",
+																		) ===
+																		subItem.href.replace(
+																			/\/$/,
+																			"",
+																		)
+																			? "text-emerald-600 bg-emerald-50 font-medium"
+																			: "text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/50"
+																	}`}
 																	onClick={() => {
 																		setIsMobileMenuOpen(
 																			false,
@@ -353,7 +381,15 @@ export default function Header() {
 									) : (
 										<a
 											href={item.href}
-											className="block px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 rounded-xl transition-all duration-200 font-medium"
+											className={`block px-4 py-3 rounded-xl transition-all duration-200 font-medium ${
+												currentPage.replace(
+													/\/$/,
+													"",
+												) ===
+												item.href.replace(/\/$/, "")
+													? "text-emerald-600 bg-emerald-50/50"
+													: "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50"
+											}`}
 											onClick={() => {
 												setIsMobileMenuOpen(false);
 												setMobileExpandedMenu(null);

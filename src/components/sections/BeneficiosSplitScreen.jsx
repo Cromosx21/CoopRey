@@ -60,11 +60,11 @@ const BenefitItem = ({ item, setActiveId }) => {
 					))}
 				</ul>
 
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                    <p className="text-emerald-700 font-semibold flex items-center gap-2">
-                        <span className="text-2xl font-bold">{item.dato}</span>
-                    </p>
-                </div>
+				<div className="mt-8 pt-6 border-t border-gray-100">
+					<p className="text-emerald-700 font-semibold flex items-center gap-2">
+						<span className="text-2xl font-bold">{item.dato}</span>
+					</p>
+				</div>
 			</motion.div>
 		</div>
 	);
@@ -77,7 +77,7 @@ export default function BeneficiosSplitScreen() {
 		beneficiosItems[0];
 
 	return (
-		<section className="relative w-full bg-linear-to-b from-gray-50 via-white to-white">
+		<section className="relative w-full bg-linear-to-b from-gray-50 via-white to-white overflow-hidden">
 			{/* Unified Background Elements */}
 			<div className="absolute inset-0 bg-linear-to-br from-emerald-50/20 to-transparent z-0 pointer-events-none" />
 			<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
@@ -92,40 +92,39 @@ export default function BeneficiosSplitScreen() {
 					align="center"
 				/>
 				<p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
-					Como socio cooperativista tienes acceso a servicios
-					y privilegios diseñados específicamente para
-					potenciar tu bienestar financiero.
+					Como socio cooperativista tienes acceso a servicios y
+					privilegios diseñados específicamente para potenciar tu
+					bienestar financiero.
 				</p>
 			</div>
 
 			<div className="flex flex-col md:flex-row mt-12 md:mt-0">
 				{/* Left Column - Sticky Image (Desktop) */}
 				<div className="hidden md:flex w-1/2 sticky top-0 h-screen flex-col justify-center items-center px-12">
-					
 					{/* Circular/Wave Image Container */}
 					<div className="relative z-10 w-[450px] h-[450px]">
 						{/* Organic blobs background */}
-						<motion.div 
-							animate={{ 
+						<motion.div
+							animate={{
 								rotate: [0, 360],
-								scale: [1, 1.05, 1]
+								scale: [1, 1.05, 1],
 							}}
-							transition={{ 
-								duration: 20, 
-								repeat: Infinity, 
-								ease: "linear" 
+							transition={{
+								duration: 20,
+								repeat: Infinity,
+								ease: "linear",
 							}}
 							className="absolute inset-0 bg-emerald-200/30 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blur-xl"
 						/>
-						<motion.div 
-							animate={{ 
+						<motion.div
+							animate={{
 								rotate: [360, 0],
-								scale: [1, 1.1, 1]
+								scale: [1, 1.1, 1],
 							}}
-							transition={{ 
-								duration: 15, 
-								repeat: Infinity, 
-								ease: "linear" 
+							transition={{
+								duration: 15,
+								repeat: Infinity,
+								ease: "linear",
 							}}
 							className="absolute inset-4 bg-yellow-200/30 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] blur-xl"
 						/>
@@ -138,7 +137,10 @@ export default function BeneficiosSplitScreen() {
 									initial={{ opacity: 0, scale: 1.1 }}
 									animate={{ opacity: 1, scale: 1 }}
 									exit={{ opacity: 0 }}
-									transition={{ duration: 0.5, ease: "easeInOut" }}
+									transition={{
+										duration: 0.5,
+										ease: "easeInOut",
+									}}
 									className="w-full h-full"
 								>
 									<img
@@ -165,9 +167,9 @@ export default function BeneficiosSplitScreen() {
 								/>
 							))}
 						</div>
-                        
-                        {/* Bottom Spacer */}
-                        <div className="h-[20vh] md:h-[30vh]" />
+
+						{/* Bottom Spacer */}
+						<div className="h-[20vh] md:h-[30vh]" />
 					</div>
 				</div>
 			</div>

@@ -81,7 +81,7 @@ export default function Creditos() {
 							return (
 								<motion.div
 									key={credito.id}
-									className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center ${
+									className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center bg-white md:bg-transparent p-6 md:p-0 rounded-3xl md:rounded-none border border-gray-200 md:border-none shadow-lg md:shadow-none ${
 										!isOdd ? "md:grid-flow-col-dense" : ""
 									}`}
 									initial={{ opacity: 0, y: 40 }}
@@ -91,9 +91,9 @@ export default function Creditos() {
 								>
 									{/* Contenido */}
 									<div
-										className={
-											isOdd ? "order-1" : "order-2"
-										}
+										className={`order-2 md:order-${
+											isOdd ? "1" : "2"
+										}`}
 									>
 										<div className="space-y-6">
 											{/* Header con icono */}
@@ -174,9 +174,9 @@ export default function Creditos() {
 
 									{/* Imagen */}
 									<div
-										className={`order-${
+										className={`relative order-1 md:order-${
 											isOdd ? "2" : "1"
-										} relative`}
+										}`}
 									>
 										<motion.div
 											className="relative overflow-hidden rounded-3xl shadow-2xl"
