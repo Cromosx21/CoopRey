@@ -6,11 +6,12 @@ import Ahorros from "./pages/Ahorros.jsx";
 import Creditos from "./pages/Creditos.jsx";
 import Beneficios from "./pages/Beneficios.jsx";
 import Requisitos from "./pages/Requisitos.jsx";
-import Estatutos from "./pages/Estatutos.jsx";
+import LibroReclamaciones from "./pages/LibroReclamaciones.jsx";
 import EstadosFinancieros from "./pages/EstadosFinancieros.jsx";
 import DocumentosInstitucionales from "./pages/DocumentosInstitucionales.jsx";
 import Noticias from "./pages/Noticias.jsx";
 import Contacto from "./pages/Contacto.jsx";
+import Login from "./pages/Login.jsx";
 
 export default function App() {
 	const [currentPage, setCurrentPage] = useState("/");
@@ -51,8 +52,8 @@ export default function App() {
 				return <Beneficios />;
 			case "/requisitos":
 				return <Requisitos />;
-			case "/estatutos":
-				return <Estatutos />;
+			case "/libro-reclamaciones":
+				return <LibroReclamaciones />;
 			case "/estados-financieros":
 				return <EstadosFinancieros />;
 			case "/documentos-institucionales":
@@ -61,6 +62,8 @@ export default function App() {
 				return <Noticias />;
 			case "/contacto":
 				return <Contacto />;
+			case "/login":
+				return <Login />;
 			default:
 				return <Home />;
 		}

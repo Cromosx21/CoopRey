@@ -5,7 +5,7 @@ import { testimonials } from "../../data/home";
 
 export function TestimonialsSection() {
 	return (
-		<section className="relative py-32 overflow-hidden bg-linear-to-br from-emerald-50/50 to-yellow-50/30">
+		<section className="relative py-20 overflow-hidden bg-linear-to-br from-emerald-50/50 to-yellow-50/30">
 			{/* Organic background elements */}
 			<div className="absolute inset-0 overflow-hidden">
 				<motion.div

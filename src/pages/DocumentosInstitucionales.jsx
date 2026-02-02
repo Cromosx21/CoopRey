@@ -10,6 +10,11 @@ import {
 	Calendar,
 	CheckCircle,
 	Lock,
+	Shield,
+	RefreshCw,
+	Mail,
+	Phone,
+	MessageSquare,
 } from "lucide-react";
 import {
 	documentosCategorias,
@@ -303,94 +308,137 @@ export default function DocumentosInstitucionales() {
 				</div>
 			</div>
 
-			{/* Información Importante */}
-			<div className="py-20 md:py-24 bg-gray-50">
-				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="bg-white rounded-2xl p-8 border border-gray-200">
-						<h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center space-x-2">
-							<CheckCircle className="w-6 h-6 text-emerald-600" />
-							<span>Política de Acceso a Documentos</span>
-						</h3>
+			{/* Información Importante - Rediseñado */}
+			<div className="py-20 md:py-24 bg-gray-50 relative overflow-hidden">
+				{/* Decorative Pattern */}
+				<div className="absolute inset-0 opacity-5 bg-[radial-gradient(#059669_1px,transparent_1px)] background-size[20px_20px]" />
+				
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div className="text-center mb-12">
+						<SectionHeading
+							badge="Políticas"
+							title="Política de Acceso"
+							subtitle="Transparencia y seguridad"
+						/>
+					</div>
 
-						<div className="space-y-4 text-gray-700">
-							<p>
-								<span className="font-semibold">
-									Documentos Públicos:
-								</span>{" "}
-								Disponibles sin restricciones para consulta,
-								descarga e impresión. No requieren autenticación
-								y pueden ser compartidos libremente.
-							</p>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+						{[
+							{
+								icon: Folder,
+								title: "Documentos Públicos",
+								desc: "Disponibles sin restricciones para consulta, descarga e impresión. Acceso libre.",
+								color: "emerald"
+							},
+							{
+								icon: Lock,
+								title: "Restringidos",
+								desc: "Requieren autenticación de usuario. Solicita acceso en atención al cliente.",
+								color: "yellow"
+							},
+							{
+								icon: Shield,
+								title: "Confidencialidad",
+								desc: "Información sensible protegida bajo estrictas políticas de privacidad.",
+								color: "blue"
+							},
+							{
+								icon: RefreshCw,
+								title: "Actualización",
+								desc: "Revisión periódica. La fecha de última versión se indica en cada archivo.",
+								color: "purple"
+							}
+						].map((item, idx) => {
+							const Icon = item.icon;
+							const colors = {
+								emerald: "bg-emerald-100 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white",
+								yellow: "bg-yellow-100 text-yellow-600 group-hover:bg-yellow-500 group-hover:text-white",
+								blue: "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
+								purple: "bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white"
+							};
 
-							<p>
-								<span className="font-semibold">
-									Documentos Restringidos:
-								</span>{" "}
-								Requieren autenticación de usuario. Los socios
-								pueden solicitar acceso contactando a nuestro
-								departamento de atención.
-							</p>
-
-							<p>
-								<span className="font-semibold">
-									Confidencialidad:
-								</span>{" "}
-								Los documentos marcados como restringidos
-								contienen información sensible que debe ser
-								protegida conforme a nuestras políticas de
-								confidencialidad y regulaciones aplicables.
-							</p>
-
-							<p>
-								<span className="font-semibold">
-									Actualización:
-								</span>{" "}
-								Los documentos son actualizados regularmente. La
-								fecha de última actualización se indica en cada
-								documento.
-							</p>
-						</div>
+							return (
+								<motion.div
+									key={idx}
+									className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{ delay: idx * 0.1 }}
+									viewport={{ once: true }}
+								>
+									<div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${colors[item.color]}`}>
+										<Icon className="w-7 h-7" />
+									</div>
+									<h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-700 transition-colors">
+										{item.title}
+									</h4>
+									<p className="text-gray-600 text-sm leading-relaxed">
+										{item.desc}
+									</p>
+								</motion.div>
+							);
+						})}
 					</div>
 				</div>
 			</div>
 
-			{/* Contacto para Solicitudes */}
-			<div className="py-20 md:py-24 bg-white">
-				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="bg-linear-to-r from-emerald-50 to-yellow-50 rounded-2xl p-8 border border-emerald-200">
-						<h3 className="text-2xl font-bold text-gray-900 mb-4">
-							¿Necesitas acceso a documentos restringidos?
-						</h3>
+			{/* Contacto para Solicitudes - Rediseñado */}
+			<div className="py-20 md:py-24 bg-white relative">
+				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+					<motion.div 
+						className="relative rounded-3xl overflow-hidden bg-linear-to-r from-emerald-900 to-emerald-800 text-white shadow-2xl"
+						initial={{ opacity: 0, scale: 0.95 }}
+						whileInView={{ opacity: 1, scale: 1 }}
+						viewport={{ once: true }}
+					>
+						{/* Background Decor */}
+						<div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+						<div className="absolute bottom-0 left-0 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-						<p className="text-gray-700 mb-6">
-							Si eres socio de la cooperativa y requieres acceso a
-							documentos restringidos, contáctanos a través de
-							nuestros canales de atención.
-						</p>
+						<div className="relative z-10 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+							<div className="flex-1 text-center md:text-left">
+								<h3 className="text-3xl md:text-4xl font-bold mb-4">
+									¿Necesitas acceso restringido?
+								</h3>
+								<p className="text-emerald-100 text-lg max-w-xl leading-relaxed">
+									Si eres socio activo y requieres consultar documentos protegidos, nuestro equipo está listo para asistirte.
+								</p>
+							</div>
 
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-							<a
-								href="mailto:documentos@coopreysa.coop"
-								className="inline-flex items-center space-x-2 px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
-							>
-								<span>Enviar Email</span>
-							</a>
-
-							<a
-								href="#contacto"
-								className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors font-semibold"
-							>
-								<span>Formulario de Contacto</span>
-							</a>
-
-							<a
-								href="tel:+1234567890"
-								className="inline-flex items-center space-x-2 px-6 py-3 bg-white text-emerald-600 border-2 border-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors font-semibold"
-							>
-								<span>Llamar Ahora</span>
-							</a>
+							<div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+								<motion.a
+									href="mailto:documentos@coopreysa.coop"
+									className="inline-flex items-center justify-center space-x-2 px-6 py-4 bg-white text-emerald-900 rounded-xl hover:bg-emerald-50 transition-colors font-bold shadow-lg"
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}
+								>
+									<Mail className="w-5 h-5" />
+									<span>Enviar Email</span>
+								</motion.a>
+								
+								<div className="flex gap-4">
+									<motion.a
+										href="#contacto"
+										className="flex-1 inline-flex items-center justify-center space-x-2 px-6 py-4 bg-emerald-800/50 backdrop-blur-sm border border-emerald-600 rounded-xl hover:bg-emerald-700/50 transition-colors font-semibold"
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+									>
+										<MessageSquare className="w-5 h-5" />
+										<span>Chat</span>
+									</motion.a>
+									<motion.a
+										href="tel:+1234567890"
+										className="flex-1 inline-flex items-center justify-center space-x-2 px-6 py-4 bg-emerald-800/50 backdrop-blur-sm border border-emerald-600 rounded-xl hover:bg-emerald-700/50 transition-colors font-semibold"
+										whileHover={{ scale: 1.05 }}
+										whileTap={{ scale: 0.95 }}
+									>
+										<Phone className="w-5 h-5" />
+										<span>Llamar</span>
+									</motion.a>
+								</div>
+							</div>
 						</div>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 

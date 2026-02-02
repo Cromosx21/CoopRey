@@ -69,7 +69,7 @@ export default function Contacto() {
 					
 					{/* Shapes animados */}
 					<motion.div
-						className="absolute -top-40 right-0 w-[500px] h-[500px] bg-linear-to-br from-emerald-200/40 to-yellow-200/40 rounded-full blur-3xl"
+						className="absolute -top-40 right-0 w-125 h-125 bg-linear-to-br from-emerald-200/40 to-yellow-200/40 rounded-full blur-3xl"
 						animate={{
 							scale: [1, 1.2, 1],
 							x: [0, 50, 0],
@@ -81,7 +81,7 @@ export default function Contacto() {
 						}}
 					/>
 					<motion.div
-						className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-linear-to-br from-yellow-200/30 to-emerald-200/30 rounded-full blur-3xl"
+						className="absolute bottom-0 left-0 w-100 h-100 bg-linear-to-br from-yellow-200/30 to-emerald-200/30 rounded-full blur-3xl"
 						animate={{
 							scale: [1, 1.3, 1],
 							x: [0, -30, 0],

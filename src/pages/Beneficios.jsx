@@ -2,9 +2,9 @@ import React from "react";
 import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { Award, CheckCircle, Quote, Star } from "lucide-react";
+import BeneficiosSplitScreen from "../components/sections/BeneficiosSplitScreen.jsx";
+import { CheckCircle, Quote, Star } from "lucide-react";
 import {
-	beneficiosItems,
 	beneficiosEspeciales,
 	beneficiosHeroData,
 } from "../data/beneficios.js";
@@ -67,97 +67,8 @@ export default function Beneficios() {
 				</div>
 			</div>
 
-			{/* Benefits Grid */}
-			<div className="py-20 md:py-24 relative z-10 bg-white">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-16">
-						<SectionHeading
-							badge="Beneficios"
-							title="Beneficios Principales"
-							subtitle="Ventajas de ser socio"
-						/>
-						<p className="text-gray-600 text-lg max-w-2xl mx-auto">
-							Como socio cooperativista tienes acceso a servicios
-							y privilegios diseñados para tu bienestar financiero
-						</p>
-					</div>
-
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-						{beneficiosItems.map((beneficio, idx) => {
-							const IconComponent = beneficio.icon;
-							return (
-								<motion.div
-									key={beneficio.id}
-									className="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:border-emerald-300 hover:shadow-2xl transition-all duration-300"
-									initial={{
-										opacity: 0,
-										y: 20,
-									}}
-									animate={{
-										opacity: 1,
-										y: 0,
-									}}
-									transition={{
-										duration: 0.6,
-										delay: idx * 0.1,
-									}}
-									whileHover={{ y: -8 }}
-								>
-									{/* Imagen */}
-									<div className="relative h-40 overflow-hidden bg-gray-200">
-										<img
-											src={beneficio.imagen}
-											alt={beneficio.titulo}
-											className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-										/>
-										<div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent" />
-
-										{/* Dato destacado */}
-										<div className="absolute bottom-4 left-4 right-4">
-											<p className="text-white text-2xl font-bold">
-												{beneficio.dato}
-											</p>
-										</div>
-									</div>
-
-									{/* Contenido */}
-									<div className="p-6">
-										<div className="mb-3">
-											<div className="inline-flex items-center justify-center w-12 h-12 bg-emerald-50 rounded-lg group-hover:bg-emerald-100 transition-colors">
-												<IconComponent className="w-6 h-6 text-emerald-600" />
-											</div>
-										</div>
-
-										<h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
-											{beneficio.titulo}
-										</h3>
-
-										<p className="text-gray-600 mb-4 text-sm">
-											{beneficio.descripcion}
-										</p>
-
-										<ul className="space-y-2">
-											{beneficio.detalles.map(
-												(detalle, i) => (
-													<li
-														key={i}
-														className="flex items-start space-x-2"
-													>
-														<CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-														<span className="text-sm text-gray-700">
-															{detalle}
-														</span>
-													</li>
-												),
-											)}
-										</ul>
-									</div>
-								</motion.div>
-							);
-						})}
-					</div>
-				</div>
-			</div>
+			{/* Split Screen Benefits Section */}
+			<BeneficiosSplitScreen />
 
 			{/* Wave divisor */}
 			<svg
@@ -185,70 +96,94 @@ export default function Beneficios() {
 						</p>
 					</div>
 
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+						{/* First 3 items (Existing Special Benefits) */}
 						{beneficiosEspeciales.map((seccion, idx) => {
 							const Icon = seccion.icon;
 							return (
 								<motion.div
 									key={idx}
-									className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-emerald-300 hover:shadow-xl transition-all group relative overflow-hidden"
+									className="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:border-emerald-200 transition-all group relative overflow-hidden flex flex-col h-full"
 									initial={{ opacity: 0, y: 20 }}
 									whileInView={{ opacity: 1, y: 0 }}
 									transition={{
-										duration: 0.6,
+										duration: 0.5,
 										delay: idx * 0.1,
 									}}
 									viewport={{ once: true }}
 								>
-									{/* Fondo gradiente sutil */}
-									<div className="absolute -top-10 -right-10 w-40 h-40 bg-linear-to-br from-emerald-100 to-yellow-100 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+									{/* Background Gradient */}
+									<div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-bl from-emerald-50 to-transparent rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110 duration-500" />
 
-									{/* Encabezado con icono */}
-									<div className="relative mb-8 flex items-start space-x-4">
-										<div className="shrink-0">
-											<div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-linear-to-br from-emerald-100 to-yellow-100 text-emerald-600 group-hover:from-emerald-200 group-hover:to-yellow-200 transition-all">
-												<Icon className="w-8 h-8" />
-											</div>
+									{/* Header */}
+									<div className="relative mb-6">
+										<div className="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4 group-hover:bg-emerald-100 transition-colors">
+											<Icon className="w-7 h-7" />
 										</div>
-										<h3 className="text-2xl font-bold text-gray-900 pt-1">
+										<h3 className="text-xl font-bold text-gray-900 leading-tight">
 											{seccion.titulo}
 										</h3>
 									</div>
 
-									{/* Items */}
-									<ul className="space-y-4 relative">
+									{/* List */}
+									<ul className="space-y-3 relative grow">
 										{seccion.items.map((item, i) => (
-											<motion.li
+											<li
 												key={i}
-												className="flex items-start space-x-3"
-												initial={{
-													opacity: 0,
-													x: -10,
-												}}
-												whileInView={{
-													opacity: 1,
-													x: 0,
-												}}
-												transition={{
-													duration: 0.4,
-													delay: i * 0.1,
-												}}
-												viewport={{ once: true }}
+												className="flex items-start space-x-2.5 text-sm text-gray-600"
 											>
-												<div className="shrink-0">
-													<div className="flex items-center justify-center h-6 w-6 rounded-full bg-emerald-100 mt-1">
-														<CheckCircle className="h-4 w-4 text-emerald-600" />
-													</div>
-												</div>
-												<span className="text-gray-700 leading-relaxed">
+												<CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+												<span className="leading-relaxed">
 													{item}
 												</span>
-											</motion.li>
+											</li>
 										))}
 									</ul>
 								</motion.div>
 							);
 						})}
+
+						{/* 4th Item: Member Image Card */}
+						<motion.div
+							className="relative rounded-3xl overflow-hidden h-full min-h-80 shadow-lg group"
+							initial={{ opacity: 0, x: 20 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, delay: 0.3 }}
+							viewport={{ once: true }}
+						>
+							<img
+								src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+								alt="Socio satisfecho"
+								className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+							/>
+							<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+
+							<div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+								<div className="flex items-center space-x-2 mb-2">
+									<div className="flex -space-x-2">
+										{[1, 2, 3].map((i) => (
+											<div
+												key={i}
+												className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 overflow-hidden"
+											>
+												<img
+													src={`https://i.pravatar.cc/100?img=${i + 10}`}
+													alt="Avatar"
+													className="w-full h-full object-cover"
+												/>
+											</div>
+										))}
+									</div>
+									<span className="text-sm font-medium text-emerald-300">
+										+2,500 Socios
+									</span>
+								</div>
+								<p className="text-lg font-bold leading-tight">
+									Únete a nuestra creciente familia
+									cooperativa
+								</p>
+							</div>
+						</motion.div>
 					</div>
 				</div>
 			</div>

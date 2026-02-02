@@ -23,7 +23,7 @@ export const heroData = {
   description:
     "Somos una cooperativa moderna que combina la solidez de la experiencia con la innovación que necesitas para alcanzar tus metas financieras.",
   ctaText: "Hazte Socio",
-  ctaLink: "#hazte-socio",
+  ctaLink: "/requisitos",
 };
 
 export const services = [

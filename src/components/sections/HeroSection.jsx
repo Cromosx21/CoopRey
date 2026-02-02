@@ -6,7 +6,7 @@ import { heroData } from "../../data/home";
 export function HeroSection() {
 	return (
 		<section
-			className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+			className="relative min-h-screen flex items-center pt-30 pb-26 overflow-hidden"
 			id="inicio"
 		>
 			{/* Organic Background Shapes */}
@@ -105,7 +105,7 @@ export function HeroSection() {
 								whileTap={{ scale: 0.95 }}
 							>
 								<span className="font-semibold">
-									Hazte Socio <span>{heroData.ctaText}</span>
+									{heroData.ctaText}
 								</span>
 								<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
 							</motion.a>

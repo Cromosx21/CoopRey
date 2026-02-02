@@ -61,7 +61,7 @@ export default function Creditos() {
 			</section>
 
 			{/* Tipos de Créditos */}
-			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-gray-50">
+			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-gray-50 to-white">
 				<div className="max-w-7xl mx-auto">
 					<div className="text-center mb-20">
 						{/* Section heading */}
@@ -223,7 +223,7 @@ export default function Creditos() {
 			</svg>
 
 			{/* Proceso de Solicitud (ajustado a referencia) */}
-			<section className="bg-[#f0fdf4] py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+			<section className="bg-linear-to-b from-[#f0fdf4] to-white py-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
 				<div className="max-w-7xl mx-auto relative z-10">
 					<motion.div
 						className="text-center mb-12"
@@ -241,7 +241,7 @@ export default function Creditos() {
 
 					<div className="grid md:grid-cols-3 gap-12 items-center">
 						{/* LEFT: imágenes superpuestas (desktop) */}
-						<div className="hidden md:block relative h-[480px] col-span-2">
+						<div className="hidden md:block relative h-120 col-span-2">
 							{/* Fondo - imagen grande horizontal */}
 							<div className="absolute left-0 top-12 w-[60%] h-[75%] rounded-2xl bg-white shadow-lg overflow-hidden border-8 border-[#f0fdf4] transform -rotate-3">
 								<img
@@ -281,8 +281,8 @@ export default function Creditos() {
 										{/* Texto */}
 										<div>
 											<div className="flex flex-row items-center gap-2">
-												<div className=" -top-8 -right-6 py-3 px-4 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
-													{paso.numero}
+												<div className=" -top-8 -right-6 py-3 px-5 bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl font-bold">
+													{paso.id}
 												</div>
 												<div>
 													<h4 className="text-2xl font-semibold text-gray-900">
@@ -310,18 +310,6 @@ export default function Creditos() {
 					</div>
 				</div>
 			</section>
-
-			{/* Wave divisor final */}
-			<svg
-				className="w-full"
-				viewBox="0 0 1200 100"
-				preserveAspectRatio="none"
-			>
-				<path
-					d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z"
-					fill="#f0fdf4"
-				/>
-			</svg>
 
 			<CTASection />
 		</>

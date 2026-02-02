@@ -1,110 +1,81 @@
-# CoopRey - Plataforma de Cooperativa de Ahorro y Crédito
+# Cooperativa de Ahorro y Crédito Niño Rey
 
-> Sitio web moderno, responsivo y dinámico para cooperativa de ahorro y crédito.
+Bienvenido al repositorio oficial del sitio web de la Cooperativa de Ahorro y Crédito Niño Rey. Este proyecto es una aplicación web moderna construida con React y Vite, diseñada para brindar información y servicios a nuestros socios y público en general.
 
-Este es un proyecto completo desarrollado con React, Vite y Tailwind CSS.
+## 🚀 Características Principales
 
-## 🚀 Tecnologías Utilizadas
+*   **Diseño Moderno y Responsivo**: Interfaz de usuario adaptable a dispositivos móviles y de escritorio, con un diseño limpio y profesional.
+*   **Información Institucional**: Secciones dedicadas a "Nosotros", "Productos y Servicios", "Transparencia" y "Noticias".
+*   **Estados Financieros**: Visualización clara y gráfica de los estados financieros y ratios de la cooperativa.
+*   **Gestión de Documentos**: Acceso fácil a documentos institucionales y normativos.
+*   **Formularios Interactivos**: Libro de reclamaciones y contacto integrados.
+*   **Inicio de Sesión**: Acceso seguro para socios (Interfaz implementada, lógica de backend pendiente).
 
-- **React 18** - Biblioteca de interfaz de usuario
-- **Vite** - Bundler y servidor de desarrollo
-- **Tailwind CSS v4** - Framework de utilidades CSS
-- **Framer Motion** - Animaciones fluidas
-- **Radix UI** - Componentes accesibles
-- **Lucide React** - Iconos modernos
+## 🛠️ Tecnologías Utilizadas
 
-## 📁 Estructura del Proyecto
+*   **Frontend**: [React](https://react.dev/) (v18+)
+*   **Build Tool**: [Vite](https://vitejs.dev/)
+*   **Estilos**: [Tailwind CSS](https://tailwindcss.com/) (v4)
+*   **Animaciones**: [Motion](https://motion.dev/) (anteriormente Framer Motion)
+*   **Iconos**: [Lucide React](https://lucide.dev/)
+*   **Enrutamiento**: Navegación personalizada basada en el estado (SPA).
+
+## 📦 Instalación y Configuración
+
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+
+1.  **Clonar el repositorio**:
+    ```bash
+    git clone <URL_DEL_REPOSITORIO>
+    cd CoopRey
+    ```
+
+2.  **Instalar dependencias**:
+    Asegúrate de tener [Node.js](https://nodejs.org/) instalado.
+    ```bash
+    npm install
+    ```
+
+3.  **Iniciar el servidor de desarrollo**:
+    ```bash
+    npm run dev
+    ```
+    La aplicación estará disponible en `http://localhost:5173`.
+
+4.  **Construir para producción**:
+    ```bash
+    npm run build
+    ```
+    Los archivos optimizados se generarán en la carpeta `dist`.
+
+## 📂 Estructura del Proyecto
 
 ```
-src/
-├── main.jsx              # Punto de entrada de React
-├── App.jsx              # Enrutador principal (SPA)
-├── components/          # Componentes reutilizables
-│   ├── Header.jsx       # Navegación
-│   ├── Footer.jsx       # Pie de página
-│   ├── HeroSection.jsx  # Sección principal
-│   ├── ServicesSection.jsx
-│   ├── ui/              # Componentes UI agrupados (botones, inputs, etc.)
-│   ├── figma/           # Componentes de utilidad
-│   └── nosotros/        # Componentes específicos de página
-├── pages/               # Páginas (rutas)
-│   ├── Home.jsx         # Página principal
-│   ├── Nosotros.jsx     # La cooperativa
-│   ├── Ahorros.jsx      # Productos de ahorro
-│   └── Creditos.jsx     # Productos de crédito
-└── styles/              # Estilos globales
+CoopRey/
+├── public/              # Archivos estáticos
+├── src/
+│   ├── components/      # Componentes reutilizables (UI, secciones, comunes)
+│   ├── data/            # Datos estáticos (JSON/JS objects) para el contenido
+│   ├── layouts/         # Plantillas de diseño (MainLayout)
+│   ├── pages/           # Vistas principales de la aplicación
+│   ├── styles/          # Estilos globales (Tailwind)
+│   ├── App.jsx          # Componente raíz y configuración de rutas
+│   └── main.jsx         # Punto de entrada de la aplicación
+├── index.html           # Archivo HTML principal
+├── package.json         # Dependencias y scripts
+├── vite.config.js       # Configuración de Vite
+└── README.md            # Documentación del proyecto
 ```
 
-## 🛣️ Rutas de Navegación
+## 📝 Notas de Desarrollo
 
-| Ruta        | Página         | Descripción                    |
-| ----------- | -------------- | ------------------------------ |
-| `/`         | Home           | Página principal con servicios |
-| `/nosotros` | La Cooperativa | Información institucional      |
-| `/ahorros`  | Ahorros        | Productos de ahorro            |
-| `/creditos` | Créditos       | Productos crediticios          |
+*   **Tailwind v4**: Este proyecto utiliza la última versión de Tailwind CSS. La configuración se encuentra en `src/styles/globals.css` y `vite.config.ts`.
+*   **Despliegue**: Para desplegar en Vercel, asegúrate de que el archivo `vercel.json` esté configurado correctamente (especialmente si hay problemas con el directorio de salida).
 
-## ⚡ Primeros Pasos
+## 🤝 Contribución
 
-### Instalación
+Las contribuciones son bienvenidas. Por favor, abre un "Issue" para discutir cambios mayores antes de enviar un "Pull Request".
 
-```bash
-npm install
-```
+## 📄 Licencia
 
-### Desarrollo
-
-```bash
-npm run dev
-```
-
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
-
-### Build Producción
-
-```bash
-npm run build
-```
-
-### Previsualizar Build
-
-```bash
-npm run preview
-```
-
-## 🎨 Características Principales
-
-✅ **Navegación SPA** - Sin recargas de página  
-✅ **Responsive** - Funciona en desktop, tablet y móvil  
-✅ **Animaciones** - Framer Motion para transiciones suaves  
-✅ **Componentes Accesibles** - Radix UI  
-✅ **Tailwind CSS** - Diseño moderno y limpio  
-✅ **Formularios** - React Hook Form integrado  
-✅ **Iconos** - Lucide React
-
-## 📱 Diseño Responsive
-
-- **Desktop** (1024px+)
-- **Tablet** (768px - 1023px)
-- **Mobile** (<768px)
-
-## 🔗 Acceso Rápido
-
-- [Home](http://localhost:3000/)
-- [La Cooperativa](http://localhost:3000/nosotros)
-- [Ahorros](http://localhost:3000/ahorros)
-- [Créditos](http://localhost:3000/creditos)
-
-## 📦 Dependencias Principales
-
-- `react` - Biblioteca de UI
-- `vite` - Bundler
-- `tailwindcss` - Estilos CSS
-- `framer-motion` - Animaciones
-- `@radix-ui/*` - Componentes accesibles
-- `lucide-react` - Iconos
-- `react-hook-form` - Manejo de formularios
-
----
-
-**Última actualización:** 29 de enero de 2026
+Este proyecto es propiedad de Cooperativa de Ahorro y Crédito Niño Rey. Todos los derechos reservados.

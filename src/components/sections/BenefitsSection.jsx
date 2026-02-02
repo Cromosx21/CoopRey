@@ -6,7 +6,7 @@ import { benefits } from "../../data/home";
 export function BenefitsSection() {
 	return (
 		<section
-			className="relative py-32 overflow-hidden bg-linear-to-br from-gray-50 to-emerald-50/30"
+			className="relative py-20 overflow-hidden bg-linear-to-br from-gray-50 to-emerald-50/30"
 			id="beneficios"
 		>
 			{/* Organic Background Elements */}
@@ -71,7 +71,7 @@ export function BenefitsSection() {
 								<img
 									src="https://images.unsplash.com/photo-1692459444402-c52d510ef57a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGxhdGluYSUyMHByb2Zlc3Npb25hbCUyMGNvbmZpZGVudHxlbnwxfHx8fDE3Njk3MzM5NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
 									alt="Profesional joven confiada"
-									className="w-full h-[600px] object-cover"
+									className="w-full h-150 object-cover"
 								/>
 							</div>
 

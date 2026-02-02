@@ -42,7 +42,10 @@ export default function Header() {
 		{
 			label: "Transparencia",
 			subItems: [
-				{ label: "Estatutos", href: "/estatutos" },
+				{
+					label: "Libro de Reclamaciones",
+					href: "/libro-reclamaciones",
+				},
 				{ label: "Estados Financieros", href: "/estados-financieros" },
 				{
 					label: "Documentos Institucionales",
@@ -154,7 +157,18 @@ export default function Header() {
 																	href={
 																		subItem.href
 																	}
-																	className="block px-6 py-3.5 text-[15px] text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-all duration-200"
+																	className={`px-6 py-3.5 text-[15px] transition-all duration-200 flex items-center justify-between ${
+																		currentPage.replace(
+																			/\/$/,
+																			"",
+																		) ===
+																		subItem.href.replace(
+																			/\/$/,
+																			"",
+																		)
+																			? "text-emerald-600 bg-emerald-50/50 font-medium"
+																			: "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50"
+																	}`}
 																	initial={{
 																		opacity: 0,
 																		x: -10,
@@ -172,9 +186,24 @@ export default function Header() {
 																		x: 5,
 																	}}
 																>
-																	{
-																		subItem.label
-																	}
+																	<span>
+																		{
+																			subItem.label
+																		}
+																	</span>
+																	{currentPage.replace(
+																		/\/$/,
+																		"",
+																	) ===
+																		subItem.href.replace(
+																			/\/$/,
+																			"",
+																		) && (
+																		<motion.div
+																			layoutId="submenu-indicator"
+																			className="w-1.5 h-1.5 rounded-full bg-emerald-500"
+																		/>
+																	)}
 																</motion.a>
 															),
 														)}
@@ -187,7 +216,8 @@ export default function Header() {
 									<a
 										href={item.href}
 										className={`block px-3 xl:px-4 py-2 text-[15px] transition-colors duration-200 relative group whitespace-nowrap font-medium ${
-											currentPage === item.href
+											currentPage.replace(/\/$/, "") ===
+											item.href.replace(/\/$/, "")
 												? "text-emerald-600"
 												: "text-gray-700 hover:text-emerald-600"
 										}`}
@@ -195,7 +225,11 @@ export default function Header() {
 										{item.label}
 										<span
 											className={`absolute -bottom-1 left-3 xl:left-4 right-3 xl:right-4 h-0.5 bg-emerald-600 transition-transform duration-300 ${
-												currentPage === item.href
+												currentPage.replace(
+													/\/$/,
+													"",
+												) ===
+												item.href.replace(/\/$/, "")
 													? "scale-x-100"
 													: "scale-x-0 group-hover:scale-x-100"
 											}`}
@@ -209,12 +243,12 @@ export default function Header() {
 					{/* CTA Buttons - Desktop */}
 					<div className="hidden lg:flex items-center space-x-4 shrink-0">
 						<motion.a
-							href="#hazte-socio"
+							href="/login"
 							className="flex items-center px-7 py-2.5 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-full hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-[15px]"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 						>
-							Hazte Socio
+							Inicio de Sesión
 						</motion.a>
 					</div>
 
@@ -334,14 +368,14 @@ export default function Header() {
 							{/* CTA Buttons - Mobile */}
 							<div className="pt-6 space-y-3 border-t border-gray-100 mt-6">
 								<a
-									href="#hazte-socio"
+									href="/login"
 									className="block w-full px-6 py-3 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-full text-center hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg font-medium"
 									onClick={() => {
 										setIsMobileMenuOpen(false);
 										setMobileExpandedMenu(null);
 									}}
 								>
-									Hazte Socio
+									Inicio de Sesión
 								</a>
 							</div>
 						</nav>
