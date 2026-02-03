@@ -77,11 +77,13 @@ export default function BeneficiosSplitScreen() {
 		beneficiosItems[0];
 
 	return (
-		<section className="relative w-full bg-linear-to-b from-gray-50 via-white to-white overflow-hidden">
-			{/* Unified Background Elements */}
-			<div className="absolute inset-0 bg-linear-to-br from-emerald-50/20 to-transparent z-0 pointer-events-none" />
-			<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-			<div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+		<section className="relative w-full bg-linear-to-b from-gray-50 via-white to-white">
+			{/* Unified Background Elements - Contained to avoid overflow issues while keeping sticky working */}
+			<div className="absolute inset-0 overflow-hidden pointer-events-none">
+				<div className="absolute inset-0 bg-linear-to-br from-emerald-50/20 to-transparent z-0" />
+				<div className="absolute top-0 right-0 w-96 h-96 bg-yellow-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+				<div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+			</div>
 
 			{/* Centered Title Section */}
 			<div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 md:pt-32 text-center">
