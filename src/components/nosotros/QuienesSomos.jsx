@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Users } from "lucide-react";
-import { SectionHeading } from "../ui";
+import SectionHeading from "../ui/SectionHeading.jsx";
 import { quienesSomosData } from "../../data/nosotros";
 
 export function QuienesSomos() {

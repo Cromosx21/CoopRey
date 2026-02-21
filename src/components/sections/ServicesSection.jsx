@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { services } from "../../data/home";
-import { SectionHeading } from "../ui";
+import SectionHeading from "../ui/SectionHeading.jsx";
 
 export function ServicesSection() {
 	return (

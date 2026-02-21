@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { SectionHeading } from "../ui";
+import SectionHeading from "../ui/SectionHeading.jsx";
 import { valores } from "../../data/nosotros";
 import { Heart } from "lucide-react";
 
