@@ -1,14 +1,15 @@
 import { TrendingUp, Clock, Award, Lock } from "lucide-react";
 
 export const ahorrosHeroData = {
-	badge: "Productos de Ahorro Seguros",
-	badgeIcon: Lock,
-	title: "Haz crecer tu",
-	titleHighlight: "dinero",
-	titleSuffix: "con nosotros",
-	description:
-		"Opciones de ahorro flexibles y seguras diseñadas para cumplir tus metas financieras",
-	image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  badge: "Productos de Ahorro",
+  badgeIcon: Lock,
+  title: "Haz crecer tu",
+  titleHighlight: "ahorro",
+  titleSuffix: "con confianza",
+  description:
+    "Brindamos alternativas de ahorro seguras que apoyan el bienestar económico y el desarrollo de nuestros socios.",
+  image:
+    "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=1170&auto=format&fit=crop",
 };
 
 export const productosAhorros = [

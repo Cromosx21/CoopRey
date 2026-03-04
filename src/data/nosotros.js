@@ -15,32 +15,36 @@ import {
 } from "lucide-react";
 
 export const nosotrosHeroData = {
-  badge: "Conoce nuestra historia",
-  title: "Somos más que una",
+  badge: "Conoce nuestra institución",
+  title: "Somos una",
   titleHighlight: "cooperativa",
   description:
-    "Somos una familia financiera comprometida con el bienestar y el progreso de cada uno de nuestros socios. Construyendo juntos un futuro más próspero.",
+    "La Cooperativa de Ahorro y Crédito Niño Rey Huamanga fomenta la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
 };
+
 
 export const quienesSomosData = {
   badge: "¿Quiénes Somos?",
-  title: "Una institución sólida",
-  subtitle: "con valores humanos",
+  title: "Cooperativa Niño Rey Huamanga",
+  subtitle: "Solidez financiera y desarrollo cooperativo",
   content: [
-    "La Cooperativa de Ahorro y Crédito Niño Rey nació en 1999 con el sueño de ofrecer servicios financieros accesibles, justos y orientados al desarrollo de las familias peruanas.",
-    "Durante más de 25 años, hemos crecido junto a nuestros socios, construyendo una relación basada en la confianza, la transparencia y el compromiso mutuo. No somos solo una institución financiera, somos una comunidad que trabaja por el bienestar común.",
-    "Hoy, con presencia a nivel nacional y más de 15,000 socios activos, continuamos innovando para ofrecer productos y servicios que se adapten a las necesidades de nuestros tiempos, sin perder la calidez y cercanía que nos caracteriza.",
+    "La Cooperativa de Ahorro y Crédito Niño Rey Huamanga brinda servicios microfinancieros y complementarios orientados a mejorar la calidad de vida de sus socios en la región Ayacucho.",
+    "Nuestra misión es fomentar la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
+    "Nuestra visión es ser una cooperativa con solidez financiera, contribuyendo eficazmente en el desarrollo de nuestros socios, su familia y su comunidad.",
+    "La cooperativa cuenta con agencias en Huamanga, Coracora, Pausa y Relave, atendiendo a socios de zonas urbanas y rurales.",
   ],
   features: [
     {
       icon: Target,
-      title: "Enfoque al socio",
-      description: "Cada decisión pensada en tu beneficio",
+      title: "Misión institucional",
+      description:
+        "Fomentar la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
     },
     {
       icon: Award,
-      title: "Excelencia",
-      description: "Calidad en cada servicio",
+      title: "Visión institucional",
+      description:
+        "Ser una cooperativa con solidez financiera, contribuyendo eficazmente en el desarrollo de nuestros socios, su familia y su comunidad.",
     },
   ],
 };
@@ -50,117 +54,101 @@ export const valores = [
     icon: Heart,
     title: "Solidaridad",
     description:
-      "Trabajamos unidos por el bienestar de todos nuestros socios y la comunidad.",
+      "Promovemos el apoyo mutuo entre nuestros socios para mejorar su bienestar económico y social.",
     color: "from-red-500 to-pink-500",
   },
   {
-    icon: Shield,
-    title: "Confianza",
+    icon: Handshake,
+    title: "Ayuda Mutua",
     description:
-      "La transparencia y honestidad son la base de nuestra relación contigo.",
+      "Nuestros socios trabajan de manera conjunta para alcanzar objetivos comunes mediante la cooperación.",
     color: "from-emerald-500 to-teal-600",
   },
   {
     icon: Users,
-    title: "Compromiso Social",
+    title: "Compromiso con la Comunidad",
     description:
-      "Contribuimos activamente al desarrollo de las comunidades donde operamos.",
+      "Contribuimos al desarrollo económico y social de las comunidades donde operamos.",
     color: "from-blue-500 to-cyan-500",
   },
   {
-    icon: Lightbulb,
-    title: "Innovación",
+    icon: Shield,
+    title: "Responsabilidad",
     description:
-      "Nos adaptamos constantemente para ofrecerte los mejores servicios.",
+      "Actuamos con responsabilidad en la gestión de los recursos confiados por nuestros socios.",
+    color: "from-purple-500 to-indigo-500",
+  },
+  {
+    icon: Lightbulb,
+    title: "Educación Cooperativa",
+    description:
+      "Impulsamos la formación e información permanente para fortalecer el cooperativismo.",
     color: "from-yellow-500 to-orange-500",
   },
   {
-    icon: Handshake,
-    title: "Respeto",
+    icon: Star,
+    title: "Cooperación",
     description:
-      "Valoramos a cada persona y tratamos a todos con dignidad y equidad.",
-    color: "from-purple-500 to-pink-500",
+      "Fomentamos la colaboración entre cooperativas para fortalecer el sistema cooperativo.",
+    color: "from-amber-500 to-yellow-500",
+  },
+];
+
+
+export const compromisos = [
+  {
+    icon: Users,
+    title: "Desarrollo de los socios",
+    description:
+      "Promovemos el desarrollo económico y social de nuestros socios y sus familias mediante servicios financieros cooperativos.",
+    image:
+      "https://images.unsplash.com/photo-1763355873417-1e0926397851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
   },
   {
-    icon: Star,
-    title: "Excelencia",
+    icon: GraduationCap,
+    title: "Educación cooperativa",
     description:
-      "Buscamos la calidad en cada servicio y atención que brindamos.",
-    color: "from-amber-500 to-yellow-500",
+      "Impulsamos la educación y capacitación permanente para fortalecer la cultura financiera y cooperativa de nuestros socios.",
+    image:
+      "https://images.unsplash.com/photo-1758691736872-61a1f75fe2d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+  },
+  {
+    icon: Handshake,
+    title: "Compromiso con la comunidad",
+    description:
+      "Contribuimos al desarrollo local brindando servicios financieros responsables en beneficio de la comunidad.",
+    image:
+      "https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
   },
 ];
 
 export const equipo = [
   {
-    name: "Roberto Mendoza",
-    role: "Gerente General",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+    name: "Asamblea General de Socios",
+    role: "Máximo órgano de gobierno",
+    image: "/images/asamblea.png",
     description:
-      "Más de 20 años de experiencia en el sector financiero cooperativo.",
+      "Es la máxima autoridad de la cooperativa, conformada por todos los socios, quienes participan en la toma de decisiones fundamentales para la institución.",
   },
   {
-    name: "María Fernández",
-    role: "Gerente de Operaciones",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+    name: "Consejo de Administración",
+    role: "Órgano de dirección",
+    image: "/images/consejo-administracion.png",
     description:
-      "Especialista en eficiencia operativa y transformación digital.",
+      "Responsable de la dirección estratégica y supervisión de la gestión institucional conforme a los principios cooperativos.",
   },
   {
-    name: "Carlos Ramírez",
-    role: "Gerente de Créditos",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-    description: "Experto en evaluación de riesgos y gestión de cartera.",
-  },
-  {
-    name: "Ana Torres",
-    role: "Gerente de Marketing",
-    image:
-      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400&h=400&fit=crop",
+    name: "Consejo de Vigilancia",
+    role: "Órgano de control",
+    image: "/images/consejo-vigilancia.png",
     description:
-      "Líder en estrategias de comunicación y experiencia del cliente.",
+      "Supervisa la gestión administrativa y financiera, velando por el cumplimiento normativo y los intereses de los socios.",
   },
   {
-    name: "Luis Vargas",
-    role: "Gerente de Tecnología",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-    description: "Impulsor de la innovación tecnológica en la cooperativa.",
-  },
-  {
-    name: "Patricia Silva",
-    role: "Gerente de RRHH",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    description: "Comprometida con el desarrollo y bienestar del equipo humano.",
-  },
-];
-
-export const compromisos = [
-  {
-    icon: Globe,
-    title: "Inclusión Financiera",
+    name: "Gerencia General",
+    role: "Gestión ejecutiva",
+    image: "/images/gerencia-general.png",
     description:
-      "Llevamos servicios financieros a comunidades tradicionalmente excluidas del sistema bancario.",
-    image:
-      "https://images.unsplash.com/photo-1763355873417-1e0926397851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBzdXBwb3J0JTIwaGVscGluZyUyMGhhbmRzfGVufDF8fHx8MTc2OTczNTY1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  },
-  {
-    icon: GraduationCap,
-    title: "Educación Financiera",
-    description:
-      "Realizamos talleres y capacitaciones gratuitas para mejorar la cultura financiera de nuestros socios.",
-    image:
-      "https://images.unsplash.com/photo-1758691736872-61a1f75fe2d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBjb29wZXJhdGlvbiUyMHRlYW13b3JrfGVufDF8fHx8MTc2OTczNTY1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  },
-  {
-    icon: Leaf,
-    title: "Sostenibilidad",
-    description:
-      "Promovemos prácticas responsables con el medio ambiente en todas nuestras operaciones.",
-    image:
-      "https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMHBhcnRuZXJzaGlwJTIwdHJ1c3R8ZW58MXx8fHwxNzY5NzM1NjU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      "Ejecuta las decisiones estratégicas y administra las operaciones institucionales para el cumplimiento de los objetivos de la cooperativa.",
   },
 ];

@@ -111,13 +111,13 @@ export function QuienesSomos() {
 									</div>
 									<div>
 										<p className="text-sm text-gray-600">
-											Fundada en
+											Inicio de Actividades
 										</p>
 										<p className="text-2xl font-bold text-gray-900">
-											1999
+											2016
 										</p>
 										<p className="text-xs text-gray-500 mt-1">
-											25+ años de trayectoria
+											Cooperativa de ahorro y crédito
 										</p>
 									</div>
 								</div>

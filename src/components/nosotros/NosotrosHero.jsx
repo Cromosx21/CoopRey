@@ -90,9 +90,21 @@ export function NosotrosHero() {
 						transition={{ duration: 0.8, delay: 0.6 }}
 					>
 						{[
-							{ icon: TrendingUp, value: "25+", label: "Años" },
-							{ icon: Users, value: "15K+", label: "Socios" },
-							{ icon: Shield, value: "12", label: "Agencias" },
+							{
+								icon: TrendingUp,
+								value: "2016",
+								label: "Inicio de Actividades",
+							},
+							{
+								icon: Users,
+								value: "6,723",
+								label: "Socios (2023)",
+							},
+							{
+								icon: Shield,
+								value: "4",
+								label: "Agencias",
+							},
 							{
 								icon: Heart,
 								value: "98%",
