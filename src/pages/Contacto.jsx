@@ -329,19 +329,19 @@ export default function Contacto() {
 							</div>
 
 							{/* Mapa */}
-							<div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg mb-6 border-2 border-emerald-200">
-								<iframe
-									className="w-full h-full"
-									style={{ border: 0 }}
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.5053419263206!2d-77.04240932346945!3d-12.046373888675395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b7a8f5c5c5c5%3A0x1234567890abcdef!2sAv.%20Principal%201500!5e0!3m2!1ses!2spe!4v1706564400000"
-									allowFullScreen=""
-									loading="lazy"
-									referrerPolicy="no-referrer-when-downgrade"
-									title="Ubicación Sede Principal"
-								/>
+							<div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-lg mb-6 border-2 border-emerald-200 bg-gray-100 flex items-center justify-center">
+								<div className="text-center p-8">
+									<MapPin className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
+									<p className="text-gray-700 font-medium">
+										MZA. C LOTE. 07 URB. SECTOR EDUCACION
+									</p>
+									<p className="text-gray-600">
+										MERCADO NERY GARCIA - AYACUCHO
+									</p>
+								</div>
 							</div>
 
-							{/* Detalles de la Sede Principal */}
+									{/* Detalles de la Sede Principal */}
 							<div className="bg-linear-to-br from-emerald-50 to-yellow-50 rounded-2xl p-8 border-2 border-emerald-300 shadow-lg">
 								<div className="space-y-4">
 									{/* Dirección */}
@@ -354,7 +354,7 @@ export default function Contacto() {
 												Dirección
 											</h3>
 											<p className="text-gray-700">
-												Av. Principal 1500, Centro
+												MZA. C LOTE. 07 URB. SECTOR EDUCACION (MERCADO NERY GARCIA) AYACUCHO - HUAMANGA – AYACUCHO
 											</p>
 										</div>
 									</div>
@@ -369,10 +369,10 @@ export default function Contacto() {
 												Teléfono
 											</h3>
 											<a
-												href="tel:+15551234567"
+												href="tel:+51066284760"
 												className="text-emerald-600 hover:text-emerald-700 font-medium"
 											>
-												+1 (555) 123-4567
+												066 284760 / 979 585 886
 											</a>
 										</div>
 									</div>
@@ -386,12 +386,9 @@ export default function Contacto() {
 											<h3 className="font-semibold text-gray-900">
 												Email
 											</h3>
-											<a
-												href="mailto:info@cooprey.com"
-												className="text-emerald-600 hover:text-emerald-700 font-medium"
-											>
-												info@cooprey.com
-											</a>
+											<p className="text-gray-700">
+												Por asignar
+											</p>
 										</div>
 									</div>
 
@@ -409,11 +406,13 @@ export default function Contacto() {
 													<strong>
 														Lunes a Viernes:
 													</strong>{" "}
-													8:00 AM - 5:00 PM
+													8:30 AM - 1:00 PM
 												</p>
 												<p>
-													<strong>Sábados:</strong>{" "}
-													9:00 AM - 1:00 PM
+													<strong>
+														Lunes a Viernes:
+													</strong>{" "}
+													3:00 PM - 6:00 PM
 												</p>
 											</div>
 										</div>

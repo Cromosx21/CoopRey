@@ -92,13 +92,13 @@ export function NosotrosHero() {
 						{[
 							{
 								icon: TrendingUp,
-								value: "2016",
-								label: "Inicio de Actividades",
+								value: "2015",
+								label: "Fundación",
 							},
 							{
 								icon: Users,
 								value: "6,723",
-								label: "Socios (2023)",
+								label: "Socios",
 							},
 							{
 								icon: Shield,

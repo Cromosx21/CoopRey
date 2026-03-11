@@ -1,13 +1,13 @@
 export const noticias = [
 	{
 		id: 1,
-		titulo: "CoopRey Celebra 25 Años de Servicio a la Comunidad",
+		titulo: "CoopRey Celebra 9 Años de Servicio a la Comunidad",
 		resumen:
 			"Hemos alcanzado un importante hito en nuestra historia, reafirmando nuestro compromiso con nuestros socios y la comunidad",
 		contenido:
-			"En este año especial celebramos 25 años de operaciones continuas, durante los cuales hemos servido a más de 15,000 familias. Nuestro crecimiento ha sido sostenido gracias a la confianza de nuestros socios.",
+			"En este año especial celebramos 9 años de operaciones continuas, durante los cuales hemos servido a miles de familias en la región Ayacucho. Nuestro crecimiento ha sido sostenido gracias a la confianza de nuestros socios.",
 		imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
-		fecha: "28 de enero, 2026",
+		fecha: "16 de setiembre, 2024",
 		autor: "Comunicaciones CoopRey",
 		categoria: "empresa",
 		destacado: true,
@@ -18,9 +18,9 @@ export const noticias = [
 		resumen:
 			"Mejoramos nuestras tasas de rendimiento para que tu dinero trabaje más por ti",
 		contenido:
-			"A partir de este mes, ofrecemos nuevas opciones de ahorro a plazo con tasas competitivas que van desde 4.5% hasta 6.2% anual, dependiendo del plazo elegido.",
+			"A partir de este mes, offercemos nuevas opciones de ahorro a plazo con tasas competitivas que van desde 3% hasta 13% anual, dependiendo del plazo elegido.",
 		imagen: "https://plus.unsplash.com/premium_photo-1688821131205-52f5c633ce69?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		fecha: "25 de enero, 2026",
+		fecha: "13 de enero, 2025",
 		autor: "Área de Productos",
 		categoria: "productos",
 		destacado: false,
@@ -31,7 +31,7 @@ export const noticias = [
 		resumen:
 			"Lanzamos una iniciativa para enseñar a los jóvenes sobre finanzas personales y emprendimiento",
 		contenido:
-			"El programa incluye talleres gratuitos, mentorías y acceso a recursos educativos en línea. Está diseñado para estudiantes de 15 a 25 años interesados en mejorar su alfabetización financiera.",
+			"El programa incluye talleres gratuitos, mentorías y acceso a recursos educativos en línea. Está diseñado para estudiantes interesados en mejorar su alfabetización financiera.",
 		imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
 		fecha: "20 de enero, 2026",
 		autor: "Área de RSE",
@@ -40,24 +40,24 @@ export const noticias = [
 	},
 	{
 		id: 4,
-		titulo: "Ampliamos Servicios en Línea y Aplicación Móvil",
+		titulo: "Ampliamos Servicios en Nuestra Sede Principal",
 		resumen:
-			"Nuestras plataformas digitales ahora ofrecen más funcionalidades para facilitar tu experiencia",
+			"Nuestras oficinas ahora ofrecen más funcionalidades para facilitar tu experiencia",
 		contenido:
-			"La nueva versión de nuestra app móvil incluye: transferencias instantáneas, consulta de saldos en tiempo real, solicitud de créditos y atención al cliente 24/7.",
+			"Contamos con nuevas instalaciones en nuestra sede principal de Huamanga y agencias en Coracora, Pausa y Relave para atender mejor a nuestros socios.",
 		imagen: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		fecha: "15 de enero, 2026",
-		autor: "Tecnología",
+		autor: "Atención al Socio",
 		categoria: "tecnologia",
 		destacado: false,
 	},
 	{
 		id: 5,
-		titulo: "CoopRey Apoya Proyectos Comunitarios en 5 Ciudades",
+		titulo: "CoopRey Apoya Proyectos Comunitarios en la Región",
 		resumen:
-			"Inversión en infraestructura y desarrollo local a través de nuestro programa de responsabilidad social",
+			"Inversión en desarrollo local a través de nuestro programa de responsabilidad social",
 		contenido:
-			"Hemos destinado 2.5 millones en fondos para proyectos de educación, salud y vivienda en comunidades vulnerables de nuestra área de cobertura.",
+			"Contribuimos al desarrollo de nuestra comunidadbrindando servicios financieros responsables en beneficio de nuestros socios y sus familias.",
 		imagen: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop",
 		fecha: "10 de enero, 2026",
 		autor: "Responsabilidad Social",
@@ -66,14 +66,14 @@ export const noticias = [
 	},
 	{
 		id: 6,
-		titulo: "Obtuvimos Certificación Internacional de Seguridad",
+		titulo: "Regulación y Supervisión SBS",
 		resumen:
-			"Nuestros sistemas de información cumplen con los más altos estándares internacionales de seguridad",
+			" Nuestra institución cumple con los más altos estándares de regulación",
 		contenido:
-			"Hemos obtenido la certificación ISO 27001 que garantiza la protección óptima de datos de nuestros socios. Esta acreditación refuerza nuestra posición como institución confiable.",
+			" Estamos inscritos en el Registro Nacional de COOPAC bajo el número 402-2019-REG.COOPAC-SBS y somos supervisados por la Superintendencia Adjunta de Cooperativas.",
 		imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
 		fecha: "5 de enero, 2026",
-		autor: "Tecnología",
+		autor: "Gerencia",
 		categoria: "empresa",
 		destacado: false,
 	},

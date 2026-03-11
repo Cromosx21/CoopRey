@@ -21,6 +21,45 @@ export const creditosHeroData = {
 	image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop",
 };
 
+export const tasasCreditos = [
+	{ producto: "Credi Emprendedor - pequeña empresa", teaMin: "26.82%", teaMax: "79.58%" },
+	{ producto: "Credi Agrario", teaMin: "37.67%", teaMax: "79.58%" },
+	{ producto: "Rapi-diario", teaMin: "101.22%", teaMax: "79.58%" },
+	{ producto: "Credi emprendedor", teaMin: "34.49%", teaMax: "79.58%" },
+	{ producto: "Peque crédito", teaMin: "39.29%", teaMax: "79.58%" },
+	{ producto: "Credi estudiante", teaMin: "42.58%", teaMax: "79.58%" },
+	{ producto: "Credi móvil", teaMin: "26.82%", teaMax: "79.58%" },
+	{ producto: "Credi convenio", teaMin: "34.49%", teaMax: "79.58%" },
+	{ producto: "Credi personal", teaMin: "42.58%", teaMax: "79.58%" },
+	{ producto: "Credi simple", teaMin: "60.10%", teaMax: "79.58%" },
+	{ producto: "Administrativo", teaMin: "20.98%", teaMax: "79.58%" },
+	{ producto: "Mi moto administrativo niño rey", teaMin: "26.82%", teaMax: "79.58%" },
+	{ producto: "Credi cubierto", teaMin: "26.82%", teaMax: "79.58%" },
+	{ producto: "Micro consumo", teaMin: "42.58%", teaMax: "79.58%" },
+	{ producto: "Mi hogar", teaMin: "26.82%", teaMax: "79.58%" },
+];
+
+export const tasaMoratoria = {
+	interesMoratorioAnual: "213.84%",
+	interesMoratorioNegociado: "213.84%",
+	nota: "El presente tarifario aplica para créditos nuevos, reprogramados y refinanciados. Todas las tasas de interés se encuentran calculadas usando un periodo de 360 días.",
+};
+
+export const comisiones = [
+	{ servicio: "Formato de trámite FUT (Opcional)", monto: "S/.2.00", momento: "Por operación" },
+	{ servicio: "Libreta de Aportes Y Ahorros", monto: "S/.10.00", momento: "Desde la segunda emisión" },
+	{ servicio: "Emisión de Constancia de no adeudo", monto: "S/.25.00", momento: "Desde la segunda emisión" },
+	{ servicio: "Afiliación", monto: "S/.40.00", momento: "Por operación" },
+	{ servicio: "Desafiliación", monto: "S/.30.00", momento: "Por operación" },
+	{ servicio: "Comisión por servicios cooperativos", monto: "S/.15.00", momento: "Se paga anual" },
+	{ servicio: "Emisión de Constancia de no ser socio", monto: "S/.5.00", momento: "Por operación" },
+	{ servicio: "Emisión de Estado de cuenta (período anual)", monto: "S/.3.00", momento: "Por operación" },
+	{ servicio: "Emisión de Duplicado de Voucher", monto: "S/.3.00", momento: "Por operación" },
+	{ servicio: "Emisión de Duplicado de Contrato a plazo fijo", monto: "S/.25.00", momento: "Por operación" },
+	{ servicio: "Emisión Duplicado de Cronograma de pago", monto: "S/.3.00", momento: "Por operación" },
+	{ servicio: "Consulta en central de Riesgo (fuera de evaluación)", monto: "S/.5.00", momento: "Por operación" },
+];
+
 export const tiposCreditos = [
 	{
 		id: 1,

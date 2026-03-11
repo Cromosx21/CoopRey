@@ -121,7 +121,7 @@ export const indicadoresFinancieros = [
 	},
 	{
 		titulo: "Base Societaria",
-		valor: "15,420",
+		valor: "6,723",
 		cambio: "+5.4%",
 		icono: Users,
 		color: "blue",

@@ -114,7 +114,7 @@ export function QuienesSomos() {
 											Inicio de Actividades
 										</p>
 										<p className="text-2xl font-bold text-gray-900">
-											2016
+											2015
 										</p>
 										<p className="text-xs text-gray-500 mt-1">
 											Cooperativa de ahorro y crédito

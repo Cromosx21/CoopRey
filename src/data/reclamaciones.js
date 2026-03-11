@@ -2,12 +2,12 @@ export const reclamacionesInfo = {
 	title: "Libro de Reclamaciones",
 	subtitle: "Servicio de Atención de Reclamos y Quejas",
 	description: "Estamos comprometidos con tu satisfacción. Registra tu reclamo o queja y recibe seguimiento permanente de tu caso.",
-	numeroRUC: "20123456789",
-	nombreEmpresa: "Cooperativa de Ahorro y Crédito Niño Rey",
-	direccion: "Av. Principal 1500, Centro, Lima, Perú",
-	telefonoReclamos: "+51 1 555 1234",
-	emailReclamos: "reclamos@ninorey.com",
-	horarioAtencion: "Lunes a Viernes: 8:00 AM - 5:00 PM",
+	numeroRUC: "20600851536",
+	nombreEmpresa: "Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho",
+	direccion: "MZA. C LOTE. 07 URB. SECTOR EDUCACION (MERCADO NERY GARCIA) AYACUCHO - HUAMANGA – AYACUCHO",
+	telefonoReclamos: "066 284760 / 979 585 886",
+	emailReclamos: "Por asignar",
+	horarioAtencion: "Lunes a Viernes: 8:30 AM - 1:00 PM / 3:00 PM - 6:00 PM",
 	diasHabiles: "2 a 15 días hábiles",
 };
 

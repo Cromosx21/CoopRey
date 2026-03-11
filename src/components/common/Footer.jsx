@@ -74,38 +74,37 @@ export default function Footer() {
 									Niño Rey
 								</span>
 								<span className="text-sm text-gray-400">
-									Cooperativa de Ahorro
+									Cooperativa de Ahorro y Crédito
 								</span>
 							</div>
 						</motion.div>
 
 						<p className="text-gray-400 leading-relaxed max-w-md">
-							Construyendo juntos un futuro financiero sólido y
-							próspero. Cooperativa de Ahorro y Crédito de
-							confianza con sede en Lima, Perú.
+							Construyendo juntos un futuro financiero sólido y próspero. 
+							Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho.
 						</p>
 
 						{/* Contact Info */}
 						<div className="space-y-3">
 							<motion.a
-								href="mailto:info@ninorey.com"
+								href="#"
 								className="flex items-center space-x-3 text-gray-400 hover:text-emerald-400 transition-colors group"
 								whileHover={{ x: 5 }}
 							>
 								<div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
 									<Mail className="w-5 h-5" />
 								</div>
-								<span>info@ninorey.com</span>
+								<span>Por asignar</span>
 							</motion.a>
 							<motion.a
-								href="tel:+5115551234"
+								href="tel:+51066284760"
 								className="flex items-center space-x-3 text-gray-400 hover:text-emerald-400 transition-colors group"
 								whileHover={{ x: 5 }}
 							>
 								<div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
 									<Phone className="w-5 h-5" />
 								</div>
-								<span>+51 (1) 555-1234</span>
+								<span>066 284760 / 979 585 886</span>
 							</motion.a>
 							<motion.div
 								className="flex items-start space-x-3 text-gray-400"
@@ -117,7 +116,7 @@ export default function Footer() {
 									<MapPin className="w-5 h-5" />
 								</div>
 								<span>
-									Av. Principal 1500, Centro, Lima 15000, Perú
+									MZA. C LOTE. 07 URB. SECTOR EDUCACION (MERCADO NERY GARCIA) AYACUCHO - HUAMANGA – AYACUCHO
 								</span>
 							</motion.div>
 						</div>

@@ -19,16 +19,16 @@ export const nosotrosHeroData = {
   title: "Somos una",
   titleHighlight: "cooperativa",
   description:
-    "La Cooperativa de Ahorro y Crédito Niño Rey Huamanga fomenta la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
+    "La Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho fomenta la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
 };
 
 
 export const quienesSomosData = {
   badge: "¿Quiénes Somos?",
-  title: "Cooperativa Niño Rey Huamanga",
+  title: "Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho",
   subtitle: "Solidez financiera y desarrollo cooperativo",
   content: [
-    "La Cooperativa de Ahorro y Crédito Niño Rey Huamanga brinda servicios microfinancieros y complementarios orientados a mejorar la calidad de vida de sus socios en la región Ayacucho.",
+    "La Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho (COOPAC Niño Rey) fue fundada el 16 de setiembre de 2015 en la ciudad de Huamanga, región Ayacucho, como una iniciativa orientada a promover el ahorro, facilitar el acceso al crédito y contribuir al desarrollo económico y social de sus socios, bajo los principios del cooperativismo, la solidaridad y la ayuda mutua.",
     "Nuestra misión es fomentar la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
     "Nuestra visión es ser una cooperativa con solidez financiera, contribuyendo eficazmente en el desarrollo de nuestros socios, su familia y su comunidad.",
     "La cooperativa cuenta con agencias en Huamanga, Coracora, Pausa y Relave, atendiendo a socios de zonas urbanas y rurales.",
@@ -124,31 +124,31 @@ export const compromisos = [
 
 export const equipo = [
   {
-    name: "Asamblea General de Socios",
-    role: "Máximo órgano de gobierno",
-    image: "/images/asamblea.png",
+    name: "Edgard Maldonado Córdova",
+    role: "Presidente del Consejo de Administración",
+    image: "/images/asamble.png",
     description:
-      "Es la máxima autoridad de la cooperativa, conformada por todos los socios, quienes participan en la toma de decisiones fundamentales para la institución.",
+      "Presidente del primer Consejo de Administración instalado el 17 de setiembre de 2015. Responsable de dirigir la cooperativa en sus inicios.",
   },
   {
-    name: "Consejo de Administración",
-    role: "Órgano de dirección",
+    name: "Raúl Enrique Ricardo Anccasi Paucar",
+    role: "Vicepresidente",
     image: "/images/consejo-administracion.png",
     description:
-      "Responsable de la dirección estratégica y supervisión de la gestión institucional conforme a los principios cooperativos.",
+      "Vicepresidente del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
   },
   {
-    name: "Consejo de Vigilancia",
-    role: "Órgano de control",
+    name: "Diana Cabezas Loayza",
+    role: "Secretaria",
     image: "/images/consejo-vigilancia.png",
     description:
-      "Supervisa la gestión administrativa y financiera, velando por el cumplimiento normativo y los intereses de los socios.",
+      "Secretaria del primer Consejo de Administración, encargada de la documentación institucional inicial.",
   },
   {
-    name: "Gerencia General",
-    role: "Gestión ejecutiva",
+    name: "René Valenzuela Maldonado",
+    role: "Vocal",
     image: "/images/gerencia-general.png",
     description:
-      "Ejecuta las decisiones estratégicas y administra las operaciones institucionales para el cumplimiento de los objetivos de la cooperativa.",
+      "Vocal del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
   },
 ];

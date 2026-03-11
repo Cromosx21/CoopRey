@@ -3,7 +3,7 @@ import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import { Shield, Percent } from "lucide-react";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { productosAhorros, ahorrosHeroData } from "../data/ahorros.js";
+import { productosAhorros, ahorrosHeroData, tasasAhorros, notasTasas } from "../data/ahorros.js";
 import AhorroProductCard from "../components/ahorros/AhorroProductCard.jsx";
 
 export default function Ahorros() {
@@ -140,6 +140,69 @@ export default function Ahorros() {
 			</section>
 
 			<CTASection />
+
+			{/* Tarifario de Tasas de Interés - Ahorros */}
+			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+				<div className="max-w-7xl mx-auto">
+					<div className="text-center mb-12">
+						<SectionHeading
+							badge="Tarifario"
+							title="Tasas de Interés - Ahorros"
+							subtitle="Vigente a partir del 13 de enero del 2025"
+						/>
+					</div>
+
+					<div className="overflow-x-auto">
+						<table className="w-full border-collapse">
+							<thead>
+								<tr className="bg-emerald-600">
+									<th className="text-left p-4 text-white font-bold">TIPO DE AHORRO</th>
+									<th className="text-center p-4 text-white font-bold">TREA %</th>
+								</tr>
+							</thead>
+							<tbody>
+								{tasasAhorros.map((tasa, idx) => (
+									<tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+										<td className="p-4 text-gray-900 font-medium">{tasa.tipo}</td>
+										<td className="p-4 text-center text-gray-700 font-semibold">{tasa.trea}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+
+					{/* Notas informativas */}
+					<div className="mt-12 bg-blue-50 rounded-2xl p-8 border border-blue-200">
+						<h3 className="text-xl font-bold text-gray-900 mb-4">Información Importante</h3>
+						<ul className="space-y-3 text-gray-700">
+							<li className="flex items-start">
+								<span className="text-emerald-600 mr-2">•</span>
+								<span>{notasTasas.advertencia}</span>
+							</li>
+							<li className="flex items-start">
+								<span className="text-emerald-600 mr-2">•</span>
+								<span>{notasTasas.periodo}</span>
+							</li>
+							<li className="flex items-start">
+								<span className="text-emerald-600 mr-2">•</span>
+								<span>{notasTasas.regulacion}</span>
+							</li>
+							<li className="flex items-start">
+								<span className="text-emerald-600 mr-2">•</span>
+								<span>{notasTasas.registro}</span>
+							</li>
+							<li className="flex items-start">
+								<span className="text-emerald-600 mr-2">•</span>
+								<span>{notasTasas.supervision}</span>
+							</li>
+							<li className="flex items-start">
+								<span className="text-emerald-600 mr-2">•</span>
+								<span>{notasTasas.seguro}</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
 		</>
 	);
 }

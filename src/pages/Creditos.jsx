@@ -3,7 +3,7 @@ import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import { Percent, CheckCircle } from "lucide-react";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { tiposCreditos, pasos, creditosHeroData } from "../data/creditos.js";
+import { tiposCreditos, pasos, creditosHeroData, tasasCreditos, tasaMoratoria, comisiones } from "../data/creditos.js";
 
 export default function Creditos() {
 	return (
@@ -312,6 +312,82 @@ export default function Creditos() {
 			</section>
 
 			<CTASection />
+
+			{/* Tarifario de Tasas de Interés - Créditos */}
+			<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+				<div className="max-w-7xl mx-auto">
+					<div className="text-center mb-12">
+						<SectionHeading
+							badge="Tarifario"
+							title="Tasas de Interés - Créditos"
+							subtitle="Vigente a partir del 12/12/2024"
+						/>
+					</div>
+
+					<div className="overflow-x-auto">
+						<table className="w-full border-collapse">
+							<thead>
+								<tr className="bg-emerald-600">
+									<th className="text-left p-4 text-white font-bold">PRODUCTO</th>
+									<th className="text-center p-4 text-white font-bold">TEA MÍN.</th>
+									<th className="text-center p-4 text-white font-bold">TEA MÁX.</th>
+								</tr>
+							</thead>
+							<tbody>
+								{tasasCreditos.map((tasa, idx) => (
+									<tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+										<td className="p-4 text-gray-900 font-medium">{tasa.producto}</td>
+										<td className="p-4 text-center text-gray-700">{tasa.teaMin}</td>
+										<td className="p-4 text-center text-gray-700">{tasa.teaMax}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+					</div>
+
+					{/* Tasa Moratoria */}
+					<div className="mt-12 bg-red-50 rounded-2xl p-8 border border-red-200">
+						<h3 className="text-2xl font-bold text-red-800 mb-6">Tasa de Interés Moratorio Anual</h3>
+						<div className="grid md:grid-cols-2 gap-6">
+							<div className="bg-white rounded-xl p-6 border border-red-200">
+								<p className="text-sm text-gray-600 mb-2">Interés moratorio anual</p>
+								<p className="text-3xl font-bold text-red-700">{tasaMoratoria.interesMoratorioAnual}</p>
+							</div>
+							<div className="bg-white rounded-xl p-6 border border-red-200">
+								<p className="text-sm text-gray-600 mb-2">Interés moratorio anual para Crédito negociado</p>
+								<p className="text-3xl font-bold text-red-700">{tasaMoratoria.interesMoratorioNegociado}</p>
+							</div>
+						</div>
+						<p className="mt-6 text-sm text-gray-700 italic">{tasaMoratoria.nota}</p>
+					</div>
+
+					{/* Tarifario de Comisiones */}
+					<div className="mt-12">
+						<h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Tarifario de Comisiones</h3>
+						<p className="text-center text-gray-600 mb-8">Vigente a partir del 12 de diciembre del 2024</p>
+						<div className="overflow-x-auto">
+							<table className="w-full border-collapse">
+								<thead>
+									<tr className="bg-emerald-600">
+										<th className="text-left p-4 text-white font-bold">COMISIONES POR SERVICIOS</th>
+										<th className="text-center p-4 text-white font-bold">MONTO DE COMISIÓN</th>
+										<th className="text-center p-4 text-white font-bold">MOMENTO DE COBRO</th>
+									</tr>
+								</thead>
+								<tbody>
+									{comisiones.map((com, idx) => (
+										<tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
+											<td className="p-4 text-gray-900 font-medium">{com.servicio}</td>
+											<td className="p-4 text-center text-gray-700 font-semibold">{com.monto}</td>
+											<td className="p-4 text-center text-gray-700">{com.momento}</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
 		</>
 	);
 }

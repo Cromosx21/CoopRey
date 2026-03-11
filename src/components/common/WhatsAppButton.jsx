@@ -3,9 +3,9 @@ import { motion } from "motion/react";
 import { MessageCircle } from "lucide-react";
 
 export default function WhatsAppButton() {
-	const whatsappNumber = "+51951234567"; // Número de WhatsApp de la cooperativa
+	const whatsappNumber = "+51979585886"; // Número de WhatsApp de la cooperativa
 	const message =
-		"Hola, tengo una consulta sobre los servicios de la Cooperativa Niño Rey.";
+		"Hola, tengo una consulta sobre los servicios de la Cooperativa Niño Rey de Huamanga - Ayacucho.";
 
 	const handleWhatsAppClick = () => {
 		const url = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`;

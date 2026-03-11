@@ -151,22 +151,22 @@ export const benefits = [
 export const stats = [
 	{
 		icon: TrendingUp,
-		value: "+25",
+		value: "9",
 		label: "Años de experiencia",
-		suffix: "",
+		suffix: "+",
 		color: "from-emerald-500 to-emerald-600",
 	},
 	{
 		icon: Users,
-		value: "15,000",
+		value: "6,723",
 		label: "Socios activos",
 		suffix: "+",
 		color: "from-yellow-500 to-yellow-600",
 	},
 	{
 		icon: Building,
-		value: "12",
-		label: "Agencias a nivel nacional",
+		value: "4",
+		label: "Agencias",
 		suffix: "",
 		color: "from-teal-500 to-emerald-600",
 	},
