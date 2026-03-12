@@ -112,7 +112,7 @@ export const beneficiosEspeciales = [
 			"Acumula puntos por tus transacciones y canjéalos por premios",
 		icon: Award,
 		items: [
-			"1 punto por cada $10 ahorrados",
+			"1 punto por cada S/.10 ahorrados",
 			"Canje por productos del hogar",
 			"Vigencia de 12 meses",
 		],

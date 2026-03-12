@@ -100,21 +100,21 @@ export const estadosFinancieros = [
 export const indicadoresFinancieros = [
 	{
 		titulo: "Activo Total",
-		valor: "$125,450,000",
+		valor: "S/.125,450,000",
 		cambio: "+12.5%",
 		icono: BarChart3,
 		color: "emerald",
 	},
 	{
 		titulo: "Capital Social",
-		valor: "$45,230,000",
+		valor: "S/.45,230,000",
 		cambio: "+8.3%",
 		icono: DollarSign,
 		color: "yellow",
 	},
 	{
 		titulo: "Excedentes",
-		valor: "$8,450,000",
+		valor: "S/.8,450,000",
 		cambio: "+15.2%",
 		icono: TrendingUp,
 		color: "emerald",
@@ -163,8 +163,8 @@ export const composicionActivos = [
 ];
 
 export const composicionPasivos = [
-	{ name: "Depósitos a Plazo", value: 55, color: "#10B981" },
-	{ name: "Ahorros a la Vista", value: 30, color: "#3B82F6" },
-	{ name: "Obligaciones Financieras", value: 10, color: "#F59E0B" },
-	{ name: "Otros Pasivos", value: 5, color: "#6366F1" },
+	{ name: "Depósitos a Plazo", value: 55, color: "#10B981", monto: "S/. 6,600,000" },
+	{ name: "Ahorros a la Vista", value: 30, color: "#3B82F6", monto: "S/. 3,600,000" },
+	{ name: "Obligaciones Financieras", value: 10, color: "#F59E0B", monto: "S/. 1,200,000" },
+	{ name: "Otros Pasivos", value: 5, color: "#6366F1", monto: "S/. 600,000" },
 ];

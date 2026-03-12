@@ -49,8 +49,8 @@ export const productosAhorros = [
 		id: 1,
 		nombre: "Ahorro Básico",
 		descripcion: "Cuenta de ahorros flexible con acceso inmediato",
-		tasa: "2.5%",
-		minimo: "$50",
+		tasa: "0.00%",
+		minimo: "S/.50",
 		beneficios: [
 			"Sin comisiones",
 			"Retiro inmediato",
@@ -62,8 +62,8 @@ export const productosAhorros = [
 		id: 2,
 		nombre: "Ahorro Plazo",
 		descripcion: "Maximiza tu rendimiento con plazo fijo",
-		tasa: "4.8%",
-		minimo: "$500",
+		tasa: "8.00%",
+		minimo: "S/.500",
 		beneficios: [
 			"Tasa fija",
 			"Plazo flexible (6-24 meses)",
@@ -75,8 +75,8 @@ export const productosAhorros = [
 		id: 3,
 		nombre: "Ahorro Infantil",
 		descripcion: "Enseña a tus hijos el valor del ahorro",
-		tasa: "3.0%",
-		minimo: "$25",
+		tasa: "3.00%",
+		minimo: "S/.25",
 		beneficios: [
 			"Cuenta especial",
 			"Incentivos por logros",

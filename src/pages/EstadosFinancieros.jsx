@@ -322,7 +322,7 @@ export default function EstadosFinancieros() {
 											</div>
 											<span className="text-sm font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
 												{/* Mock data since monto is missing */}
-												$ {(item.value * 150000).toLocaleString()}
+												S/. {(item.value * 150000).toLocaleString()}
 											</span>
 										</div>
 										<div className="w-full bg-gray-100 rounded-full h-3 overflow-hidden">
@@ -367,8 +367,7 @@ export default function EstadosFinancieros() {
 												</span>
 											</div>
 											<span className="text-sm font-semibold text-yellow-700 bg-yellow-50 px-3 py-1 rounded-full border border-yellow-100">
-												{/* Mock data since monto is missing */}
-												$ {(item.value * 120000).toLocaleString()}
+												{item.monto}
 											</span>
 										</div>
 										<div className="w-full bg-gray-100 rounded-full h-3 overflow-hidden">
