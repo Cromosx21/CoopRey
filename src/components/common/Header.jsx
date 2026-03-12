@@ -42,6 +42,10 @@ export default function Header() {
 		{
 			label: "Transparencia",
 			subItems: [
+				{
+					label: "Libro de Reclamaciones",
+					href: "/libro-reclamaciones",
+				},
 				{ label: "Estados Financieros", href: "/estados-financieros" },
 				{
 					label: "Documentos Institucionales",
@@ -236,6 +240,18 @@ export default function Header() {
 						))}
 					</nav>
 
+					{/* CTA Buttons - Desktop */}
+					<div className="hidden lg:flex items-center space-x-4 shrink-0">
+						<motion.a
+							href="/login"
+							className="flex items-center px-7 py-2.5 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-full hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-[15px]"
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+						>
+							Inicio de Sesión
+						</motion.a>
+					</div>
+
 					{/* Mobile Menu Button */}
 					<button
 						className="lg:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-xl transition-colors"
@@ -269,24 +285,7 @@ export default function Header() {
 												onClick={() =>
 													toggleMobileMenu(item.label)
 												}
-												className={`flex items-center justify-between w-full text-left px-4 py-3 rounded-xl transition-all duration-200 ${
-													(item.subItems &&
-														item.subItems.some(
-															(sub) =>
-																currentPage.replace(
-																	/\/$/,
-																	"",
-																) ===
-																sub.href.replace(
-																	/\/$/,
-																	"",
-																),
-														)) ||
-													mobileExpandedMenu ===
-														item.label
-														? "text-emerald-600 bg-emerald-50/50 font-medium"
-														: "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50"
-												}`}
+												className="flex items-center justify-between w-full text-left px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 rounded-xl transition-all duration-200"
 											>
 												<span className="font-medium">
 													{item.label}
@@ -331,18 +330,7 @@ export default function Header() {
 																	href={
 																		subItem.href
 																	}
-																	className={`block px-4 py-2.5 rounded-lg transition-all duration-200 ${
-																		currentPage.replace(
-																			/\/$/,
-																			"",
-																		) ===
-																		subItem.href.replace(
-																			/\/$/,
-																			"",
-																		)
-																			? "text-emerald-600 bg-emerald-50 font-medium"
-																			: "text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/50"
-																	}`}
+																	className="block px-4 py-2.5 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/50 rounded-lg transition-all duration-200"
 																	onClick={() => {
 																		setIsMobileMenuOpen(
 																			false,
@@ -365,15 +353,7 @@ export default function Header() {
 									) : (
 										<a
 											href={item.href}
-											className={`block px-4 py-3 rounded-xl transition-all duration-200 font-medium ${
-												currentPage.replace(
-													/\/$/,
-													"",
-												) ===
-												item.href.replace(/\/$/, "")
-													? "text-emerald-600 bg-emerald-50/50"
-													: "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50"
-											}`}
+											className="block px-4 py-3 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 rounded-xl transition-all duration-200 font-medium"
 											onClick={() => {
 												setIsMobileMenuOpen(false);
 												setMobileExpandedMenu(null);
@@ -384,6 +364,20 @@ export default function Header() {
 									)}
 								</div>
 							))}
+
+							{/* CTA Buttons - Mobile */}
+							<div className="pt-6 space-y-3 border-t border-gray-100 mt-6">
+								<a
+									href="/login"
+									className="block w-full px-6 py-3 bg-linear-to-r from-emerald-500 to-emerald-600 text-white rounded-full text-center hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 shadow-lg font-medium"
+									onClick={() => {
+										setIsMobileMenuOpen(false);
+										setMobileExpandedMenu(null);
+									}}
+								>
+									Inicio de Sesión
+								</a>
+							</div>
 						</nav>
 					</motion.div>
 				)}
