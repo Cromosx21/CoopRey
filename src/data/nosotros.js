@@ -25,12 +25,10 @@ export const nosotrosHeroData = {
 
 export const quienesSomosData = {
   badge: "¿Quiénes Somos?",
-  title: "Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho",
+  title: "Cooperativa de Ahorro y Crédito Niño Rey",
   subtitle: "Solidez financiera y desarrollo cooperativo",
   content: [
     "La Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho (COOPAC Niño Rey) fue fundada el 16 de setiembre de 2015 en la ciudad de Huamanga, región Ayacucho, como una iniciativa orientada a promover el ahorro, facilitar el acceso al crédito y contribuir al desarrollo económico y social de sus socios, bajo los principios del cooperativismo, la solidaridad y la ayuda mutua.",
-    "Nuestra misión es fomentar la cooperación entre sus socios, brindando servicios financieros de calidad con soluciones mancomunadas.",
-    "Nuestra visión es ser una cooperativa con solidez financiera, contribuyendo eficazmente en el desarrollo de nuestros socios, su familia y su comunidad.",
     "La cooperativa cuenta con agencias en Huamanga, Coracora, Pausa y Relave, atendiendo a socios de zonas urbanas y rurales.",
   ],
   features: [

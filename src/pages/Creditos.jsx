@@ -346,20 +346,31 @@ export default function Creditos() {
 					</div>
 
 					{/* Tasa Moratoria */}
-					<div className="mt-12 bg-red-50 rounded-2xl p-8 border border-red-200">
-						<h3 className="text-2xl font-bold text-red-800 mb-6">Tasa de Interés Moratorio Anual</h3>
-						<div className="grid md:grid-cols-2 gap-6">
-							<div className="bg-white rounded-xl p-6 border border-red-200">
-								<p className="text-sm text-gray-600 mb-2">Interés moratorio anual</p>
-								<p className="text-3xl font-bold text-red-700">{tasaMoratoria.interesMoratorioAnual}</p>
-							</div>
-							<div className="bg-white rounded-xl p-6 border border-red-200">
-								<p className="text-sm text-gray-600 mb-2">Interés moratorio anual para Crédito negociado</p>
-								<p className="text-3xl font-bold text-red-700">{tasaMoratoria.interesMoratorioNegociado}</p>
-							</div>
-						</div>
-						<p className="mt-6 text-sm text-gray-700 italic">{tasaMoratoria.nota}</p>
-					</div>
+<div className="mt-10 text-gray-500 text-sm">
+  <p className="font-medium text-gray-600 mb-2">
+    Tasa de interés moratorio anual
+  </p>
+
+  <div className="flex flex-col md:flex-row md:gap-6">
+    <p>
+      Interés moratorio anual: 
+      <span className="ml-1 text-gray-700">
+        {tasaMoratoria.interesMoratorioAnual}
+      </span>
+    </p>
+
+    <p>
+      Crédito negociado: 
+      <span className="ml-1 text-gray-700">
+        {tasaMoratoria.interesMoratorioNegociado}
+      </span>
+    </p>
+  </div>
+
+  <p className="mt-2 text-xs text-gray-400 italic">
+    {tasaMoratoria.nota}
+  </p>
+</div>
 
 					{/* Tarifario de Comisiones */}
 					<div className="mt-12">
