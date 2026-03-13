@@ -124,7 +124,7 @@ export const equipo = [
   {
     name: "Edgard Maldonado Córdova",
     role: "Presidente del Consejo de Administración",
-    image: "/images/asamble.png",
+    image: "/images/consejo/Edgard Maldonado Córdova Presidente del Consejo de Administración.jpeg",
     description:
       "Presidente del primer Consejo de Administración instalado el 17 de setiembre de 2015. Responsable de dirigir la cooperativa en sus inicios.",
   },
@@ -149,4 +149,31 @@ export const equipo = [
     description:
       "Vocal del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
   },
+  {
+    name: "MIGUEL ARTURO JIMENEZ BRAVO",
+    role: "ASESOR LEGAL",
+    image: "/images/consejo/MIGUEL ARTURO JIMENEZ BRAVO - ASESOR LEGAL.jpg",
+    description:
+      "Asesor legal del primer Consejo de Administración, aportó su experiencia en materia legal para el desarrollo de la cooperativa.",
+  },
+  {
+    name: "ANGIE MALDONADO VELENZUELA ",
+    role: "ASISTENTE CONTABLE",
+    image: "/images/consejo/ANGIE MALDONADO VELENZUELA -ASISTENTE CONTABLE.jpg",
+    description:
+      "Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
+  },{
+    name: "DEYSI STEPHANEI QUISPE GALLO ",
+    role: "ASISTENTE DE GERENCIA",
+    image: "/images/consejo/DEYSI STEPHANEI QUISPE GALLO - ASISTENTE DE GERENCIA.jpg",
+    description:
+      "Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
+  }
+  ,{
+    name: "KOPER AGUILAR HUILLCAHUAMAN  ",
+    role: "SUB GERENCIA",
+    image: "/images/consejo/KOPER AGUILAR HUILLCAHUAMAN - SUB GERENCIA.jpg",
+    description:
+      "Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
+  }
 ];

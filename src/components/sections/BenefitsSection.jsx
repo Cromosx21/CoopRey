@@ -69,7 +69,7 @@ export function BenefitsSection() {
 
 							<div className="relative rounded-[40%_60%_60%_40%/60%_40%_40%_60%] overflow-hidden">
 								<img
-									src="https://images.unsplash.com/photo-1692459444402-c52d510ef57a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMGxhdGluYSUyMHByb2Zlc3Npb25hbCUyMGNvbmZpZGVudHxlbnwxfHx8fDE3Njk3MzM5NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+									src="/images/FOTO CON TODO EL PERSONAL.jpg"
 									alt="Profesional joven confiada"
 									className="w-full h-150 object-cover"
 								/>
