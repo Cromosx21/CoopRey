@@ -100,21 +100,21 @@ export const estadosFinancieros = [
 export const indicadoresFinancieros = [
 	{
 		titulo: "Activo Total",
-		valor: "S/.125,450,000",
+		valor: "S/.17,927,433.96",
 		cambio: "+12.5%",
 		icono: BarChart3,
 		color: "emerald",
 	},
 	{
 		titulo: "Capital Social",
-		valor: "S/.45,230,000",
+		valor: "S/.4,563,727.63",
 		cambio: "+8.3%",
 		icono: DollarSign,
 		color: "yellow",
 	},
 	{
 		titulo: "Excedentes",
-		valor: "S/.8,450,000",
+		valor: "S/.1,926,662.22",
 		cambio: "+15.2%",
 		icono: TrendingUp,
 		color: "emerald",

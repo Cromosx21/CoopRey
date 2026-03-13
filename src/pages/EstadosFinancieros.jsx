@@ -83,7 +83,7 @@ export default function EstadosFinancieros() {
 					<div className="text-center mb-16">
 						<SectionHeading
 							badge="Transparencia"
-							title="Indicadores Financieros 2024"
+							title="Indicadores Financieros 2025"
 							subtitle="Métricas clave"
 						/>
 						<p className="text-gray-600 text-lg max-w-2xl mx-auto">
