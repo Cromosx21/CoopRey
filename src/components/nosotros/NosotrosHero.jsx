@@ -48,13 +48,13 @@ export function NosotrosHero() {
 				<div className="max-w-4xl mx-auto text-center space-y-8">
 					{/* Badge */}
 					<motion.div
-						className="inline-flex items-center space-x-2 px-5 py-2 bg-emerald-50 rounded-full border border-emerald-100"
+						className="inline-flex items-center space-x-2 px-5 py-2 bg-primary/10 rounded-full border border-primary/20"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
 					>
-						<Shield className="w-4 h-4 text-emerald-600" />
-						<span className="text-emerald-700 text-sm font-medium">
+						<Shield className="w-4 h-4 text-primary" />
+						<span className="text-primary text-sm font-medium">
 							{nosotrosHeroData.badge}
 						</span>
 					</motion.div>
@@ -67,7 +67,7 @@ export function NosotrosHero() {
 						transition={{ duration: 0.8, delay: 0.2 }}
 					>
 						{nosotrosHeroData.title}
-						<span className="block mt-2 bg-linear-to-r from-emerald-600 to-yellow-500 bg-clip-text text-transparent">
+						<span className="block mt-2 text-primary">
 							{nosotrosHeroData.titleHighlight}
 						</span>
 					</motion.h1>

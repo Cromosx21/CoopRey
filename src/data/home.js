@@ -26,7 +26,7 @@ export const heroSlides = [
 			"Financia tus proyectos personales y familiares con cuotas accesibles y plazos ajustados a ti.",
 		image: "/home/Home_1.png",
 		ctaText: "Ver Créditos",
-		ctaLink: "/creditos",
+		ctaLink: "/creditos-personales",
 	},
 	{
 		id: 2,
@@ -37,7 +37,7 @@ export const heroSlides = [
 			"Aprovecha tasas competitivas y programas de ahorro que te ayudan a alcanzar tus objetivos.",
 		image: "/home/Home_2.png",
 		ctaText: "Ver Ahorros",
-		ctaLink: "/ahorros",
+		ctaLink: "/ahorros-libre",
 	},
 	{
 		id: 3,
@@ -60,7 +60,7 @@ export const services = [
 			"Haz crecer tu dinero con tasas de interés competitivas y retiros flexibles.",
 		gradient: "from-emerald-500 to-emerald-600",
 		color: "emerald",
-		href: "/ahorros",
+		href: "/ahorros-libre",
 	},
 	{
 		icon: CreditCard,
@@ -69,7 +69,7 @@ export const services = [
 			"Financiamiento accesible para tus proyectos personales y empresariales.",
 		gradient: "from-yellow-500 to-yellow-600",
 		color: "yellow",
-		href: "/creditos",
+		href: "/creditos-personales",
 	},
 	{
 		icon: Home,
@@ -78,7 +78,7 @@ export const services = [
 			"Convierte el sueño de tu casa propia en realidad con nuestros planes flexibles.",
 		gradient: "from-emerald-600 to-teal-600",
 		color: "teal",
-		href: "/creditos",
+		href: "/creditos-hipotecarios",
 	},
 	{
 		icon: TrendingUp,
@@ -87,7 +87,7 @@ export const services = [
 			"Multiplica tu capital con opciones de inversión seguras y rentables.",
 		gradient: "from-yellow-600 to-orange-500",
 		color: "orange",
-		href: "/ahorros",
+		href: "/ahorros-plazo-fijo",
 	},
 	{
 		icon: Wallet,
@@ -105,7 +105,7 @@ export const services = [
 			"Soluciones de financiamiento colectivo para grupos solidarios.",
 		gradient: "from-orange-500 to-yellow-500",
 		color: "orange",
-		href: "/creditos",
+		href: "/creditos-empresariales",
 	},
 ];
 

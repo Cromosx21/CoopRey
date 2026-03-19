@@ -24,13 +24,13 @@ export default function Creditos() {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">
 						<motion.div
-							className="inline-flex items-center space-x-2 px-5 py-2 bg-emerald-50 rounded-full border border-emerald-100"
+							className="inline-flex items-center space-x-2 px-5 py-2 bg-primary/10 rounded-full border border-primary/20"
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6 }}
 						>
-							<creditosHeroData.badgeIcon className="w-4 h-4 text-emerald-600" />
-							<span className="text-emerald-700 text-sm font-medium">
+							<creditosHeroData.badgeIcon className="w-4 h-4 text-primary" />
+							<span className="text-primary text-sm font-medium">
 								{creditosHeroData.badge}
 							</span>
 						</motion.div>
@@ -42,7 +42,7 @@ export default function Creditos() {
 							transition={{ duration: 0.8, delay: 0.2 }}
 						>
 							{creditosHeroData.title}{" "}
-							<span className="bg-linear-to-r from-emerald-600 to-yellow-500 bg-clip-text text-transparent">
+							<span className="text-primary">
 								{creditosHeroData.titleHighlight}
 							</span>{" "}
 							{creditosHeroData.titleSuffix}

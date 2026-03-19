@@ -17,7 +17,7 @@ export function StatsSection() {
 				>
 					<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
 						Números que
-						<span className="block mt-2 bg-linear-to-r from-emerald-600 to-yellow-500 bg-clip-text text-transparent">
+						<span className="block mt-2 text-primary">
 							inspiran confianza
 						</span>
 					</h2>

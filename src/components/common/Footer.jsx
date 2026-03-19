@@ -12,16 +12,22 @@ import {
 
 const footerLinks = {
 	servicios: [
-		{ label: "Cuentas de Ahorro", href: "/ahorros" },
-		{ label: "Créditos", href: "/creditos" },
+		{ label: "Ahorro libre", href: "/ahorros-libre" },
+		{ label: "Plazo fijo", href: "/ahorros-plazo-fijo" },
+		{ label: "Créditos personales", href: "/creditos-personales" },
+		{ label: "Créditos hipotecarios", href: "/creditos-hipotecarios" },
+		{ label: "Tarifarios", href: "/tarifarios" },
 		{ label: "Beneficios al Socio", href: "/beneficios" },
 		{ label: "Requisitos", href: "/requisitos" },
 	],
 	empresa: [
-		{ label: "Sobre Nosotros", href: "/nosotros" },
+		{ label: "Nosotros", href: "/nosotros" },
+		{ label: "Misión, visión y valores", href: "/mision-vision-valores" },
+		{ label: "Compromiso social", href: "/compromiso-social" },
+		{ label: "Órgano de gobernanza", href: "/organo-gobernanza" },
+		{ label: "Nuestro equipo", href: "/nuestro-equipo" },
 		{ label: "Noticias", href: "/noticias" },
 		{ label: "Contacto", href: "/contacto" },
-		{ label: "Responsabilidad Social", href: "#" },
 	],
 	ayuda: [
 		{ label: "Libro de Reclamaciones", href: "/libro-reclamaciones" },
@@ -80,8 +86,9 @@ export default function Footer() {
 						</motion.div>
 
 						<p className="text-gray-400 leading-relaxed max-w-md">
-							Construyendo juntos un futuro financiero sólido y próspero. 
-							Cooperativa de Ahorro y Crédito Niño Rey de Huamanga - Ayacucho.
+							Construyendo juntos un futuro financiero sólido y
+							próspero. Cooperativa de Ahorro y Crédito Niño Rey
+							de Huamanga - Ayacucho.
 						</p>
 
 						{/* Contact Info */}
@@ -116,7 +123,9 @@ export default function Footer() {
 									<MapPin className="w-5 h-5" />
 								</div>
 								<span>
-									MZA. C LOTE. 07 URB. SECTOR EDUCACION (MERCADO NERY GARCIA) AYACUCHO - HUAMANGA – AYACUCHO
+									MZA. C LOTE. 07 URB. SECTOR EDUCACION
+									(MERCADO NERY GARCIA) AYACUCHO - HUAMANGA –
+									AYACUCHO
 								</span>
 							</motion.div>
 						</div>
