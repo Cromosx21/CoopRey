@@ -14,8 +14,9 @@ import LibroReclamaciones from "./pages/LibroReclamaciones.jsx";
 import EstadosFinancieros from "./pages/EstadosFinancieros.jsx";
 import DocumentosInstitucionales from "./pages/DocumentosInstitucionales.jsx";
 import Tarifarios from "./pages/Tarifarios.jsx";
+import PreguntasFrecuentes from "./pages/PreguntasFrecuentes.jsx";
 import Noticias from "./pages/Noticias.jsx";
-import Contacto from "./pages/Contacto.jsx";
+import Oficinas from "./pages/Contacto.jsx";
 import Login from "./pages/Login.jsx";
 
 export default function App() {
@@ -93,10 +94,14 @@ export default function App() {
 				return <EstadosFinancieros />;
 			case "/documentos-institucionales":
 				return <DocumentosInstitucionales />;
+			case "/preguntas-frecuentes":
+				return <PreguntasFrecuentes />;
 			case "/noticias":
 				return <Noticias />;
+			case "/oficinas":
+				return <Oficinas />;
 			case "/contacto":
-				return <Contacto />;
+				return <Oficinas />;
 			case "/login":
 				return <Login />;
 			default:

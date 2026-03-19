@@ -91,21 +91,25 @@ export default function Header() {
 				},
 				{ label: "Beneficios al Socio", href: "/beneficios" },
 				{ label: "Requisitos", href: "/requisitos" },
-				{ label: "Tarifarios", href: "/tarifarios" },
 			],
 		},
 		{
 			label: "Transparencia",
 			subItems: [
 				{ label: "Estados Financieros", href: "/estados-financieros" },
+				{ label: "Tarifarios", href: "/tarifarios" },
 				{
 					label: "Documentos Institucionales",
 					href: "/documentos-institucionales",
 				},
+				{
+					label: "Preguntas Frecuentes",
+					href: "/preguntas-frecuentes",
+				},
 			],
 		},
 		{ label: "Noticias", href: "/noticias" },
-		{ label: "Contacto", href: "/contacto" },
+		{ label: "Oficinas", href: "/oficinas" },
 	];
 
 	const toggleMobileMenu = (menuItem) => {

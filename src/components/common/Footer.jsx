@@ -16,7 +16,6 @@ const footerLinks = {
 		{ label: "Plazo fijo", href: "/ahorros-plazo-fijo" },
 		{ label: "Créditos personales", href: "/creditos-personales" },
 		{ label: "Créditos hipotecarios", href: "/creditos-hipotecarios" },
-		{ label: "Tarifarios", href: "/tarifarios" },
 		{ label: "Beneficios al Socio", href: "/beneficios" },
 		{ label: "Requisitos", href: "/requisitos" },
 	],
@@ -27,16 +26,17 @@ const footerLinks = {
 		{ label: "Órgano de gobernanza", href: "/organo-gobernanza" },
 		{ label: "Nuestro equipo", href: "/nuestro-equipo" },
 		{ label: "Noticias", href: "/noticias" },
-		{ label: "Contacto", href: "/contacto" },
+		{ label: "Oficinas", href: "/oficinas" },
 	],
 	ayuda: [
 		{ label: "Libro de Reclamaciones", href: "/libro-reclamaciones" },
 		{ label: "Estados Financieros", href: "/estados-financieros" },
+		{ label: "Tarifarios", href: "/tarifarios" },
 		{
 			label: "Documentos Institucionales",
 			href: "/documentos-institucionales",
 		},
-		{ label: "Preguntas Frecuentes", href: "#" },
+		{ label: "Preguntas Frecuentes", href: "/preguntas-frecuentes" },
 	],
 };
 
