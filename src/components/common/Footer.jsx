@@ -70,18 +70,11 @@ export default function Footer() {
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
 						>
-							<div className="w-12 h-12 bg-linear-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center transform rotate-6">
-								<span className="text-white font-bold text-xl transform -rotate-6">
-									NR
-								</span>
-							</div>
-							<div className="flex flex-col">
-								<span className="font-bold text-xl">
-									Niño Rey
-								</span>
-								<span className="text-sm text-gray-400">
-									Cooperativa de Ahorro y Crédito
-								</span>
+							<div className="max-w-xs">
+								<img
+									src="./images/LOGOTIPO_NEGATIVO_ESCUDO_VIVO.png"
+									alt="Logotipo Niño Rey"
+								/>
 							</div>
 						</motion.div>
 

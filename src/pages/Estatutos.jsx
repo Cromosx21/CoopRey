@@ -30,8 +30,7 @@ export default function Estatutos() {
 					}}
 				/>
 
-				{/* Gradient Overlay */}
-				<div className="absolute inset-0 z-1 bg-linear-to-br from-emerald-500/85 to-yellow-500/75 mix-blend-multiply" />
+				<div className="absolute inset-0 z-1 bg-primary/70 mix-blend-multiply" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">

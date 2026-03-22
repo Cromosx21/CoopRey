@@ -104,7 +104,7 @@ export default function CreditoProducto({ tipo = "personales" }) {
 					) : (
 						<div className="w-full h-full bg-gray-50" />
 					)}
-					<div className="absolute inset-0 bg-linear-to-b from-white via-white/90 to-white" />
+					<div className="absolute inset-0 bg-white/90" />
 				</div>
 
 				<div className="relative max-w-6xl mx-auto px-6 py-14">

@@ -60,8 +60,7 @@ export default function DocumentosInstitucionales() {
 					}}
 				/>
 
-				{/* Gradient Overlay */}
-				<div className="absolute inset-0 z-1 bg-linear-to-br from-emerald-500/85 to-yellow-500/75 mix-blend-multiply" />
+				<div className="absolute inset-0 z-1 bg-primary/70 mix-blend-multiply" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">
@@ -312,7 +311,7 @@ export default function DocumentosInstitucionales() {
 			<div className="py-20 md:py-24 bg-gray-50 relative overflow-hidden">
 				{/* Decorative Pattern */}
 				<div className="absolute inset-0 opacity-5 bg-[radial-gradient(#059669_1px,transparent_1px)] background-size[20px_20px]" />
-				
+
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="text-center mb-12">
 						<SectionHeading
@@ -328,33 +327,34 @@ export default function DocumentosInstitucionales() {
 								icon: Folder,
 								title: "Documentos Públicos",
 								desc: "Disponibles sin restricciones para consulta, descarga e impresión. Acceso libre.",
-								color: "emerald"
+								color: "emerald",
 							},
 							{
 								icon: Lock,
 								title: "Restringidos",
 								desc: "Requieren autenticación de usuario. Solicita acceso en atención al cliente.",
-								color: "yellow"
+								color: "yellow",
 							},
 							{
 								icon: Shield,
 								title: "Confidencialidad",
 								desc: "Información sensible protegida bajo estrictas políticas de privacidad.",
-								color: "blue"
+								color: "blue",
 							},
 							{
 								icon: RefreshCw,
 								title: "Actualización",
 								desc: "Revisión periódica. La fecha de última versión se indica en cada archivo.",
-								color: "purple"
-							}
+								color: "purple",
+							},
 						].map((item, idx) => {
 							const Icon = item.icon;
 							const colors = {
-								emerald: "bg-emerald-100 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white",
+								emerald:
+									"bg-emerald-100 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white",
 								yellow: "bg-yellow-100 text-yellow-600 group-hover:bg-yellow-500 group-hover:text-white",
 								blue: "bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white",
-								purple: "bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white"
+								purple: "bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white",
 							};
 
 							return (
@@ -366,7 +366,9 @@ export default function DocumentosInstitucionales() {
 									transition={{ delay: idx * 0.1 }}
 									viewport={{ once: true }}
 								>
-									<div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${colors[item.color]}`}>
+									<div
+										className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${colors[item.color]}`}
+									>
 										<Icon className="w-7 h-7" />
 									</div>
 									<h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-700 transition-colors">
@@ -385,7 +387,7 @@ export default function DocumentosInstitucionales() {
 			{/* Contacto para Solicitudes - Rediseñado */}
 			<div className="py-20 md:py-24 bg-white relative">
 				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-					<motion.div 
+					<motion.div
 						className="relative rounded-3xl overflow-hidden bg-linear-to-r from-emerald-900 to-emerald-800 text-white shadow-2xl"
 						initial={{ opacity: 0, scale: 0.95 }}
 						whileInView={{ opacity: 1, scale: 1 }}
@@ -401,7 +403,9 @@ export default function DocumentosInstitucionales() {
 									¿Necesitas acceso restringido?
 								</h3>
 								<p className="text-emerald-100 text-lg max-w-xl leading-relaxed">
-									Si eres socio activo y requieres consultar documentos protegidos, nuestro equipo está listo para asistirte.
+									Si eres socio activo y requieres consultar
+									documentos protegidos, nuestro equipo está
+									listo para asistirte.
 								</p>
 							</div>
 
@@ -415,7 +419,7 @@ export default function DocumentosInstitucionales() {
 									<Mail className="w-5 h-5" />
 									<span>Enviar Email</span>
 								</motion.a>
-								
+
 								<div className="flex gap-4">
 									<motion.a
 										href="#contacto"

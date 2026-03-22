@@ -3,7 +3,12 @@ import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import { Shield, Percent } from "lucide-react";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { productosAhorros, ahorrosHeroData, tasasAhorros, notasTasas } from "../data/ahorros.js";
+import {
+	productosAhorros,
+	ahorrosHeroData,
+	tasasAhorros,
+	notasTasas,
+} from "../data/ahorros.js";
 import AhorroProductCard from "../components/ahorros/AhorroProductCard.jsx";
 
 export default function Ahorros() {
@@ -19,7 +24,7 @@ export default function Ahorros() {
 							opacity: 0.2,
 						}}
 					/>
-					<div className="absolute inset-0 bg-linear-to-br from-emerald-500/50 via-blue-500/30 to-indigo-500/20 mix-blend-multiply" />
+					<div className="absolute inset-0 bg-primary/12 mix-blend-multiply" />
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -156,15 +161,30 @@ export default function Ahorros() {
 						<table className="w-full border-collapse">
 							<thead>
 								<tr className="bg-emerald-600">
-									<th className="text-left p-4 text-white font-bold">TIPO DE AHORRO</th>
-									<th className="text-center p-4 text-white font-bold">TREA %</th>
+									<th className="text-left p-4 text-white font-bold">
+										TIPO DE AHORRO
+									</th>
+									<th className="text-center p-4 text-white font-bold">
+										TREA %
+									</th>
 								</tr>
 							</thead>
 							<tbody>
 								{tasasAhorros.map((tasa, idx) => (
-									<tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-										<td className="p-4 text-gray-900 font-medium">{tasa.tipo}</td>
-										<td className="p-4 text-center text-gray-700 font-semibold">{tasa.trea}</td>
+									<tr
+										key={idx}
+										className={
+											idx % 2 === 0
+												? "bg-gray-50"
+												: "bg-white"
+										}
+									>
+										<td className="p-4 text-gray-900 font-medium">
+											{tasa.tipo}
+										</td>
+										<td className="p-4 text-center text-gray-700 font-semibold">
+											{tasa.trea}
+										</td>
 									</tr>
 								))}
 							</tbody>
@@ -173,7 +193,9 @@ export default function Ahorros() {
 
 					{/* Notas informativas */}
 					<div className="mt-12 bg-blue-50 rounded-2xl p-8 border border-blue-200">
-						<h3 className="text-xl font-bold text-gray-900 mb-4">Información Importante</h3>
+						<h3 className="text-xl font-bold text-gray-900 mb-4">
+							Información Importante
+						</h3>
 						<ul className="space-y-3 text-gray-700">
 							<li className="flex items-start">
 								<span className="text-emerald-600 mr-2">•</span>

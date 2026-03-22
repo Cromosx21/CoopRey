@@ -167,7 +167,7 @@ export default function Noticias() {
 
 									{/* Botón */}
 
-									<button className="w-full mt-4 px-4 py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all font-medium inline-flex items-center justify-center space-x-2 group/btn">
+									<button className="w-full mt-4 px-4 py-2.5 bg-linear-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all font-medium inline-flex items-center justify-center space-x-2 group/btn">
 
 										<span>Leer más</span>
 

@@ -15,11 +15,9 @@ export function NosotrosHero() {
 						opacity: 0.3,
 					}}
 				/>
-				{/* Máscara con degradado verde a amarillo con transparencia */}
-				<div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(16,185,129,0.6)_0%,rgba(34,197,94,0.4)_25%,rgba(134,239,172,0.3)_50%,rgba(250,204,21,0.4)_75%,rgba(253,224,71,0.3)_100%)] mix-blend-multiply" />
-				{/* Shapes animados */}
+				<div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
 				<motion.div
-					className="absolute -top-40 right-0 w-[500px] h-[500px] bg-linear-to-br from-emerald-200/40 to-yellow-200/40 rounded-full blur-3xl"
+					className="absolute -top-40 right-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl"
 					animate={{
 						scale: [1, 1.2, 1],
 						x: [0, 50, 0],
@@ -31,7 +29,7 @@ export function NosotrosHero() {
 					}}
 				/>
 				<motion.div
-					className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-linear-to-br from-yellow-200/30 to-emerald-200/30 rounded-full blur-3xl"
+					className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl"
 					animate={{
 						scale: [1, 1.3, 1],
 						x: [0, -30, 0],

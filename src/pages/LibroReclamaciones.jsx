@@ -141,7 +141,7 @@ export default function LibroReclamaciones() {
 	};
 
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-32 pb-16">
+		<div className="min-h-screen bg-linear-to-b from-gray-50 to-white pt-32 pb-16">
 			{/* Hero Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
 				<motion.div
@@ -273,7 +273,7 @@ export default function LibroReclamaciones() {
 								<motion.div
 									initial={{ opacity: 0, scale: 0.9 }}
 									animate={{ opacity: 1, scale: 1 }}
-									className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-8 mb-8 border border-emerald-200"
+									className="bg-linear-to-r from-emerald-50 to-green-50 rounded-xl p-8 mb-8 border border-emerald-200"
 								>
 									<div className="flex items-start space-x-4">
 										<div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center shrink-0">
@@ -481,7 +481,7 @@ export default function LibroReclamaciones() {
 									type="submit"
 									whileHover={{ scale: 1.02 }}
 									whileTap={{ scale: 0.98 }}
-									className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
+									className="w-full bg-linear-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
 								>
 									<Send className="w-5 h-5" />
 									<span>Registrar Reclamo</span>
@@ -533,7 +533,7 @@ export default function LibroReclamaciones() {
 									<motion.div
 										initial={{ opacity: 0, scale: 0.95 }}
 										animate={{ opacity: 1, scale: 1 }}
-										className="border border-gray-200 rounded-lg p-6 bg-gradient-to-br from-gray-50 to-white"
+										className="border border-gray-200 rounded-lg p-6 bg-linear-to-br from-gray-50 to-white"
 									>
 										<div className="flex items-start justify-between mb-6">
 											<div>
@@ -765,7 +765,7 @@ export default function LibroReclamaciones() {
 									initial={{ opacity: 0, y: 20 }}
 									whileInView={{ opacity: 1, y: 0 }}
 									viewport={{ once: true }}
-									className="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-8 mt-12 border border-emerald-200"
+									className="bg-linear-to-r from-emerald-50 to-green-50 rounded-xl p-8 mt-12 border border-emerald-200"
 								>
 									<h3 className="text-xl font-bold text-emerald-900 mb-4">
 										Información de la Cooperativa

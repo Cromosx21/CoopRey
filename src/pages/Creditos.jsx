@@ -3,7 +3,14 @@ import { CTASection } from "../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import { Percent, CheckCircle } from "lucide-react";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { tiposCreditos, pasos, creditosHeroData, tasasCreditos, tasaMoratoria, comisiones } from "../data/creditos.js";
+import {
+	tiposCreditos,
+	pasos,
+	creditosHeroData,
+	tasasCreditos,
+	tasaMoratoria,
+	comisiones,
+} from "../data/creditos.js";
 
 export default function Creditos() {
 	return (
@@ -18,7 +25,7 @@ export default function Creditos() {
 							opacity: 0.2,
 						}}
 					/>
-					<div className="absolute inset-0 bg-linear-to-br from-blue-500/50 via-indigo-500/30 to-violet-500/20 mix-blend-multiply" />
+					<div className="absolute inset-0 bg-primary/12 mix-blend-multiply" />
 				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -328,17 +335,36 @@ export default function Creditos() {
 						<table className="w-full border-collapse">
 							<thead>
 								<tr className="bg-emerald-600">
-									<th className="text-left p-4 text-white font-bold">PRODUCTO</th>
-									<th className="text-center p-4 text-white font-bold">TEA MÍN.</th>
-									<th className="text-center p-4 text-white font-bold">TEA MÁX.</th>
+									<th className="text-left p-4 text-white font-bold">
+										PRODUCTO
+									</th>
+									<th className="text-center p-4 text-white font-bold">
+										TEA MÍN.
+									</th>
+									<th className="text-center p-4 text-white font-bold">
+										TEA MÁX.
+									</th>
 								</tr>
 							</thead>
 							<tbody>
 								{tasasCreditos.map((tasa, idx) => (
-									<tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-										<td className="p-4 text-gray-900 font-medium">{tasa.producto}</td>
-										<td className="p-4 text-center text-gray-700">{tasa.teaMin}</td>
-										<td className="p-4 text-center text-gray-700">{tasa.teaMax}</td>
+									<tr
+										key={idx}
+										className={
+											idx % 2 === 0
+												? "bg-gray-50"
+												: "bg-white"
+										}
+									>
+										<td className="p-4 text-gray-900 font-medium">
+											{tasa.producto}
+										</td>
+										<td className="p-4 text-center text-gray-700">
+											{tasa.teaMin}
+										</td>
+										<td className="p-4 text-center text-gray-700">
+											{tasa.teaMax}
+										</td>
 									</tr>
 								))}
 							</tbody>
@@ -346,51 +372,74 @@ export default function Creditos() {
 					</div>
 
 					{/* Tasa Moratoria */}
-<div className="mt-10 text-gray-500 text-sm">
-  <p className="font-medium text-gray-600 mb-2">
-    Tasa de interés moratorio anual
-  </p>
+					<div className="mt-10 text-gray-500 text-sm">
+						<p className="font-medium text-gray-600 mb-2">
+							Tasa de interés moratorio anual
+						</p>
 
-  <div className="flex flex-col md:flex-row md:gap-6">
-    <p>
-      Interés moratorio anual: 
-      <span className="ml-1 text-gray-700">
-        {tasaMoratoria.interesMoratorioAnual}
-      </span>
-    </p>
+						<div className="flex flex-col md:flex-row md:gap-6">
+							<p>
+								Interés moratorio anual:
+								<span className="ml-1 text-gray-700">
+									{tasaMoratoria.interesMoratorioAnual}
+								</span>
+							</p>
 
-    <p>
-      Crédito negociado: 
-      <span className="ml-1 text-gray-700">
-        {tasaMoratoria.interesMoratorioNegociado}
-      </span>
-    </p>
-  </div>
+							<p>
+								Crédito negociado:
+								<span className="ml-1 text-gray-700">
+									{tasaMoratoria.interesMoratorioNegociado}
+								</span>
+							</p>
+						</div>
 
-  <p className="mt-2 text-xs text-gray-400 italic">
-    {tasaMoratoria.nota}
-  </p>
-</div>
+						<p className="mt-2 text-xs text-gray-400 italic">
+							{tasaMoratoria.nota}
+						</p>
+					</div>
 
 					{/* Tarifario de Comisiones */}
 					<div className="mt-12">
-						<h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Tarifario de Comisiones</h3>
-						<p className="text-center text-gray-600 mb-8">Vigente a partir del 12 de diciembre del 2024</p>
+						<h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+							Tarifario de Comisiones
+						</h3>
+						<p className="text-center text-gray-600 mb-8">
+							Vigente a partir del 12 de diciembre del 2024
+						</p>
 						<div className="overflow-x-auto">
 							<table className="w-full border-collapse">
 								<thead>
 									<tr className="bg-emerald-600">
-										<th className="text-left p-4 text-white font-bold">COMISIONES POR SERVICIOS</th>
-										<th className="text-center p-4 text-white font-bold">MONTO DE COMISIÓN</th>
-										<th className="text-center p-4 text-white font-bold">MOMENTO DE COBRO</th>
+										<th className="text-left p-4 text-white font-bold">
+											COMISIONES POR SERVICIOS
+										</th>
+										<th className="text-center p-4 text-white font-bold">
+											MONTO DE COMISIÓN
+										</th>
+										<th className="text-center p-4 text-white font-bold">
+											MOMENTO DE COBRO
+										</th>
 									</tr>
 								</thead>
 								<tbody>
 									{comisiones.map((com, idx) => (
-										<tr key={idx} className={idx % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-											<td className="p-4 text-gray-900 font-medium">{com.servicio}</td>
-											<td className="p-4 text-center text-gray-700 font-semibold">{com.monto}</td>
-											<td className="p-4 text-center text-gray-700">{com.momento}</td>
+										<tr
+											key={idx}
+											className={
+												idx % 2 === 0
+													? "bg-gray-50"
+													: "bg-white"
+											}
+										>
+											<td className="p-4 text-gray-900 font-medium">
+												{com.servicio}
+											</td>
+											<td className="p-4 text-center text-gray-700 font-semibold">
+												{com.monto}
+											</td>
+											<td className="p-4 text-center text-gray-700">
+												{com.momento}
+											</td>
 										</tr>
 									))}
 								</tbody>

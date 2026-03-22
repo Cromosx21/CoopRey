@@ -7,7 +7,7 @@ export default function OrganoGobernanza() {
 	const gobernanza = equipo.slice(0, 5);
 
 	return (
-		<section className="pt-32 pb-20 bg-linear-to-b from-gray-50 to-white">
+		<section className="pt-32 pb-20 bg-gray-50">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<motion.div
 					className="text-center max-w-3xl mx-auto mb-14"

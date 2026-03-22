@@ -37,8 +37,7 @@ export default function EstadosFinancieros() {
 					}}
 				/>
 
-				{/* Gradient Overlay */}
-				<div className="absolute inset-0 z-1 bg-linear-to-br from-emerald-500/85 to-yellow-500/75 mix-blend-multiply" />
+				<div className="absolute inset-0 z-1 bg-primary/70 mix-blend-multiply" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 					<div className="max-w-3xl mx-auto text-center space-y-6">
@@ -226,65 +225,83 @@ export default function EstadosFinancieros() {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 						{ratiosFinancieros.map((ratio, idx) => {
-                            // Extract numeric value safely
-                            // Handle cases where ratio.value might be undefined or not a string
-                            const rawValue = String(ratio.value || '');
-                            const numericValue = parseFloat(rawValue.replace(/[^0-9.]/g, '')) || 0;
-                            
-                            // Determine max value for calculation (approximate)
-                            const maxVal = rawValue.includes('%') ? 100 : (numericValue > 10 ? 100 : 5);
-                            const progress = Math.min((numericValue / maxVal) * 100, 100);
+							// Extract numeric value safely
+							// Handle cases where ratio.value might be undefined or not a string
+							const rawValue = String(ratio.value || "");
+							const numericValue =
+								parseFloat(rawValue.replace(/[^0-9.]/g, "")) ||
+								0;
 
-                            return (
-                                <motion.div
-                                    key={idx}
-                                    className="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:border-emerald-200 transition-all group relative overflow-hidden"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{
-                                        duration: 0.6,
-                                        delay: idx * 0.1,
-                                    }}
-                                    viewport={{ once: true }}
-                                >
-                                    {/* Decorative background blob */}
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-emerald-100 transition-colors" />
+							// Determine max value for calculation (approximate)
+							const maxVal = rawValue.includes("%")
+								? 100
+								: numericValue > 10
+									? 100
+									: 5;
+							const progress = Math.min(
+								(numericValue / maxVal) * 100,
+								100,
+							);
 
-                                    <div className="relative z-10">
-                                        <div className="flex justify-between items-start mb-4">
-                                            <h3 className="text-xl font-bold text-gray-800">
-                                                {ratio.ratio}
-                                            </h3>
-                                            <div className="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-100">
-                                                Meta: {ratio.target}
-                                            </div>
-                                        </div>
+							return (
+								<motion.div
+									key={idx}
+									className="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg hover:shadow-xl hover:border-emerald-200 transition-all group relative overflow-hidden"
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									transition={{
+										duration: 0.6,
+										delay: idx * 0.1,
+									}}
+									viewport={{ once: true }}
+								>
+									{/* Decorative background blob */}
+									<div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full blur-2xl -mr-16 -mt-16 group-hover:bg-emerald-100 transition-colors" />
 
-                                        <div className="flex items-end gap-2 mb-4">
-                                            <span className="text-4xl font-extrabold text-gray-900">
-                                                {ratio.value}
-                                            </span>
-                                        </div>
+									<div className="relative z-10">
+										<div className="flex justify-between items-start mb-4">
+											<h3 className="text-xl font-bold text-gray-800">
+												{ratio.ratio}
+											</h3>
+											<div className="bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-100">
+												Meta: {ratio.target}
+											</div>
+										</div>
 
-                                        {/* Progress Bar Visualization */}
-                                        <div className="w-full bg-gray-100 h-2 rounded-full mb-4 overflow-hidden">
-                                            <motion.div 
-                                                className="h-full bg-linear-to-r from-emerald-500 to-yellow-400 rounded-full"
-                                                initial={{ width: 0 }}
-                                                whileInView={{ width: `${progress}%` }}
-                                                transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                                                viewport={{ once: true }}
-                                            />
-                                        </div>
+										<div className="flex items-end gap-2 mb-4">
+											<span className="text-4xl font-extrabold text-gray-900">
+												{ratio.value}
+											</span>
+										</div>
 
-                                        <p className="text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
-                                            {/* Mock description since it's missing in data */}
-                                            Indicador estratégico que mide la capacidad de {ratio.ratio.toLowerCase()} para asegurar la estabilidad financiera.
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            );
-                        })}
+										{/* Progress Bar Visualization */}
+										<div className="w-full bg-gray-100 h-2 rounded-full mb-4 overflow-hidden">
+											<motion.div
+												className="h-full bg-linear-to-r from-emerald-500 to-yellow-400 rounded-full"
+												initial={{ width: 0 }}
+												whileInView={{
+													width: `${progress}%`,
+												}}
+												transition={{
+													duration: 1,
+													ease: "easeOut",
+													delay: 0.2,
+												}}
+												viewport={{ once: true }}
+											/>
+										</div>
+
+										<p className="text-gray-500 text-sm leading-relaxed border-t border-gray-50 pt-4">
+											{/* Mock description since it's missing in data */}
+											Indicador estratégico que mide la
+											capacidad de{" "}
+											{ratio.ratio.toLowerCase()} para
+											asegurar la estabilidad financiera.
+										</p>
+									</div>
+								</motion.div>
+							);
+						})}
 					</div>
 				</div>
 			</div>
@@ -322,15 +339,23 @@ export default function EstadosFinancieros() {
 											</div>
 											<span className="text-sm font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
 												{/* Mock data since monto is missing */}
-												S/. {(item.value * 150000).toLocaleString()}
+												S/.{" "}
+												{(
+													item.value * 150000
+												).toLocaleString()}
 											</span>
 										</div>
 										<div className="w-full bg-gray-100 rounded-full h-3 overflow-hidden">
 											<motion.div
 												className="bg-linear-to-r from-emerald-500 to-emerald-400 h-full rounded-full"
 												initial={{ width: 0 }}
-												whileInView={{ width: `${item.value}%` }}
-												transition={{ duration: 1, delay: 0.2 }}
+												whileInView={{
+													width: `${item.value}%`,
+												}}
+												transition={{
+													duration: 1,
+													delay: 0.2,
+												}}
 												viewport={{ once: true }}
 											/>
 										</div>
@@ -374,8 +399,13 @@ export default function EstadosFinancieros() {
 											<motion.div
 												className="bg-linear-to-r from-yellow-500 to-yellow-400 h-full rounded-full"
 												initial={{ width: 0 }}
-												whileInView={{ width: `${item.value}%` }}
-												transition={{ duration: 1, delay: 0.2 }}
+												whileInView={{
+													width: `${item.value}%`,
+												}}
+												transition={{
+													duration: 1,
+													delay: 0.2,
+												}}
 												viewport={{ once: true }}
 											/>
 										</div>
@@ -404,7 +434,9 @@ export default function EstadosFinancieros() {
 									Auditoría y Verificación
 								</h3>
 								<p className="text-emerald-100 max-w-2xl mx-auto text-lg">
-									Garantizamos la integridad de nuestra información financiera a través de múltiples niveles de control.
+									Garantizamos la integridad de nuestra
+									información financiera a través de múltiples
+									niveles de control.
 								</p>
 							</div>
 
@@ -413,18 +445,18 @@ export default function EstadosFinancieros() {
 									{
 										icon: FileSearch,
 										title: "Auditoría Externa",
-										desc: "Auditados anualmente por firmas independientes certificadas bajo estándares internacionales."
+										desc: "Auditados anualmente por firmas independientes certificadas bajo estándares internacionales.",
 									},
 									{
 										icon: CheckCircle,
 										title: "Aprobación Interna",
-										desc: "Revisión exhaustiva y aprobación por parte de la Junta Directiva y comités de vigilancia."
+										desc: "Revisión exhaustiva y aprobación por parte de la Junta Directiva y comités de vigilancia.",
 									},
 									{
 										icon: Landmark,
 										title: "Control Estatal",
-										desc: "Supervisión constante y reporte a la Superintendencia de Economía Solidaria."
-									}
+										desc: "Supervisión constante y reporte a la Superintendencia de Economía Solidaria.",
+									},
 								].map((item, idx) => {
 									const Icon = item.icon;
 									return (
@@ -438,7 +470,9 @@ export default function EstadosFinancieros() {
 										>
 											<div className="flex items-center space-x-3 mb-4">
 												<Icon className="w-6 h-6 text-yellow-300" />
-												<h4 className="font-bold text-lg">{item.title}</h4>
+												<h4 className="font-bold text-lg">
+													{item.title}
+												</h4>
 											</div>
 											<p className="text-emerald-50 text-sm leading-relaxed">
 												{item.desc}
