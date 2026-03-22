@@ -7,20 +7,24 @@ export default function PreguntasFrecuentes() {
 	const faqs = [
 		{
 			question: "¿Cómo puedo abrir una cuenta de ahorros?",
-			answer: "Puedes acercarte a cualquiera de nuestras oficinas con tu DNI vigente. Si deseas, revisa primero la sección de requisitos para conocer la documentación solicitada.",
+			answer:
+				"Puedes acercarte a cualquiera de nuestras oficinas con tu DNI vigente. Si deseas, revisa primero la sección de requisitos para conocer la documentación solicitada."
 		},
 		{
 			question: "¿Cuáles son los horarios de atención?",
-			answer: "Atendemos de lunes a viernes en el horario publicado en la sección de Oficinas. Los horarios pueden variar por agencia.",
+			answer:
+				"Atendemos de lunes a viernes en el horario publicado en la sección de Oficinas. Los horarios pueden variar por agencia."
 		},
 		{
 			question: "¿Dónde consulto tasas y comisiones vigentes?",
-			answer: "Las tasas y comisiones se encuentran en la página de Transparencia, en la sección de Tarifarios.",
+			answer:
+				"Las tasas y comisiones se encuentran en la página de Transparencia, en la sección de Tarifarios."
 		},
 		{
 			question: "¿Cómo presento un reclamo o queja?",
-			answer: "Puedes registrar tu solicitud en el Libro de Reclamaciones desde la web o hacerlo de manera presencial en nuestras oficinas.",
-		},
+			answer:
+				"Puedes registrar tu solicitud en el Libro de Reclamaciones desde la web o hacerlo de manera presencial en nuestras oficinas."
+		}
 	];
 
 	const [openIndex, setOpenIndex] = useState(0);
@@ -77,14 +81,8 @@ export default function PreguntasFrecuentes() {
 									<AnimatePresence>
 										{isOpen && (
 											<motion.div
-												initial={{
-													height: 0,
-													opacity: 0,
-												}}
-												animate={{
-													height: "auto",
-													opacity: 1,
-												}}
+												initial={{ height: 0, opacity: 0 }}
+												animate={{ height: "auto", opacity: 1 }}
 												exit={{ height: 0, opacity: 0 }}
 												transition={{ duration: 0.25 }}
 												className="px-6 pb-6"

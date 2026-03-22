@@ -7,7 +7,7 @@ import { sedes } from "../data/contacto";
 const getMapsUrl = (direccion) => {
 	if (!direccion) return "https://www.google.com/maps";
 	return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-		direccion,
+		direccion
 	)}`;
 };
 
@@ -46,8 +46,7 @@ export default function Oficinas() {
 										<span>Oficina principal</span>
 									</div>
 									<h2 className="mt-4 text-2xl sm:text-3xl font-bold text-gray-900">
-										{sedePrincipal?.nombre ||
-											"Sede principal"}
+										{sedePrincipal?.nombre || "Sede principal"}
 									</h2>
 									<p className="mt-2 text-gray-600">
 										{sedePrincipal?.tipo ||
@@ -214,10 +213,7 @@ export default function Oficinas() {
 								initial={{ opacity: 0, y: 12 }}
 								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
-								transition={{
-									duration: 0.35,
-									delay: index * 0.04,
-								}}
+								transition={{ duration: 0.35, delay: index * 0.04 }}
 							>
 								<div className="flex items-start justify-between gap-4">
 									<div>
