@@ -144,13 +144,13 @@ export const equipo = [
 		description:
 			"Vocal del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
 	},
-	{
+	/* {
 		name: "MIGUEL ARTURO JIMENEZ BRAVO",
 		role: "ASESOR LEGAL",
 		image: "/images/consejo/MIGUEL ARTURO JIMENEZ BRAVO - ASESOR LEGAL.jpg",
 		description:
 			"Asesor legal del primer Consejo de Administración, aportó su experiencia en materia legal para el desarrollo de la cooperativa.",
-	},
+	}, */
 	{
 		name: "ANGIE MALDONADO VELENZUELA ",
 		role: "ASISTENTE CONTABLE",
@@ -205,22 +205,22 @@ export const equipoPorAgencia = [
 				name: "CAMILO BENITO ÑACCHA CASAVERDE",
 				role: "ASESOR LEGAL INTERNO",
 			},
-			{ id: "dir-7", name: "JHOANA TOTOCAYO HUAYNA", role: "CONTADORA" },
-			{
+/* 			{ id: "dir-7", name: "JHOANA TOTOCAYO HUAYNA", role: "CONTADORA" },
+ */			/* {
 				id: "dir-8",
 				name: "MELANIA CHOQQUE MAMANI",
 				role: "ASISTENTE CONTABLE",
-			},
-			{
+			}, */
+			/* {
 				id: "dir-9",
 				name: "ELVIS PAQUIYAURI DIAZ",
 				role: "UNIDAD DE RIESGOS",
-			},
-			{
+			}, */
+			/* {
 				id: "dir-10",
 				name: "YSAEL ELIAS GUTIERREZ QUISPE",
 				role: "AUDITOR INTERNO",
-			},
+			}, */
 			{
 				id: "dir-11",
 				name: "EDERSON CISNEROS RODRIGUEZ",
