@@ -119,7 +119,7 @@ export const equipo = [
 	{
 		name: "Edgard Maldonado Córdova",
 		role: "Presidente del Consejo de Administración",
-		image: "/images/consejo/Edgard Maldonado Córdova Presidente del Consejo de Administración.jpeg",
+		image: "/images/consejo/Edgard_Maldonado_Cordova_Presidente_Consejo_Administracion.jpeg",
 		description:
 			"Presidente del primer Consejo de Administración instalado el 17 de setiembre de 2015. Responsable de dirigir la cooperativa en sus inicios.",
 	},
@@ -205,12 +205,12 @@ export const equipoPorAgencia = [
 				name: "CAMILO BENITO ÑACCHA CASAVERDE",
 				role: "ASESOR LEGAL INTERNO",
 			},
-/* 			{ id: "dir-7", name: "JHOANA TOTOCAYO HUAYNA", role: "CONTADORA" },
- */			/* {
-				id: "dir-8",
-				name: "MELANIA CHOQQUE MAMANI",
-				role: "ASISTENTE CONTABLE",
-			}, */
+			/* 			{ id: "dir-7", name: "JHOANA TOTOCAYO HUAYNA", role: "CONTADORA" },
+			 */			/* {
+						   id: "dir-8",
+						   name: "MELANIA CHOQQUE MAMANI",
+						   role: "ASISTENTE CONTABLE",
+					   }, */
 			/* {
 				id: "dir-9",
 				name: "ELVIS PAQUIYAURI DIAZ",
