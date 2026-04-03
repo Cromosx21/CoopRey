@@ -36,14 +36,23 @@ const footerLinks = {
 			label: "Documentos Institucionales",
 			href: "/documentos-institucionales",
 		},
+		{ label: "Educación Financiera", href: "/educacion-financiera" },
+		{ label: "Sanciones SBS", href: "/sanciones" },
 		{ label: "Preguntas Frecuentes", href: "/preguntas-frecuentes" },
 	],
 };
 
 const socialLinks = [
-	{ icon: Facebook, href: "https://www.facebook.com/CoopacNinoRey", label: "Facebook" },
-	{ icon: Instagram, href: "https://www.instagram.com/CoopacNinoRey", label: "Instagram" },
-	
+	{
+		icon: Facebook,
+		href: "https://www.facebook.com/CoopacNinoRey",
+		label: "Facebook",
+	},
+	{
+		icon: Instagram,
+		href: "https://www.instagram.com/CoopacNinoRey",
+		label: "Instagram",
+	},
 ];
 
 export default function Footer() {

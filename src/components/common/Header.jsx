@@ -103,6 +103,14 @@ export default function Header() {
 					href: "/documentos-institucionales",
 				},
 				{
+					label: "Educación Financiera",
+					href: "/educacion-financiera",
+				},
+				{
+					label: "Sanciones SBS",
+					href: "/sanciones",
+				},
+				{
 					label: "Preguntas Frecuentes",
 					href: "/preguntas-frecuentes",
 				},

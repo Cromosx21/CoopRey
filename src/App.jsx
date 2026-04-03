@@ -15,6 +15,8 @@ import EstadosFinancieros from "./pages/EstadosFinancieros.jsx";
 import DocumentosInstitucionales from "./pages/DocumentosInstitucionales.jsx";
 import Tarifarios from "./pages/Tarifarios.jsx";
 import PreguntasFrecuentes from "./pages/PreguntasFrecuentes.jsx";
+import EducacionFinanciera from "./pages/EducacionFinanciera.jsx";
+import Sanciones from "./pages/Sanciones.jsx";
 import Noticias from "./pages/Noticias.jsx";
 import Oficinas from "./pages/Contacto.jsx";
 import Login from "./pages/Login.jsx";
@@ -94,6 +96,10 @@ export default function App() {
 				return <EstadosFinancieros />;
 			case "/documentos-institucionales":
 				return <DocumentosInstitucionales />;
+			case "/educacion-financiera":
+				return <EducacionFinanciera />;
+			case "/sanciones":
+				return <Sanciones />;
 			case "/preguntas-frecuentes":
 				return <PreguntasFrecuentes />;
 			case "/noticias":
