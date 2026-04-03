@@ -148,6 +148,11 @@ export default function NuestroEquipo() {
 														alt={member.name}
 														className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
 														loading="lazy"
+														decoding="async"
+														onError={(e) => {
+															e.currentTarget.style.display =
+																"none";
+														}}
 													/>
 												) : (
 													<div className="w-full h-full flex items-center justify-center bg-primary/5">

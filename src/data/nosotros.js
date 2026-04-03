@@ -97,21 +97,21 @@ export const compromisos = [
 		title: "Desarrollo de los socios",
 		description:
 			"Promovemos el desarrollo económico y social de nuestros socios y sus familias mediante servicios financieros cooperativos.",
-		image: "/images/Desarrollo.png",
+		image: "/images/Desarrollo.webp",
 	},
 	{
 		icon: GraduationCap,
 		title: "Educación cooperativa",
 		description:
 			"Impulsamos la educación y capacitación permanente para fortalecer la cultura financiera y cooperativa de nuestros socios.",
-		image: "/images/Educacion.png",
+		image: "/images/Educacion.webp",
 	},
 	{
 		icon: Handshake,
 		title: "Compromiso con la comunidad",
 		description:
 			"Contribuimos al desarrollo local brindando servicios financieros responsables en beneficio de la comunidad.",
-		image: "/images/Compromiso.png",
+		image: "/images/Compromiso.webp",
 	},
 ];
 
@@ -119,28 +119,28 @@ export const equipo = [
 	{
 		name: "Edgard Maldonado Córdova",
 		role: "Presidente del Consejo de Administración",
-		image: "/images/consejo/EDGAR_MALDONADO_CORDOVA.jpeg",
+		image: "/images/consejo/EDGAR_MALDONADO_CORDOVA.webp",
 		description:
 			"Presidente del primer Consejo de Administración instalado el 17 de setiembre de 2015. Responsable de dirigir la cooperativa en sus inicios.",
 	},
 	{
 		name: "Raúl Enrique Ricardo Anccasi Paucar",
 		role: "Vicepresidente",
-		image: "/images/consejo/RAUL_ENRIQUE_RICARDO_ANCCASI_PAUCAR.jpeg",
+		image: "/images/consejo/RAUL_ENRIQUE_RICARDO_ANCCASI_PAUCAR.webp",
 		description:
 			"Vicepresidente del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
 	},
 	{
 		name: "Diana Cabezas Loayza",
 		role: "Secretaria",
-		image: "/images/consejo/DIANA_CABEZAS_LOAYZA.jpeg",
+		image: "/images/consejo/DIANA_CABEZAS_LOAYZA.webp",
 		description:
 			"Secretaria del primer Consejo de Administración, encargada de la documentación institucional inicial.",
 	},
 	{
 		name: "René Valenzuela Maldonado",
 		role: "Vocal",
-		image: "/images/consejo/RENE_VALENZUELA_MALDONADO.jpeg",
+		image: "/images/consejo/RENE_VALENZUELA_MALDONADO.webp",
 		description:
 			"Vocal del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
 	},
@@ -154,7 +154,7 @@ export const equipo = [
 	{
 		name: "ANGIE MALDONADO VELENZUELA ",
 		role: "ASISTENTE CONTABLE",
-		image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.jpg",
+		image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.webp",
 		description:
 			"Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
 	},
@@ -182,37 +182,37 @@ export const equipoPorAgencia = [
 			{
 				id: "dir-1",
 				name: "EDGARD MALDONADO CORDOVA",
-				image: "/images/consejo/EDGAR_MALDONADO_CORDOVA.jpeg",
+				image: "/images/consejo/EDGAR_MALDONADO_CORDOVA.webp",
 				role: "GERENCIA",
 			},
 			{
 				id: "dir-2",
 				name: "KOPER AGUILAR HUILLCAHUAMAN",
-				image: "/images/consejo/KOPER_AGUILAR_HUILLCAHUAMAN.jpg",
+				image: "/images/consejo/KOPER_AGUILAR_HUILLCAHUAMAN.webp",
 				role: "SUB GERENCIA",
 			},
 			{
 				id: "dir-3",
 				name: "MARIBEL CALDERON ORDOÑEZ",
-				image: "/images/consejo/MARIBEL_CALDERON_ORDONEZ.jpg",
+				image: "/images/consejo/MARIBEL_CALDERON_ORDONEZ.webp",
 				role: "ASISTENTE DE GESTION",
 			},
 			{
 				id: "dir-4",
 				name: "ANGIE MALDONADO VELENZUELA",
-				image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.jpg",
+				image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.webp",
 				role: "JEFE DE FINANZAS",
 			},
 			// {
 			// 	id: "dir-5",
 			// 	name: "MIGUEL ARTURO JIMENEZ BRAVO",
-			// 	image: "/images/consejo/MIGUEL_ARTURO_JIMENEZ_BRAVO.jpg",
+			// 	image: "/images/consejo/MIGUEL_ARTURO_JIMENEZ_BRAVO.webp",
 			// 	role: "ASESOR LEGAL EXTERNO",
 			// },
 			{
 				id: "dir-6",
 				name: "CAMILO BENITO ÑACCHA CASAVERDE",
-				image: "/images/consejo/CAMILO_BENITO_NACCHA_CASAVERDE.jpg",
+				image: "/images/consejo/CAMILO_BENITO_NACCHA_CASAVERDE.webp",
 				role: "ASESOR LEGAL INTERNO",
 			},
 			/* 			{ id: "dir-7", name: "JHOANA TOTOCAYO HUAYNA", role: "CONTADORA" },
@@ -234,7 +234,7 @@ export const equipoPorAgencia = [
 			{
 				id: "dir-11",
 				name: "EDERSON CISNEROS RODRIGUEZ",
-				image: "/images/consejo/EDERSON_CISNEROS_RODRIGUEZ.jpg",
+				image: "/images/consejo/EDERSON_CISNEROS_RODRIGUEZ.webp",
 				role: "IMAGEN INSTITUCIONAL",
 			},
 		],
@@ -246,79 +246,79 @@ export const equipoPorAgencia = [
 			{
 				id: "op-1",
 				name: "GYINA NAYDA YUCRA CHAMBI",
-				image: "/images/Personal/Principal/GYINA_NAYDA_YUCRA_CHAMBI.jpg",
+				image: "/images/Personal/Principal/GYINA_NAYDA_YUCRA_CHAMBI.webp",
 				role: "OPERACIONES CAJA",
 			},
 			{
 				id: "op-2",
 				name: "ROY ANTHONY CENTENO ORÉ",
-				image: "/images/Personal/Principal/ROY_ANTHONY_CENTENO_ORE.jpg",
+				image: "/images/Personal/Principal/ROY_ANTHONY_CENTENO_ORE.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-3",
 				name: "ANABEL ANTUANEL RUIZ CHACHAYMA",
-				image: "/images/Personal/Principal/ANABEL_ANTUANEL_RUIZ_CHACHAYMA.jpg",
+				image: "/images/Personal/Principal/ANABEL_ANTUANEL_RUIZ_CHACHAYMA.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-4",
 				name: "EDWIN ELMER LEON MOLINA",
-				image: "/images/Personal/Principal/EDWIN_ELMER_LEON_MOLINA.jpg",
+				image: "/images/Personal/Principal/EDWIN_ELMER_LEON_MOLINA.webp",
 				role: "GESTOR DE RECUPERACIONES",
 			},
 			{
 				id: "op-5",
 				name: "SANDIVEL QUISPE GUTIERREZ",
-				image: "/images/Personal/Principal/SANDIVEL_QUISPE_GUTIERREZ.jpg",
+				image: "/images/Personal/Principal/SANDIVEL_QUISPE_GUTIERREZ.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-6",
 				name: "YHELSIN LAINES GUILLEN",
-				image: "/images/Personal/Principal/YHELSIN_LAINES_GUILLEN.jpg",
+				image: "/images/Personal/Principal/YHELSIN_LAINES_GUILLEN.webp",
 				role: "GESTOR DE RECUPERACIONES",
 			},
 			{
 				id: "op-7",
 				name: "DELIA VILMA QUISPE TACURI",
-				image: "/images/Personal/Principal/DELIA_VILMA_QUISPE_TACURI.jpg",
+				image: "/images/Personal/Principal/DELIA_VILMA_QUISPE_TACURI.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-8",
 				name: "JACINTO CESAR BAUTISTA LLACTAHUAMAN",
-				image: "/images/Personal/Principal/JACINTO_CESAR_BAUTISTA_LLACTAHUAMAN.jpg",
+				image: "/images/Personal/Principal/JACINTO_CESAR_BAUTISTA_LLACTAHUAMAN.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-9",
 				name: "HENRY FLORIANO RAMIREZ ALMEIDA",
-				image: "/images/Personal/Principal/HENRY_FLORIANO_RAMIREZ_ALMEIDA.jpg",
+				image: "/images/Personal/Principal/HENRY_FLORIANO_RAMIREZ_ALMEIDA.webp",
 				role: "ADMINISTRADOR/ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-10",
 				name: "JOAQUIN HUAMAN VENTURA",
-				image: "/images/Personal/Principal/JOAQUIN_HUAMAN_VENTURA.jpg",
+				image: "/images/Personal/Principal/JOAQUIN_HUAMAN_VENTURA.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-11",
 				name: "ROSALINA CONDORI FARFAN",
-				image: "/images/Personal/Principal/ROSALINA_CONDORI_FARFAN.jpg",
+				image: "/images/Personal/Principal/ROSALINA_CONDORI_FARFAN.webp",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-12",
 				name: "VILMA MALDONADO CORDOVA",
-				image: "/images/Personal/Principal/VILMA_MALDONADO_CORDOVA.jpg",
+				image: "/images/Personal/Principal/VILMA_MALDONADO_CORDOVA.webp",
 				role: "SUPERVISOR DE CREDITOS",
 			},
 			{
 				id: "op-13",
 				name: "GLICERIO MALDONADO CORDOVA",
-				image: "/images/Personal/Principal/GLICERIO_MALDONADO_CORDOVA.jpg",
+				image: "/images/Personal/Principal/GLICERIO_MALDONADO_CORDOVA.webp",
 				role: "PERSONAL DE SEGURIDAD",
 			},
 		],

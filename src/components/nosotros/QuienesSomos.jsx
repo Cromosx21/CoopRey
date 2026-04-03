@@ -90,9 +90,11 @@ export function QuienesSomos() {
 							{/* Main Image */}
 							<div className="relative rounded-[40%_60%_60%_40%/60%_40%_40%_60%] overflow-hidden">
 								<img
-									src="/images/reunion.png"
+									src="/images/reunion.webp"
 									alt="Equipo profesional de la cooperativa"
 									className="w-full h-[600px] object-cover"
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 

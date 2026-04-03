@@ -80,8 +80,10 @@ export default function Footer() {
 						>
 							<div className="max-w-xs">
 								<img
-									src="/images/LOGOTIPO_NEGATIVO_ESCUDO_VIVO.png"
+									src="/images/LOGOTIPO_NEGATIVO_ESCUDO_VIVO.webp"
 									alt="Logotipo Niño Rey"
+									loading="lazy"
+									decoding="async"
 								/>
 							</div>
 						</motion.div>

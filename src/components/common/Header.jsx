@@ -236,9 +236,12 @@ export default function Header() {
 					>
 						<div className="h-full w-fit flex items-center justify-center">
 							<img
-								src="/images/LOGOTIPO_NIÑO_REY_VARIACIÓN_1.png"
+								src="/images/LOGOTIPO_NIÑO_REY_VARIACIÓN_1.webp"
 								alt="Logo"
 								className="h-full"
+								loading="eager"
+								fetchPriority="high"
+								decoding="async"
 							/>
 						</div>
 					</motion.a>

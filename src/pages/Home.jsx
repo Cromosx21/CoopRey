@@ -21,7 +21,12 @@ function SbsRibbon() {
 						</div>
 					</div>
 					<div className="max-w-3xs">
-						<img src="./images/SBS_logotipo.png" alt="Imagen de la SuperIntendencia de Bancas y Seguros" />
+						<img
+							src="/images/SBS_logotipo.webp"
+							alt="Imagen de la SuperIntendencia de Bancas y Seguros"
+							loading="lazy"
+							decoding="async"
+						/>
 					</div>
 					<div className="text-gray-700 text-sm">
 						Somos seguros y confiables
