@@ -24,20 +24,20 @@ export const heroSlides = [
 		titleHighlight: "para tus metas",
 		description:
 			"Financia tus proyectos personales y familiares con cuotas accesibles y plazos ajustados a ti.",
-		image: "/home/Home_1.png",
+		image: "/home/Banner_1.png",
 		ctaText: "Ver Créditos",
 		ctaLink: "/creditos-personales",
 	},
 	{
 		id: 2,
-		badge: "Ahorro Programado",
-		title: "Haz crecer",
-		titleHighlight: "tus ahorros",
+		badge: "Promoción de Créditos",
+		title: "Créditos flexibles",
+		titleHighlight: "para tus metas",
 		description:
-			"Aprovecha tasas competitivas y programas de ahorro que te ayudan a alcanzar tus objetivos.",
-		image: "/home/Home_2.png",
-		ctaText: "Ver Ahorros",
-		ctaLink: "/ahorros-libre",
+			"Financia tus proyectos personales y familiares con cuotas accesibles y plazos ajustados a ti.",
+		image: "/home/Home_1.png",
+		ctaText: "Ver Créditos",
+		ctaLink: "/creditos-personales",
 	},
 	{
 		id: 3,
@@ -47,6 +47,17 @@ export const heroSlides = [
 		description:
 			"Accede a beneficios exclusivos, programas sociales y oportunidades para ti y tu familia.",
 		image: "/home/Home_3.png",
+		ctaText: "Conoce los Beneficios",
+		ctaLink: "/beneficios",
+	},
+	{
+		id: 4,
+		badge: "Beneficios al Socio",
+		title: "Más que una cuenta,",
+		titleHighlight: "una comunidad",
+		description:
+			"Accede a beneficios exclusivos, programas sociales y oportunidades para ti y tu familia.",
+		image: "/home/Banner_2.png",
 		ctaText: "Conoce los Beneficios",
 		ctaLink: "/beneficios",
 	},

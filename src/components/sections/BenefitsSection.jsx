@@ -69,7 +69,7 @@ export function BenefitsSection() {
 
 							<div className="relative rounded-[40%_60%_60%_40%/60%_40%_40%_60%] overflow-hidden">
 								<img
-									src="/images/FOTO CON TODO EL PERSONAL.jpg"
+									src="/images/Atencion.png"
 									alt="Profesional joven confiada"
 									className="w-full h-150 object-cover"
 								/>

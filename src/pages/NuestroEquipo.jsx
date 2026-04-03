@@ -132,7 +132,7 @@ export default function NuestroEquipo() {
 									{grupo.miembros.map((member, index) => (
 										<motion.div
 											key={member.id}
-											className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+											className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-shadow duration-300 hover:shadow-xl"
 											initial={{ opacity: 0, y: 20 }}
 											whileInView={{ opacity: 1, y: 0 }}
 											viewport={{ once: true }}
@@ -141,22 +141,35 @@ export default function NuestroEquipo() {
 												delay: index * 0.06,
 											}}
 										>
-											<div className="relative h-24 bg-primary/5 flex items-center justify-center">
-												<div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-													<div className="text-primary font-bold">
-														{getInitials(
-															member.name,
-														)}
+											<div className="relative w-full h-80 sm:h-96 bg-gray-100">
+												{member.image ? (
+													<img
+														src={member.image}
+														alt={member.name}
+														className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+														loading="lazy"
+													/>
+												) : (
+													<div className="w-full h-full flex items-center justify-center bg-primary/5">
+														<div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
+															<div className="text-primary font-bold text-lg">
+																{getInitials(
+																	member.name,
+																)}
+															</div>
+														</div>
+													</div>
+												)}
+
+												<div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
+												<div className="absolute inset-x-0 bottom-0 p-5 transition-transform duration-300 group-hover:-translate-y-1">
+													<div className="text-white font-bold text-base leading-tight">
+														{member.name}
+													</div>
+													<div className="mt-1 text-white/90 text-sm font-medium leading-snug">
+														{member.role}
 													</div>
 												</div>
-											</div>
-											<div className="p-6">
-												<h3 className="text-lg font-bold text-gray-900 mb-1">
-													{member.name}
-												</h3>
-												<p className="text-primary font-medium">
-													{member.role}
-												</p>
 											</div>
 										</motion.div>
 									))}

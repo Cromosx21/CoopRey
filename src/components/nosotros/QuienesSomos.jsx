@@ -90,7 +90,7 @@ export function QuienesSomos() {
 							{/* Main Image */}
 							<div className="relative rounded-[40%_60%_60%_40%/60%_40%_40%_60%] overflow-hidden">
 								<img
-									src="https://images.unsplash.com/photo-1551135049-8a33b5883817?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBiYW5raW5nJTIwdGVhbSUyMG1lZXRpbmd8ZW58MXx8fHwxNzY5NzM1NjU3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+									src="/images/reunion.png"
 									alt="Equipo profesional de la cooperativa"
 									className="w-full h-[600px] object-cover"
 								/>

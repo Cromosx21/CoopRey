@@ -11,7 +11,7 @@ export function NosotrosHero() {
 				<div
 					className="absolute inset-0 bg-cover bg-center"
 					style={{
-						backgroundImage: `url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop')`,
+						backgroundImage: `url('/images/Nosotros_hero_section.png')`,
 						opacity: 0.3,
 					}}
 				/>

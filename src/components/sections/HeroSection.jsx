@@ -76,7 +76,7 @@ export function HeroSection() {
 		>
 			<div
 				ref={emblaRef}
-				className="relative w-full h-[520px] md:h-[640px] lg:h-[765px]"
+				className="relative w-full h-[520px] md:h-[640px]"
 			>
 				<div className="flex h-full">
 					{heroSlides.map((slide, index) => (
