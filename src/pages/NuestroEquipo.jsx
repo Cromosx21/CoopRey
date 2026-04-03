@@ -146,7 +146,7 @@ export default function NuestroEquipo() {
 													<img
 														src={member.image}
 														alt={member.name}
-														className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.06]"
+														className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.06]"
 														loading="lazy"
 														decoding="async"
 														onError={(e) => {

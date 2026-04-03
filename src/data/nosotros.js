@@ -118,59 +118,38 @@ export const compromisos = [
 export const equipo = [
 	{
 		name: "Edgard Maldonado Córdova",
-		role: "Presidente del Consejo de Administración",
+		role: "Gerente General",
 		image: "/images/consejo/EDGAR_MALDONADO_CORDOVA.webp",
 		description:
-			"Presidente del primer Consejo de Administración instalado el 17 de setiembre de 2015. Responsable de dirigir la cooperativa en sus inicios.",
+			"Responsable de la dirección estratégica de la organización. Lidera la toma de decisiones, supervisa todas las áreas operativas y garantiza el cumplimiento de los objetivos institucionales.",
 	},
 	{
-		name: "Raúl Enrique Ricardo Anccasi Paucar",
-		role: "Vicepresidente",
-		image: "/images/consejo/RAUL_ENRIQUE_RICARDO_ANCCASI_PAUCAR.webp",
+		name: "Koper Aguilar Huillcahuaman",
+		role: "Sub Gerente",
+		image: "/images/consejo/KOPER_AGUILAR_HUILLCAHUAMAN.webp",
 		description:
-			"Vicepresidente del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
+			"Encargado de apoyar en la gestión administrativa y operativa. Coordina las actividades internas y asegura la correcta ejecución de los planes establecidos por la gerencia.",
 	},
 	{
-		name: "Diana Cabezas Loayza",
-		role: "Secretaria",
-		image: "/images/consejo/DIANA_CABEZAS_LOAYZA.webp",
-		description:
-			"Secretaria del primer Consejo de Administración, encargada de la documentación institucional inicial.",
-	},
-	{
-		name: "René Valenzuela Maldonado",
-		role: "Vocal",
-		image: "/images/consejo/RENE_VALENZUELA_MALDONADO.webp",
-		description:
-			"Vocal del primer Consejo de Administración, contribuyó al establecimiento de las bases institucionales de la cooperativa.",
-	},
-	/* {
-		name: "MIGUEL ARTURO JIMENEZ BRAVO",
-		role: "ASESOR LEGAL",
-		image: "/images/consejo/MIGUEL ARTURO JIMENEZ BRAVO - ASESOR LEGAL.jpg",
-		description:
-			"Asesor legal del primer Consejo de Administración, aportó su experiencia en materia legal para el desarrollo de la cooperativa.",
-	}, */
-	{
-		name: "ANGIE MALDONADO VELENZUELA ",
-		role: "ASISTENTE CONTABLE",
+		name: "Angie Maldonado Valenzuela",
+		role: "Jefe de Finanzas",
 		image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.webp",
 		description:
-			"Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
+			"Responsable de la planificación financiera, control de presupuestos y gestión de recursos económicos. Garantiza la sostenibilidad financiera de la organización.",
 	},
 	{
-		name: "MARIBEL CALDERON ORDOÑEZ",
-		role: "ASISTENTE DE GERENCIA",
-		image: "/images/consejo/DEYSI STEPHANEI QUISPE GALLO - ASISTENTE DE GERENCIA.jpg",
+		name: "Camilo Benito Ñaccha Casaverde",
+		role: "Asesor Legal Interno",
+		image: "/images/consejo/CAMILO_BENITO_NACCHA_CASAVERDE.webp",
 		description:
-			"Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
+			"Brinda asesoría jurídica en temas legales y normativos. Supervisa el cumplimiento de las leyes vigentes y protege los intereses legales de la organización.",
 	},
 	{
-		name: "KOPER AGUILAR HUILLCAHUAMAN  ",
-		role: "SUB GERENCIA",
-		image: "/images/consejo/KOPER AGUILAR HUILLCAHUAMAN - SUB GERENCIA.jpg",
+		name: "Maribel Calderón Ordóñez",
+		role: "Asistente de Gestión",
+		image: "/images/consejo/MARIBEL_CALDERON_ORDONEZ.webp",
 		description:
-			"Asistente contable del primer Consejo de Administración, aportó su experiencia en materia contable para el desarrollo de la cooperativa.",
+			"Apoya en la organización administrativa, gestión documental y coordinación de actividades internas. Facilita la comunicación entre áreas y contribuye a la eficiencia operativa.",
 	},
 ];
 

@@ -201,26 +201,23 @@ export default function Header() {
 
 						<div className="flex items-center gap-3">
 							<a
-								href="#"
+								href="https://www.facebook.com/CoopacNinoRey"
+								target="_blanck"
 								aria-label="Facebook"
 								className="hover:text-white/90 transition-colors"
+								
 							>
 								<Facebook className="w-4 h-4" />
 							</a>
 							<a
-								href="#"
+								href="https://www.instagram.com/CoopacNinoRey"
+								target="_blanck"
 								aria-label="Instagram"
 								className="hover:text-white/90 transition-colors"
 							>
 								<Instagram className="w-4 h-4" />
 							</a>
-							<a
-								href="#"
-								aria-label="LinkedIn"
-								className="hover:text-white/90 transition-colors"
-							>
-								<Linkedin className="w-4 h-4" />
-							</a>
+							
 						</div>
 					</div>
 				</div>
@@ -236,7 +233,7 @@ export default function Header() {
 					>
 						<div className="h-full w-fit flex items-center justify-center">
 							<img
-								src="/images/LOGOTIPO_NIÑO_REY_VARIACIÓN_1.webp"
+								src="/images/logonav.webp"
 								alt="Logo"
 								className="h-full"
 								loading="eager"
