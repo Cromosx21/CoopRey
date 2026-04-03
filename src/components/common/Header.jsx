@@ -79,7 +79,7 @@ export default function Header() {
 					>
 						<div className="h-full w-fit flex items-center justify-center">
 							<img
-								src="/images/LOGOTIPO.png"
+								src="/images/LOGOTIPO_NIÑO_REY_VARIACIÓN_1.png"
 								alt="Logo"
 								className="h-full"
 							/>
