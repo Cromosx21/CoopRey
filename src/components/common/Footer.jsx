@@ -41,10 +41,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-	{ icon: Facebook, href: "#", label: "Facebook" },
-	{ icon: Instagram, href: "#", label: "Instagram" },
-	{ icon: Twitter, href: "#", label: "Twitter" },
-	{ icon: Linkedin, href: "#", label: "LinkedIn" },
+	{ icon: Facebook, href: "https://www.facebook.com/CoopacNinoRey", label: "Facebook" },
+	{ icon: Instagram, href: "https://www.instagram.com/CoopacNinoRey", label: "Instagram" },
+	
 ];
 
 export default function Footer() {
@@ -72,7 +71,7 @@ export default function Footer() {
 						>
 							<div className="max-w-xs">
 								<img
-									src="./images/LOGOTIPO_NEGATIVO_ESCUDO_VIVO.png"
+									src="/images/LOGOTIPO_NEGATIVO_ESCUDO_VIVO.png"
 									alt="Logotipo Niño Rey"
 								/>
 							</div>
@@ -135,6 +134,7 @@ export default function Footer() {
 										aria-label={social.label}
 										whileHover={{ scale: 1.1, rotate: 5 }}
 										whileTap={{ scale: 0.95 }}
+										target="_blanck"
 									>
 										<Icon className="w-5 h-5" />
 									</motion.a>

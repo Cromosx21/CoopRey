@@ -77,20 +77,12 @@ export default function Header() {
 						className="flex items-center space-x-3 shrink-0 cursor-pointer"
 						whileHover={{ scale: 1.02 }}
 					>
-						<div className="relative">
-							<div className="w-14 h-14 bg-linear-to-br from-emerald-500 to-yellow-400 rounded-2xl flex items-center justify-center transform rotate-6">
-								<span className="text-white font-bold text-2xl transform -rotate-6">
-									NR
-								</span>
-							</div>
-						</div>
-						<div className="flex flex-col">
-							<span className="font-bold text-xl text-gray-900 leading-tight">
-								Niño Rey
-							</span>
-							<span className="text-xs text-emerald-600 leading-tight">
-								Cooperativa de Ahorro
-							</span>
+						<div className="h-full w-fit flex items-center justify-center">
+							<img
+								src="/images/LOGOTIPO.png"
+								alt="Logo"
+								className="h-full"
+							/>
 						</div>
 					</motion.a>
 

@@ -13,7 +13,7 @@ export const estadosHeroData = {
 export const estadosFinancieros = [
 	{
 		id: 1,
-		año: 2024,
+		año: 2025,
 		disponible: true,
 		reportes: [
 			{
@@ -21,80 +21,30 @@ export const estadosFinancieros = [
 				descripcion:
 					"Estado de situación financiera al 31 de diciembre",
 				tamaño: "1.2 MB",
+				url: "#",
 			},
 			{
 				titulo: "Estado de Resultados",
 				descripcion: "Ingresos, gastos y utilidades del ejercicio",
 				tamaño: "0.9 MB",
+				url: "/images/reportes/2025/EEFF122025.pdf",
 			},
 			{
 				titulo: "Flujo de Caja",
 				descripcion: "Movimiento de recursos durante el período",
 				tamaño: "0.8 MB",
+				url: "#",
 			},
 			{
 				titulo: "Notas a los Estados",
 				descripcion: "Explicaciones y detalles de rubros principales",
 				tamaño: "1.5 MB",
+				url: "#",
 			},
 		],
 	},
-	{
-		id: 2,
-		año: 2023,
-		disponible: true,
-		reportes: [
-			{
-				titulo: "Balance General",
-				descripcion:
-					"Estado de situación financiera al 31 de diciembre",
-				tamaño: "1.1 MB",
-			},
-			{
-				titulo: "Estado de Resultados",
-				descripcion: "Ingresos, gastos y utilidades del ejercicio",
-				tamaño: "0.8 MB",
-			},
-			{
-				titulo: "Flujo de Caja",
-				descripcion: "Movimiento de recursos durante el período",
-				tamaño: "0.7 MB",
-			},
-			{
-				titulo: "Notas a los Estados",
-				descripcion: "Explicaciones y detalles de rubros principales",
-				tamaño: "1.3 MB",
-			},
-		],
-	},
-	{
-		id: 3,
-		año: 2022,
-		disponible: true,
-		reportes: [
-			{
-				titulo: "Balance General",
-				descripcion:
-					"Estado de situación financiera al 31 de diciembre",
-				tamaño: "1.0 MB",
-			},
-			{
-				titulo: "Estado de Resultados",
-				descripcion: "Ingresos, gastos y utilidades del ejercicio",
-				tamaño: "0.8 MB",
-			},
-			{
-				titulo: "Flujo de Caja",
-				descripcion: "Movimiento de recursos durante el período",
-				tamaño: "0.7 MB",
-			},
-			{
-				titulo: "Notas a los Estados",
-				descripcion: "Explicaciones y detalles de rubros principales",
-				tamaño: "1.2 MB",
-			},
-		],
-	},
+	
+	
 ];
 
 export const indicadoresFinancieros = [

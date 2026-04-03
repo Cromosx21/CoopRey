@@ -20,7 +20,7 @@ import {
 } from "../data/estadosFinancieros";
 
 export default function EstadosFinancieros() {
-	const [selectedYear, setSelectedYear] = useState(2024);
+	const [selectedYear, setSelectedYear] = useState(2025);
 
 	return (
 		<>
@@ -148,11 +148,10 @@ export default function EstadosFinancieros() {
 							<motion.button
 								key={item.año}
 								onClick={() => setSelectedYear(item.año)}
-								className={`px-6 py-3 rounded-lg font-semibold transition-all ${
-									selectedYear === item.año
+								className={`px-6 py-3 rounded-lg font-semibold transition-all ${selectedYear === item.año
 										? "bg-emerald-600 text-white shadow-lg"
 										: "bg-white text-gray-900 border border-gray-200 hover:border-emerald-200"
-								}`}
+									}`}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
 							>
@@ -194,15 +193,13 @@ export default function EstadosFinancieros() {
 										{reporte.descripcion}
 									</p>
 
-									<motion.a
-										href="#descargar"
-										className="inline-flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-emerald-600 to-emerald-700 text-white rounded-lg hover:from-emerald-700 hover:to-emerald-800 transition-all"
-										whileHover={{ scale: 1.05 }}
-										whileTap={{ scale: 0.95 }}
+									<motion.button
+										onClick={() => window.open(reporte.url, "_blank")}
+										className="inline-flex items-center space-x-2 px-4 py-2 bg-linear-to-r from-emerald-600 to-emerald-700 text-white rounded-lg"
 									>
 										<Download className="w-4 h-4" />
 										<span>Descargar</span>
-									</motion.a>
+									</motion.button>
 								</motion.div>
 							))}
 					</div>
