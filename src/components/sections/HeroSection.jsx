@@ -76,13 +76,13 @@ export function HeroSection() {
 		>
 			<div
 				ref={emblaRef}
-				className="relative w-full h-[520px] md:h-[640px]"
+				className="relative  "
 			>
-				<div className="flex h-full">
+				<div className="flex">
 					{heroSlides.map((slide, index) => (
 						<div
 							key={slide.id}
-							className="relative flex-[0_0_100%] w-full h-full"
+							className="relative flex-[0_0_100%] w-full h-[80vh]"
 						>
 							<motion.img
 								src={slide.image}

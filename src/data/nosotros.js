@@ -156,7 +156,7 @@ export const equipo = [
 export const equipoPorAgencia = [
 	{
 		id: "directorio-coopac-2026",
-		titulo: "Directorio de la COOPAC 2026",
+		titulo: "Directorio Administrativo",
 		miembros: [
 			{
 				id: "dir-1",
@@ -182,40 +182,20 @@ export const equipoPorAgencia = [
 				image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.webp",
 				role: "JEFE DE FINANZAS",
 			},
-			// {
-			// 	id: "dir-5",
-			// 	name: "MIGUEL ARTURO JIMENEZ BRAVO",
-			// 	image: "/images/consejo/MIGUEL_ARTURO_JIMENEZ_BRAVO.webp",
-			// 	role: "ASESOR LEGAL EXTERNO",
-			// },
+			
 			{
 				id: "dir-6",
 				name: "CAMILO BENITO ÑACCHA CASAVERDE",
 				image: "/images/consejo/CAMILO_BENITO_NACCHA_CASAVERDE.webp",
 				role: "ASESOR LEGAL INTERNO",
 			},
-			/* 			{ id: "dir-7", name: "JHOANA TOTOCAYO HUAYNA", role: "CONTADORA" },
-			 */ /* {
-				id: "dir-8",
-				name: "MELANIA CHOQQUE MAMANI",
-				role: "ASISTENTE CONTABLE",
-			}, */
+			
 			/* {
-				id: "dir-9",
-				name: "ELVIS PAQUIYAURI DIAZ",
-				role: "UNIDAD DE RIESGOS",
-			}, */
-			/* {
-				id: "dir-10",
-				name: "YSAEL ELIAS GUTIERREZ QUISPE",
-				role: "AUDITOR INTERNO",
-			}, */
-			{
 				id: "dir-11",
 				name: "EDERSON CISNEROS RODRIGUEZ",
 				image: "/images/consejo/EDERSON_CISNEROS_RODRIGUEZ.webp",
 				role: "IMAGEN INSTITUCIONAL",
-			},
+			}, */
 		],
 	},
 	{
@@ -231,13 +211,13 @@ export const equipoPorAgencia = [
 			{
 				id: "op-2",
 				name: "ROY ANTHONY CENTENO ORÉ",
-				image: "/images/Personal/Principal/ROY_ANTHONY_CENTENO_ORE.webp",
+				image: "",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
 				id: "op-3",
 				name: "ANABEL ANTUANEL RUIZ CHACHAYMA",
-				image: "/images/Personal/Principal/ANABEL_ANTUANEL_RUIZ_CHACHAYMA.webp",
+				image: "",
 				role: "ANALISTA DE CREDITOS",
 			},
 			{
@@ -297,7 +277,7 @@ export const equipoPorAgencia = [
 			{
 				id: "op-13",
 				name: "GLICERIO MALDONADO CORDOVA",
-				image: "/images/Personal/Principal/GLICERIO_MALDONADO_CORDOVA.webp",
+				image: "",
 				role: "PERSONAL DE SEGURIDAD",
 			},
 		],
