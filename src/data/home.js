@@ -25,6 +25,7 @@ export const heroSlides = [
 		description:
 			"Financia tus proyectos personales y familiares con cuotas accesibles y plazos ajustados a ti.",
 		image: "/home/Banner_1.png",
+		imgmobil: "/home/Mobil_1.png",
 		ctaText: "Ver Créditos",
 		ctaLink: "/creditos-personales",
 	},
@@ -36,6 +37,8 @@ export const heroSlides = [
 		description:
 			"Financia tus proyectos personales y familiares con cuotas accesibles y plazos ajustados a ti.",
 		image: "/home/Home_1.png",
+		imgmobil: "/home/Mobil_2.png",
+
 		ctaText: "Ver Créditos",
 		ctaLink: "/creditos-personales",
 	},
@@ -47,6 +50,8 @@ export const heroSlides = [
 		description:
 			"Accede a beneficios exclusivos, programas sociales y oportunidades para ti y tu familia.",
 		image: "/home/Home_3.png",
+		imgmobil: "/home/Mobil_3.png",
+
 		ctaText: "Conoce los Beneficios",
 		ctaLink: "/beneficios",
 	},
@@ -58,6 +63,8 @@ export const heroSlides = [
 		description:
 			"Accede a beneficios exclusivos, programas sociales y oportunidades para ti y tu familia.",
 		image: "/home/Banner_2.png",
+		imgmobil: "/home/Mobil_4.png",
+
 		ctaText: "Conoce los Beneficios",
 		ctaLink: "/beneficios",
 	},

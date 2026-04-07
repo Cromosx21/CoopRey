@@ -291,7 +291,7 @@ export default function CreditoProducto({ tipo = "personales" }) {
 									className={`border-b border-gray-100 ${
 										index % 2 === 0
 											? "bg-white"
-											: "bg-green-200"
+											: "bg-green-100"
 									}`}
 								>
 									<td className="p-4 text-gray-900 font-medium">

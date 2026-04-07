@@ -84,14 +84,17 @@ export function HeroSection() {
 							key={slide.id}
 							className="relative flex-[0_0_100%] w-full h-[80vh]"
 						>
-							<motion.img
-								src={slide.image}
-								alt={slide.title}
-								className="absolute inset-0 w-full h-full object-cover"
-								initial={{ scale: 1.05, opacity: 0 }}
-								animate={{ scale: 1, opacity: 1 }}
-								transition={{ duration: 0.8 }}
-							/>
+							<picture>
+								<source media="(max-width: 768px)" srcSet={slide.imgmobil} />
+								<motion.img
+									src={slide.image}
+									alt={slide.title}
+									className="absolute inset-0 w-full h-full "
+									initial={{ scale: 1.05, opacity: 0 }}
+									animate={{ scale: 1, opacity: 1 }}
+									transition={{ duration: 0.8 }}
+								/>
+							</picture>
 						</div>
 					))}
 				</div>
