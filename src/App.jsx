@@ -24,6 +24,8 @@ import Sanciones from "./pages/transparencia/Sanciones.jsx";
 import Noticias from "./pages/noticias/Noticias.jsx";
 import Oficinas from "./pages/atencion/Contacto.jsx";
 import Login from "./pages/auth/Login.jsx";
+import TerminosDeUso from "./pages/legal/TerminosDeUso.jsx";
+import PoliticasDePrivacidad from "./pages/legal/PoliticasDePrivacidad.jsx";
 
 export default function App() {
 	const [currentPage, setCurrentPage] = useState("/");
@@ -126,6 +128,10 @@ export default function App() {
 				return <Oficinas />;
 			case "/login":
 				return <Login />;
+			case "/terminos-de-uso":
+				return <TerminosDeUso />;
+			case "/politicas-de-privacidad":
+				return <PoliticasDePrivacidad />;
 			default:
 				return <Home />;
 		}

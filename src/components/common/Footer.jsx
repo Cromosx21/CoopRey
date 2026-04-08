@@ -11,15 +11,7 @@ import {
 } from "lucide-react";
 
 const footerLinks = {
-	servicios: [
-		{ label: "Ahorro libre", href: "/ahorros-libre" },
-		{ label: "Plazo fijo", href: "/ahorros-plazo-fijo" },
-		{ label: "Créditos personales", href: "/creditos-personales" },
-		{ label: "Créditos hipotecarios", href: "/creditos-hipotecarios" },
-		{ label: "Socios", href: "/socios" },
-		{ label: "Beneficios del socio", href: "/socios/beneficios" },
-	],
-	empresa: [
+	cooperativa: [
 		{ label: "Nosotros", href: "/nosotros" },
 		{ label: "Misión, visión y valores", href: "/mision-vision-valores" },
 		{ label: "Compromiso social", href: "/compromiso-social" },
@@ -28,8 +20,22 @@ const footerLinks = {
 		{ label: "Noticias", href: "/noticias" },
 		{ label: "Oficinas", href: "/oficinas" },
 	],
-	ayuda: [
-		{ label: "Libro de Reclamaciones", href: "/libro-reclamaciones" },
+	productos: [
+		{ label: "Ahorros", href: "/ahorros" },
+		{ label: "Ahorro infantil", href: "/ahorros-infantil" },
+		{ label: "Ahorro libre", href: "/ahorros-libre" },
+		{ label: "Plazo fijo", href: "/ahorros-plazo-fijo" },
+		{ label: "Créditos", href: "/creditos" },
+		{ label: "Créditos personales", href: "/creditos-personales" },
+	],
+	socios: [
+		{ label: "Beneficios", href: "/socios/beneficios" },
+		{ label: "Requisitos", href: "/socios/requisitos" },
+		{ label: "Aportes", href: "/socios/aportes" },
+		{ label: "Deberes y derechos", href: "/socios/deberes-derechos" },
+		{ label: "Previsión social", href: "/socios/prevision-social" },
+	],
+	transparencia: [
 		{ label: "Estados Financieros", href: "/estados-financieros" },
 		{ label: "Tarifarios", href: "/tarifarios" },
 		{
@@ -39,6 +45,7 @@ const footerLinks = {
 		{ label: "Educación Financiera", href: "/educacion-financiera" },
 		{ label: "Sanciones SBS", href: "/sanciones" },
 		{ label: "Preguntas Frecuentes", href: "/preguntas-frecuentes" },
+		{ label: "Libro de Reclamaciones", href: "/libro-reclamaciones" },
 	],
 };
 
@@ -69,7 +76,7 @@ export default function Footer() {
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Main Footer Content */}
-				<div className="py-16 grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+				<div className="py-16 grid md:grid-cols-2 lg:grid-cols-6 gap-12">
 					{/* Brand Column */}
 					<div className="lg:col-span-2 space-y-6">
 						<motion.div
@@ -156,9 +163,11 @@ export default function Footer() {
 
 					{/* Links Columns */}
 					<div>
-						<h3 className="font-bold text-lg mb-6">Servicios</h3>
+						<h3 className="font-bold text-lg mb-6">
+							La Cooperativa
+						</h3>
 						<ul className="space-y-3">
-							{footerLinks.servicios.map((link) => (
+							{footerLinks.cooperativa.map((link) => (
 								<li key={link.label}>
 									<motion.a
 										href={link.href}
@@ -173,9 +182,9 @@ export default function Footer() {
 					</div>
 
 					<div>
-						<h3 className="font-bold text-lg mb-6">Empresa</h3>
+						<h3 className="font-bold text-lg mb-6">Productos</h3>
 						<ul className="space-y-3">
-							{footerLinks.empresa.map((link) => (
+							{footerLinks.productos.map((link) => (
 								<li key={link.label}>
 									<motion.a
 										href={link.href}
@@ -190,9 +199,28 @@ export default function Footer() {
 					</div>
 
 					<div>
-						<h3 className="font-bold text-lg mb-6">Ayuda</h3>
+						<h3 className="font-bold text-lg mb-6">Socios</h3>
 						<ul className="space-y-3">
-							{footerLinks.ayuda.map((link) => (
+							{footerLinks.socios.map((link) => (
+								<li key={link.label}>
+									<motion.a
+										href={link.href}
+										className="text-gray-400 hover:text-emerald-400 transition-colors inline-block"
+										whileHover={{ x: 5 }}
+									>
+										{link.label}
+									</motion.a>
+								</li>
+							))}
+						</ul>
+					</div>
+
+					<div>
+						<h3 className="font-bold text-lg mb-6">
+							Transparencia
+						</h3>
+						<ul className="space-y-3">
+							{footerLinks.transparencia.map((link) => (
 								<li key={link.label}>
 									<motion.a
 										href={link.href}
@@ -216,22 +244,16 @@ export default function Footer() {
 						</p>
 						<div className="flex items-center space-x-6">
 							<a
-								href="#"
+								href="/politicas-de-privacidad"
 								className="text-gray-400 hover:text-emerald-400 text-sm transition-colors"
 							>
 								Política de Privacidad
 							</a>
 							<a
-								href="#"
+								href="/terminos-de-uso"
 								className="text-gray-400 hover:text-emerald-400 text-sm transition-colors"
 							>
 								Términos de Uso
-							</a>
-							<a
-								href="#"
-								className="text-gray-400 hover:text-emerald-400 text-sm transition-colors"
-							>
-								Cookies
 							</a>
 						</div>
 					</div>

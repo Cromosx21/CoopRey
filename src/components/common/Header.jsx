@@ -18,7 +18,7 @@ export default function Header() {
 	const [mobileExpandedMenu, setMobileExpandedMenu] = useState(null);
 	const [mobileExpandedSubMenu, setMobileExpandedSubMenu] = useState(null);
 	const [currentPage, setCurrentPage] = useState(window.location.pathname);
-	const closeDropdownTimeoutRef = useRef(null);
+	const headerRef = useRef(null);
 
 	// Manejo de cambios de URL
 	useEffect(() => {
@@ -35,13 +35,42 @@ export default function Header() {
 	}, []);
 
 	useEffect(() => {
-		return () => {
-			if (closeDropdownTimeoutRef.current) {
-				clearTimeout(closeDropdownTimeoutRef.current);
-				closeDropdownTimeoutRef.current = null;
-			}
+		if (!activeDropdown) return;
+
+		const handleMouseDown = (event) => {
+			const root = headerRef.current;
+			if (!root) return;
+			if (root.contains(event.target)) return;
+			setActiveDropdown(null);
+			setActiveSubDropdown(null);
 		};
-	}, []);
+
+		const handleKeyDown = (event) => {
+			if (event.key !== "Escape") return;
+			setActiveDropdown(null);
+			setActiveSubDropdown(null);
+		};
+
+		window.addEventListener("mousedown", handleMouseDown);
+		window.addEventListener("keydown", handleKeyDown);
+		return () => {
+			window.removeEventListener("mousedown", handleMouseDown);
+			window.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [activeDropdown]);
+
+	const toggleDesktopDropdown = (menuItem) => {
+		if (!menuItem?.subItems) return;
+
+		if (activeDropdown === menuItem.label) {
+			setActiveDropdown(null);
+			setActiveSubDropdown(null);
+			return;
+		}
+
+		setActiveDropdown(menuItem.label);
+		setActiveSubDropdown(getAutoExpandedSubKey(menuItem));
+	};
 
 	const menuItems = [
 		{ label: "Inicio", href: "/" },
@@ -206,6 +235,7 @@ export default function Header() {
 
 	return (
 		<header
+			ref={headerRef}
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 				isScrolled
 					? "bg-white/95 backdrop-blur-md shadow-lg"
@@ -271,55 +301,13 @@ export default function Header() {
 					{/* Desktop Navigation */}
 					<nav className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-1 justify-end">
 						{menuItems.map((item) => (
-							<div
-								key={item.label}
-								className="relative"
-								onMouseEnter={() => {
-									if (!item.subItems) return;
-									if (closeDropdownTimeoutRef.current) {
-										clearTimeout(
-											closeDropdownTimeoutRef.current,
-										);
-										closeDropdownTimeoutRef.current = null;
-									}
-									setActiveDropdown(item.label);
-									setActiveSubDropdown(
-										getAutoExpandedSubKey(item),
-									);
-								}}
-								onMouseLeave={() => {
-									if (closeDropdownTimeoutRef.current) {
-										clearTimeout(
-											closeDropdownTimeoutRef.current,
-										);
-									}
-									closeDropdownTimeoutRef.current =
-										setTimeout(() => {
-											setActiveDropdown(null);
-											setActiveSubDropdown(null);
-											closeDropdownTimeoutRef.current =
-												null;
-										}, 140);
-								}}
-							>
+							<div key={item.label} className="relative">
 								{item.subItems ? (
 									<>
 										<button
-											onClick={() => {
-												if (
-													closeDropdownTimeoutRef.current
-												) {
-													clearTimeout(
-														closeDropdownTimeoutRef.current,
-													);
-													closeDropdownTimeoutRef.current =
-														null;
-												}
-												setActiveDropdown(item.label);
-												setActiveSubDropdown(
-													getAutoExpandedSubKey(item),
-												);
-											}}
+											onClick={() =>
+												toggleDesktopDropdown(item)
+											}
 											className={`flex items-center space-x-1 px-3 xl:px-4 py-2 text-[15px] transition-colors duration-200 group whitespace-nowrap font-medium ${
 												isMenuItemActive(item)
 													? "text-primary"
@@ -417,11 +405,6 @@ export default function Header() {
 																				subItem.label
 																			}
 																			className="px-2"
-																			onMouseEnter={() =>
-																				setActiveSubDropdown(
-																					subKey,
-																				)
-																			}
 																		>
 																			<motion.button
 																				type="button"
