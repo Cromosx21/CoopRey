@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
 import { Tag, Calendar, User, ArrowRight } from "lucide-react";
 
 export default function Noticias() {

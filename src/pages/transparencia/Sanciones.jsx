@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { AlertCircle, FileText, CheckCircle2 } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
 
 export default function Sanciones() {
 	return (
@@ -19,7 +19,7 @@ export default function Sanciones() {
 					/>
 				</motion.div>
 
-				<div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
 					
 					{/* CONTENIDO PRINCIPAL */}
 					<div className="lg:col-span-2 space-y-6">
@@ -78,37 +78,6 @@ export default function Sanciones() {
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-
-					{/* SIDEBAR */}
-					<div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 h-fit">
-						
-						<div className="flex items-start gap-3">
-							<div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-								<FileText className="w-5 h-5 text-primary" />
-							</div>
-
-							<div>
-								<div className="text-sm text-gray-500">
-									Referencia normativa
-								</div>
-
-								<div className="mt-1 text-base font-semibold text-gray-900">
-									Oficio N.º 54340-2025-SBS
-								</div>
-							</div>
-						</div>
-
-						<div className="mt-4 text-sm text-gray-700 leading-relaxed">
-							De acuerdo con el Oficio N.º 54340-2025-SBS, cada COOPAC
-							deberá publicar las sanciones impuestas por la SBS de forma
-							clara, accesible y permanente desde su incorporación al Registro Nacional.
-						</div>
-
-						{/* EXTRA: FECHA */}
-						<div className="mt-6 pt-4 border-t border-gray-100 text-xs text-gray-500">
-							Última actualización: {new Date().toLocaleDateString()}
 						</div>
 					</div>
 				</div>

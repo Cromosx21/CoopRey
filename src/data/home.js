@@ -53,7 +53,7 @@ export const heroSlides = [
 		imgmobil: "/home/Mobil_3.png",
 
 		ctaText: "Conoce los Beneficios",
-		ctaLink: "/beneficios",
+		ctaLink: "/socios/beneficios",
 	},
 	{
 		id: 4,
@@ -66,7 +66,7 @@ export const heroSlides = [
 		imgmobil: "/home/Mobil_4.png",
 
 		ctaText: "Conoce los Beneficios",
-		ctaLink: "/beneficios",
+		ctaLink: "/socios/beneficios",
 	},
 ];
 
@@ -114,7 +114,7 @@ export const services = [
 			"Participa activamente en la cooperativa y disfruta de beneficios exclusivos.",
 		gradient: "from-teal-500 to-emerald-600",
 		color: "teal",
-		href: "/nosotros",
+		href: "/socios/aportes",
 	},
 	{
 		icon: Users,

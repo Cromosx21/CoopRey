@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
 	Menu,
 	X,
@@ -18,6 +18,7 @@ export default function Header() {
 	const [mobileExpandedMenu, setMobileExpandedMenu] = useState(null);
 	const [mobileExpandedSubMenu, setMobileExpandedSubMenu] = useState(null);
 	const [currentPage, setCurrentPage] = useState(window.location.pathname);
+	const closeDropdownTimeoutRef = useRef(null);
 
 	// Manejo de cambios de URL
 	useEffect(() => {
@@ -31,6 +32,15 @@ export default function Header() {
 		const handleScroll = () => setIsScrolled(window.scrollY > 20);
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	useEffect(() => {
+		return () => {
+			if (closeDropdownTimeoutRef.current) {
+				clearTimeout(closeDropdownTimeoutRef.current);
+				closeDropdownTimeoutRef.current = null;
+			}
+		};
 	}, []);
 
 	const menuItems = [
@@ -89,8 +99,25 @@ export default function Header() {
 						},
 					],
 				},
-				{ label: "Beneficios al Socio", href: "/beneficios" },
-				{ label: "Requisitos", href: "/requisitos" },
+			],
+		},
+		{
+			label: "Socios",
+			subItems: [
+				{
+					label: "Beneficios de ser socio",
+					href: "/socios/beneficios",
+				},
+				{
+					label: "Requisitos para ser socio",
+					href: "/socios/requisitos",
+				},
+				{ label: "Aportes", href: "/socios/aportes" },
+				{
+					label: "Deberes y derechos",
+					href: "/socios/deberes-derechos",
+				},
+				{ label: "Previsión social", href: "/socios/prevision-social" },
 			],
 		},
 		{
@@ -205,7 +232,6 @@ export default function Header() {
 								target="_blanck"
 								aria-label="Facebook"
 								className="hover:text-white/90 transition-colors"
-								
 							>
 								<Facebook className="w-4 h-4" />
 							</a>
@@ -217,7 +243,6 @@ export default function Header() {
 							>
 								<Instagram className="w-4 h-4" />
 							</a>
-							
 						</div>
 					</div>
 				</div>
@@ -244,27 +269,52 @@ export default function Header() {
 					</motion.a>
 
 					{/* Desktop Navigation */}
-					<nav className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-1 justify-center mx-8">
+					<nav className="hidden lg:flex items-center space-x-2 xl:space-x-3 flex-1 justify-end">
 						{menuItems.map((item) => (
 							<div
 								key={item.label}
 								className="relative"
 								onMouseEnter={() => {
 									if (!item.subItems) return;
+									if (closeDropdownTimeoutRef.current) {
+										clearTimeout(
+											closeDropdownTimeoutRef.current,
+										);
+										closeDropdownTimeoutRef.current = null;
+									}
 									setActiveDropdown(item.label);
 									setActiveSubDropdown(
 										getAutoExpandedSubKey(item),
 									);
 								}}
 								onMouseLeave={() => {
-									setActiveDropdown(null);
-									setActiveSubDropdown(null);
+									if (closeDropdownTimeoutRef.current) {
+										clearTimeout(
+											closeDropdownTimeoutRef.current,
+										);
+									}
+									closeDropdownTimeoutRef.current =
+										setTimeout(() => {
+											setActiveDropdown(null);
+											setActiveSubDropdown(null);
+											closeDropdownTimeoutRef.current =
+												null;
+										}, 140);
 								}}
 							>
 								{item.subItems ? (
 									<>
 										<button
 											onClick={() => {
+												if (
+													closeDropdownTimeoutRef.current
+												) {
+													clearTimeout(
+														closeDropdownTimeoutRef.current,
+													);
+													closeDropdownTimeoutRef.current =
+														null;
+												}
 												setActiveDropdown(item.label);
 												setActiveSubDropdown(
 													getAutoExpandedSubKey(item),
@@ -367,6 +417,11 @@ export default function Header() {
 																				subItem.label
 																			}
 																			className="px-2"
+																			onMouseEnter={() =>
+																				setActiveSubDropdown(
+																					subKey,
+																				)
+																			}
 																		>
 																			<motion.button
 																				type="button"

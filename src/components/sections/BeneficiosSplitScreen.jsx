@@ -85,21 +85,6 @@ export default function BeneficiosSplitScreen() {
 				<div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 			</div>
 
-			{/* Centered Title Section */}
-			<div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-20 md:pt-32 text-center">
-				<SectionHeading
-					badge="Beneficios"
-					title="Beneficios Principales"
-					subtitle="Ventajas de ser socio"
-					align="center"
-				/>
-				<p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto leading-relaxed">
-					Como socio cooperativista tienes acceso a servicios y
-					privilegios diseñados específicamente para potenciar tu
-					bienestar financiero.
-				</p>
-			</div>
-
 			<div className="flex flex-col md:flex-row mt-12 md:mt-0">
 				{/* Left Column - Sticky Image (Desktop) */}
 				<div className="hidden md:flex w-1/2 sticky top-0 h-screen flex-col justify-center items-center px-12">

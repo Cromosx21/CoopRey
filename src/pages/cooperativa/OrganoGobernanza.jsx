@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { equipo } from "../data/nosotros";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
+import { equipo } from "../../data/nosotros";
 
 export default function OrganoGobernanza() {
 	const gobernanza = equipo.slice(0, 5);

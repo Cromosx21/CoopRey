@@ -182,14 +182,14 @@ export const equipoPorAgencia = [
 				image: "/images/consejo/ANGIE_MALDONADO_VALENZUELA.webp",
 				role: "JEFE DE FINANZAS",
 			},
-			
+
 			{
 				id: "dir-6",
 				name: "CAMILO BENITO ÑACCHA CASAVERDE",
 				image: "/images/consejo/CAMILO_BENITO_NACCHA_CASAVERDE.webp",
 				role: "ASESOR LEGAL INTERNO",
 			},
-			
+
 			/* {
 				id: "dir-11",
 				name: "EDERSON CISNEROS RODRIGUEZ",
@@ -201,6 +201,15 @@ export const equipoPorAgencia = [
 	{
 		id: "oficina-principal",
 		titulo: "Oficina Principal",
+		imagen: "/images/Nosotros.webp",
+		resena: "Nuestra oficina principal es el corazón de la cooperativa. Desde aquí coordinamos la atención, la gestión y el acompañamiento a nuestros socios.",
+		mensajeAdmin:
+			"Gracias por confiar en nosotros. Estamos para ayudarte a crecer con orden, responsabilidad y cercanía.",
+		administrador: {
+			name: "HENRY FLORIANO RAMIREZ ALMEIDA",
+			role: "Administrador",
+			image: "/images/Personal/Principal/HENRY_FLORIANO_RAMIREZ_ALMEIDA.webp",
+		},
 		miembros: [
 			{
 				id: "op-1",
@@ -285,6 +294,15 @@ export const equipoPorAgencia = [
 	{
 		id: "agencia-cora-cora",
 		titulo: "Agencia Cora Cora",
+		imagen: "/images/asamblea.webp",
+		resena: "Esta agencia nace con el propósito de acercar el servicio cooperativo a más familias, impulsando el ahorro y el crédito responsable en la zona.",
+		mensajeAdmin:
+			"Tu esfuerzo tiene valor. Aquí trabajamos para acompañarte con soluciones claras y un trato humano.",
+		administrador: {
+			name: "JESENIA ANDREA DIAZ ROJAS",
+			role: "Administradora",
+			image: "/images/gerencia-general.webp",
+		},
 		miembros: [
 			{
 				id: "cc-1",
@@ -331,6 +349,15 @@ export const equipoPorAgencia = [
 	{
 		id: "agencia-pausa",
 		titulo: "Agencia Pausa",
+		imagen: "/images/reunion.webp",
+		resena: "En Pausa brindamos una atención cercana para fortalecer el desarrollo local con alternativas de ahorro y financiamiento oportuno.",
+		mensajeAdmin:
+			"Siempre hay un siguiente paso. Cuenta con nosotros para hacerlo con confianza y respaldo.",
+		administrador: {
+			name: "ALEX SOLGORRE CABRERA",
+			role: "Administrador",
+			image: "/images/gerencia-general.webp",
+		},
 		miembros: [
 			{
 				id: "pa-1",
@@ -347,6 +374,15 @@ export const equipoPorAgencia = [
 	{
 		id: "agencia-relave",
 		titulo: "Agencia Relave",
+		imagen: "/images/Compromiso.webp",
+		resena: "La Agencia Relave refuerza nuestro compromiso de atender con transparencia, rapidez y calidez a cada socio.",
+		mensajeAdmin:
+			"Estamos listos para escucharte y ayudarte. Tu tranquilidad financiera es nuestra prioridad.",
+		administrador: {
+			name: "DIANA LUCIA ALMIDON HUARCAYA",
+			role: "Administradora",
+			image: "/images/gerencia-general.webp",
+		},
 		miembros: [
 			{
 				id: "re-1",

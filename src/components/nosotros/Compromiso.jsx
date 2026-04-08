@@ -55,7 +55,7 @@ export function Compromiso() {
 								<div
 									className={`space-y-6 ${!isEven ? "lg:col-start-2" : ""}`}
 								>
-									<div className="inline-flex items-center justify-center w-16 h-16 bg-linear-to-br from-emerald-500 to-yellow-500 rounded-2xl shadow-lg">
+									<div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-600 rounded-2xl shadow-lg">
 										<Icon className="w-8 h-8 text-white" />
 									</div>
 									<h3 className="text-3xl font-bold text-gray-900">

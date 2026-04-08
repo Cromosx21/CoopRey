@@ -1,13 +1,13 @@
 import React from "react";
-import { CTASection } from "../components/sections/CTASection.jsx";
+import { CTASection } from "../../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import BeneficiosSplitScreen from "../components/sections/BeneficiosSplitScreen.jsx";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
+import BeneficiosSplitScreen from "../../components/sections/BeneficiosSplitScreen.jsx";
 import { CheckCircle, Quote, Star } from "lucide-react";
 import {
 	beneficiosEspeciales,
 	beneficiosHeroData,
-} from "../data/beneficios.js";
+} from "../../data/beneficios.js";
 
 export default function Beneficios() {
 	return (

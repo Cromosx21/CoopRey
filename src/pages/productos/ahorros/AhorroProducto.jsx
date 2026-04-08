@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckCircle, PiggyBank } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { tasasAhorros, notasTasas, productosAhorros } from "../data/ahorros.js";
+import SectionHeading from "../../../components/ui/SectionHeading.jsx";
+import { tasasAhorros, notasTasas, productosAhorros } from "../../../data/ahorros.js";
 
 const ahorroConfigPorTipo = {
 	infantil: {

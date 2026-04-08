@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
 
 export default function PreguntasFrecuentes() {
 	const faqs = [

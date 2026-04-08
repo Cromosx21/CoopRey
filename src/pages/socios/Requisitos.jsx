@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
-import { CTASection } from "../components/sections/CTASection.jsx";
+import { CTASection } from "../../components/sections/CTASection.jsx";
 import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
 import {
 	FileText,
 	CheckCircle,
@@ -9,15 +9,15 @@ import {
 	ClipboardList,
 	Shield,
 } from "lucide-react";
-import ProcesoStep from "../components/requisitos/ProcesoStep.jsx";
-import RequisitoAccordionItem from "../components/requisitos/RequisitoAccordionItem.jsx";
-import RequisitoGeneralCard from "../components/requisitos/RequisitoGeneralCard.jsx";
+import ProcesoStep from "../../components/requisitos/ProcesoStep.jsx";
+import RequisitoAccordionItem from "../../components/requisitos/RequisitoAccordionItem.jsx";
+import RequisitoGeneralCard from "../../components/requisitos/RequisitoGeneralCard.jsx";
 import {
 	requisitosCorporativos,
 	requisitosPorProducto,
 	procesoPasos,
 	requisitosHeroData,
-} from "../data/requisitos";
+} from "../../data/requisitos";
 
 export default function Requisitos() {
 	const [expandedSection, setExpandedSection] = useState(null);

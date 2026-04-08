@@ -1,8 +1,8 @@
 import React from "react";
-import { CTASection } from "../components/sections/CTASection.jsx";
+import { CTASection } from "../../../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import { Percent, CheckCircle } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
+import SectionHeading from "../../../components/ui/SectionHeading.jsx";
 import {
 	tiposCreditos,
 	pasos,
@@ -10,7 +10,7 @@ import {
 	tasasCreditos,
 	tasaMoratoria,
 	comisiones,
-} from "../data/creditos.js";
+} from "../../../data/creditos.js";
 
 export default function Creditos() {
 	return (

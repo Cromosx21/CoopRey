@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { MapPin, Phone, Mail, Clock, ExternalLink } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { sedes } from "../data/contacto";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
+import { sedes } from "../../data/contacto";
 
 const getMapsUrl = (direccion) => {
 	if (!direccion) return "https://www.google.com/maps";

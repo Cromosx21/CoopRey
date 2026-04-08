@@ -1,15 +1,15 @@
 import React from "react";
-import { CTASection } from "../components/sections/CTASection.jsx";
+import { CTASection } from "../../../components/sections/CTASection.jsx";
 import { motion } from "motion/react";
 import { Shield, Percent } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
+import SectionHeading from "../../../components/ui/SectionHeading.jsx";
 import {
 	productosAhorros,
 	ahorrosHeroData,
 	tasasAhorros,
 	notasTasas,
-} from "../data/ahorros.js";
-import AhorroProductCard from "../components/ahorros/AhorroProductCard.jsx";
+} from "../../../data/ahorros.js";
+import AhorroProductCard from "../../../components/ahorros/AhorroProductCard.jsx";
 
 export default function Ahorros() {
 	return (

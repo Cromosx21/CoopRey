@@ -1,7 +1,7 @@
 import React from "react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { tasasCreditos, tasaMoratoria, comisiones } from "../data/creditos.js";
-import { tasasAhorros, notasTasas } from "../data/ahorros.js";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
+import { tasasCreditos, tasaMoratoria, comisiones } from "../../data/creditos.js";
+import { tasasAhorros, notasTasas } from "../../data/ahorros.js";
 
 export default function Tarifarios() {
 	return (

@@ -16,8 +16,8 @@ const footerLinks = {
 		{ label: "Plazo fijo", href: "/ahorros-plazo-fijo" },
 		{ label: "Créditos personales", href: "/creditos-personales" },
 		{ label: "Créditos hipotecarios", href: "/creditos-hipotecarios" },
-		{ label: "Beneficios al Socio", href: "/beneficios" },
-		{ label: "Requisitos", href: "/requisitos" },
+		{ label: "Socios", href: "/socios" },
+		{ label: "Beneficios del socio", href: "/socios/beneficios" },
 	],
 	empresa: [
 		{ label: "Nosotros", href: "/nosotros" },

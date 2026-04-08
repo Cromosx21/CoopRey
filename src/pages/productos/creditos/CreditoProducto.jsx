@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
 import { CheckCircle, FileText, PiggyBank } from "lucide-react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { tiposCreditos, tasasCreditos } from "../data/creditos.js";
-import { requisitosPorProducto } from "../data/requisitos.js";
+import SectionHeading from "../../../components/ui/SectionHeading.jsx";
+import { tiposCreditos, tasasCreditos } from "../../../data/creditos.js";
+import { requisitosPorProducto } from "../../../data/requisitos.js";
 
 const creditoConfigPorTipo = {
 	personales: {

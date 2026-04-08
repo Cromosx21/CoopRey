@@ -6,9 +6,12 @@ import { ctaBenefits } from "../../data/common";
 
 export function CTASection() {
 	return (
-		<section className="relative py-32 overflow-hidden" id="hazte-socio">
+		<section
+			className="relative py-32 overflow-hidden bg-emerald-600"
+			id="hazte-socio "
+		>
 			{/* Organic gradient background */}
-			<div className="absolute inset-0 bg-linear-to-br from-emerald-600 via-emerald-500 to-yellow-500">
+			<div className="">
 				<motion.div
 					className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
 					animate={{

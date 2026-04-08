@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { CTASection } from "../components/sections/CTASection.jsx";
+import { CTASection } from "../../components/sections/CTASection.jsx";
 import { motion, AnimatePresence } from "motion/react";
 import { Download, ChevronDown, Book, CheckCircle } from "lucide-react";
 import {
 	documentosDescargables,
 	capitulos,
 	principiosCooperativistas,
-} from "../data/estatutos.js";
+} from "../../data/estatutos.js";
 
 export default function Estatutos() {
 	const [expandedSection, setExpandedSection] = useState(null);

@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
 import MainLayout from "./layouts/MainLayout.jsx";
-import Home from "./pages/Home.jsx";
-import Nosotros from "./pages/Nosotros.jsx";
-import MisionVisionValores from "./pages/MisionVisionValores.jsx";
-import CompromisoSocial from "./pages/CompromisoSocial.jsx";
-import OrganoGobernanza from "./pages/OrganoGobernanza.jsx";
-import NuestroEquipo from "./pages/NuestroEquipo.jsx";
-import AhorroProducto from "./pages/AhorroProducto.jsx";
-import CreditoProducto from "./pages/CreditoProducto.jsx";
-import Beneficios from "./pages/Beneficios.jsx";
-import Requisitos from "./pages/Requisitos.jsx";
-import LibroReclamaciones from "./pages/LibroReclamaciones.jsx";
-import EstadosFinancieros from "./pages/EstadosFinancieros.jsx";
-import DocumentosInstitucionales from "./pages/DocumentosInstitucionales.jsx";
-import Tarifarios from "./pages/Tarifarios.jsx";
-import PreguntasFrecuentes from "./pages/PreguntasFrecuentes.jsx";
-import EducacionFinanciera from "./pages/EducacionFinanciera.jsx";
-import Sanciones from "./pages/Sanciones.jsx";
-import Noticias from "./pages/Noticias.jsx";
-import Oficinas from "./pages/Contacto.jsx";
-import Login from "./pages/Login.jsx";
+import Home from "./pages/inicio/Home.jsx";
+import Nosotros from "./pages/cooperativa/Nosotros.jsx";
+import MisionVisionValores from "./pages/cooperativa/MisionVisionValores.jsx";
+import CompromisoSocial from "./pages/cooperativa/CompromisoSocial.jsx";
+import OrganoGobernanza from "./pages/cooperativa/OrganoGobernanza.jsx";
+import NuestroEquipo from "./pages/cooperativa/NuestroEquipo.jsx";
+import AhorroProducto from "./pages/productos/ahorros/AhorroProducto.jsx";
+import CreditoProducto from "./pages/productos/creditos/CreditoProducto.jsx";
+import Socios from "./pages/socios/Socios.jsx";
+import BeneficiosSocio from "./pages/socios/BeneficiosSocio.jsx";
+import RequisitosSocio from "./pages/socios/RequisitosSocio.jsx";
+import AportesSocio from "./pages/socios/AportesSocio.jsx";
+import DeberesDerechosSocio from "./pages/socios/DeberesDerechosSocio.jsx";
+import PrevisionSocialSocio from "./pages/socios/PrevisionSocialSocio.jsx";
+import LibroReclamaciones from "./pages/atencion/LibroReclamaciones.jsx";
+import EstadosFinancieros from "./pages/transparencia/EstadosFinancieros.jsx";
+import DocumentosInstitucionales from "./pages/transparencia/DocumentosInstitucionales.jsx";
+import Tarifarios from "./pages/transparencia/Tarifarios.jsx";
+import PreguntasFrecuentes from "./pages/transparencia/PreguntasFrecuentes.jsx";
+import EducacionFinanciera from "./pages/transparencia/EducacionFinanciera.jsx";
+import Sanciones from "./pages/transparencia/Sanciones.jsx";
+import Noticias from "./pages/noticias/Noticias.jsx";
+import Oficinas from "./pages/atencion/Contacto.jsx";
+import Login from "./pages/auth/Login.jsx";
 
 export default function App() {
 	const [currentPage, setCurrentPage] = useState("/");
@@ -84,10 +88,22 @@ export default function App() {
 				return <CreditoProducto tipo="empresariales" />;
 			case "/creditos-educativos":
 				return <CreditoProducto tipo="educativos" />;
+			case "/socios":
+				return <Socios />;
+			case "/socios/beneficios":
+				return <BeneficiosSocio />;
+			case "/socios/requisitos":
+				return <RequisitosSocio />;
+			case "/socios/aportes":
+				return <AportesSocio />;
+			case "/socios/deberes-derechos":
+				return <DeberesDerechosSocio />;
+			case "/socios/prevision-social":
+				return <PrevisionSocialSocio />;
 			case "/beneficios":
-				return <Beneficios />;
+				return <BeneficiosSocio />;
 			case "/requisitos":
-				return <Requisitos />;
+				return <RequisitosSocio />;
 			case "/tarifarios":
 				return <Tarifarios />;
 			case "/libro-reclamaciones":

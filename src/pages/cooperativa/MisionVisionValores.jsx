@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
-import SectionHeading from "../components/ui/SectionHeading.jsx";
-import { quienesSomosData } from "../data/nosotros";
-import { NuestrosValores } from "../components/nosotros/NuestrosValores.jsx";
+import SectionHeading from "../../components/ui/SectionHeading.jsx";
+import { quienesSomosData } from "../../data/nosotros";
+import { NuestrosValores } from "../../components/nosotros/NuestrosValores.jsx";
 
 export default function MisionVisionValores() {
 	return (
