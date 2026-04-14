@@ -25,7 +25,7 @@ export default function DocumentosInstitucionales() {
 	const [expandedCategory, setExpandedCategory] = useState(null);
 
 	const toggleCategory = (id) => {
-		setExpandedCategory(expandedCategory === id ? null : id);
+		/* setExpandedCategory(expandedCategory === id ? null : id); */
 	};
 
 	const getIconColor = (color) => {

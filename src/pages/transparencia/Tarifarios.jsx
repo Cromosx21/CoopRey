@@ -45,7 +45,7 @@ export default function Tarifarios() {
 										className={`border-b border-gray-100 ${
 											index % 2 === 0
 												? "bg-white"
-												: "bg-gray-50"
+												: "bg-green-50"
 										}`}
 									>
 										<td className="p-4 text-gray-900 font-medium">
@@ -102,7 +102,7 @@ export default function Tarifarios() {
 												className={`border-b border-gray-100 ${
 													index % 2 === 0
 														? "bg-white"
-														: "bg-gray-50"
+														: "bg-green-50"
 												}`}
 											>
 												<td className="p-4 text-gray-900 font-medium">
@@ -152,7 +152,7 @@ export default function Tarifarios() {
 										className={`border-b border-gray-100 ${
 											index % 2 === 0
 												? "bg-white"
-												: "bg-gray-50"
+												: "bg-green-50"
 										}`}
 									>
 										<td className="p-4 text-gray-900 font-medium">
