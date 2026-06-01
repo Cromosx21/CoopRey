@@ -14,7 +14,7 @@ import RequisitosSocio from "./pages/socios/RequisitosSocio.jsx";
 import AportesSocio from "./pages/socios/AportesSocio.jsx";
 import DeberesDerechosSocio from "./pages/socios/DeberesDerechosSocio.jsx";
 import PrevisionSocialSocio from "./pages/socios/PrevisionSocialSocio.jsx";
-import LibroReclamaciones from "./pages/atencion/LibroReclamaciones.jsx";
+import LibroReclamaciones from "./pages/atencion/libro-reclamaciones/LibroReclamaciones.jsx";
 import EstadosFinancieros from "./pages/transparencia/EstadosFinancieros.jsx";
 import DocumentosInstitucionales from "./pages/transparencia/DocumentosInstitucionales.jsx";
 import Tarifarios from "./pages/transparencia/Tarifarios.jsx";

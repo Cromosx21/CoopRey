@@ -61,6 +61,8 @@ const socialLinks = [
 		label: "Instagram",
 	},
 ];
+const correo = "atencion.al.cliente.nr@coopacninorey.com";
+const PhoneNumber = "+51 979 585 886";
 
 export default function Footer() {
 	return (
@@ -111,7 +113,7 @@ export default function Footer() {
 								<div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
 									<Mail className="w-5 h-5" />
 								</div>
-								<span>Por asignar</span>
+								<span>{ correo }</span>
 							</motion.a>
 							<motion.a
 								href="tel:+51066284760"
@@ -121,7 +123,7 @@ export default function Footer() {
 								<div className="w-10 h-10 bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
 									<Phone className="w-5 h-5" />
 								</div>
-								<span>066 284760 / 979 585 886</span>
+								<span>066 284760 / { PhoneNumber }</span>
 							</motion.a>
 							<motion.div
 								className="flex items-start space-x-3 text-gray-400"

@@ -1,4 +1,10 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+	useCallback,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 import { motion, AnimatePresence } from "motion/react";
 import SectionHeading from "../../components/ui/SectionHeading.jsx";
 import { equipoPorAgencia } from "../../data/nosotros";
@@ -35,7 +41,7 @@ function Skeleton({ className = "" }) {
 			className={`relative overflow-hidden bg-gray-200 ${className}`}
 			aria-hidden="true"
 		>
-			<div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+			<div className="absolute inset-0 -translate-x-full animate-[shimmer_1.6s_infinite] bg-linear-to-r from-transparent via-white/60 to-transparent" />
 		</div>
 	);
 }
@@ -43,7 +49,11 @@ function Skeleton({ className = "" }) {
 // ─── Skeleton del panel principal ───────────────────────────────────────────
 function PanelSkeleton() {
 	return (
-		<div className="mt-12" aria-label="Cargando información..." aria-busy="true">
+		<div
+			className="mt-12"
+			aria-label="Cargando información..."
+			aria-busy="true"
+		>
 			<div className="grid lg:grid-cols-[2fr_3fr] gap-12 items-stretch">
 				{/* Imagen skeleton */}
 				<div className="relative min-h-64 sm:min-h-80 lg:min-h-[440px]">
@@ -82,7 +92,13 @@ function PanelSkeleton() {
 }
 
 // ─── Imagen que muestra skeleton hasta que carga ─────────────────────────────
-function ImageWithSkeleton({ src, alt, className, skeletonClassName = "", ...props }) {
+function ImageWithSkeleton({
+	src,
+	alt,
+	className,
+	skeletonClassName = "",
+	...props
+}) {
 	const [loaded, setLoaded] = useState(false);
 	const [errored, setErrored] = useState(false);
 
@@ -136,7 +152,8 @@ export default function NuestroEquipo() {
 		const hash = window.location.hash.replace("#", "").trim();
 		const validHash = hash && tabGroups.some((g) => g.id === hash);
 		if (validHash) return hash;
-		if (tabGroups.some((g) => g.id === DEFAULT_GROUP_ID)) return DEFAULT_GROUP_ID;
+		if (tabGroups.some((g) => g.id === DEFAULT_GROUP_ID))
+			return DEFAULT_GROUP_ID;
 		return tabGroups[0]?.id ?? "";
 	});
 
@@ -146,7 +163,10 @@ export default function NuestroEquipo() {
 	const [panelReady, setPanelReady] = useState(false);
 
 	const selectedGroup = useMemo(
-		() => tabGroups.find((g) => g.id === selectedGroupId) ?? tabGroups[0] ?? null,
+		() =>
+			tabGroups.find((g) => g.id === selectedGroupId) ??
+			tabGroups[0] ??
+			null,
 		[selectedGroupId, tabGroups],
 	);
 
@@ -173,10 +193,16 @@ export default function NuestroEquipo() {
 
 		if ("requestIdleCallback" in window) {
 			const id = window.requestIdleCallback(run, { timeout: 1500 });
-			return () => { cancelled = true; window.cancelIdleCallback(id); };
+			return () => {
+				cancelled = true;
+				window.cancelIdleCallback(id);
+			};
 		}
 		const id = window.setTimeout(run, 0);
-		return () => { cancelled = true; window.clearTimeout(id); };
+		return () => {
+			cancelled = true;
+			window.clearTimeout(id);
+		};
 	}, [selectedGroup]);
 
 	const scrollToPanel = useCallback(() => {
@@ -190,7 +216,11 @@ export default function NuestroEquipo() {
 		(id) => {
 			setSelectedGroupId(id);
 			setShowStaff(false);
-			window.history.replaceState({}, "", `${window.location.pathname}#${id}`);
+			window.history.replaceState(
+				{},
+				"",
+				`${window.location.pathname}#${id}`,
+			);
 			scrollToPanel();
 		},
 		[scrollToPanel],
@@ -199,7 +229,10 @@ export default function NuestroEquipo() {
 	const handleShowStaff = useCallback(() => {
 		setShowStaff(true);
 		window.requestAnimationFrame(() => {
-			staffRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+			staffRef.current?.scrollIntoView({
+				behavior: "smooth",
+				block: "start",
+			});
 		});
 	}, []);
 
@@ -249,6 +282,7 @@ export default function NuestroEquipo() {
 						</div>
 					</div>
 				</div>
+													fetchPriority="high"
 
 				{/* Panel principal — alterna skeleton ↔ contenido con AnimatePresence */}
 				<section ref={panelRef} className="scroll-mt-32">
@@ -282,13 +316,12 @@ export default function NuestroEquipo() {
 													alt={selectedGroup.titulo}
 													className="w-full h-full object-cover object-center"
 													loading="eager"
-													fetchPriority="high"
 													decoding="async"
 												/>
 											) : (
 												<div className="w-full h-full bg-gray-100" />
 											)}
-											<div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+											<div className="absolute inset-0 bg-linear-to-t from-black/55 via-black/10 to-transparent" />
 											<div className="absolute left-6 bottom-6 right-6">
 												<div className="text-white text-sm font-semibold">
 													{selectedGroup.titulo}
@@ -309,14 +342,22 @@ export default function NuestroEquipo() {
 										)}
 										{selectedGroup.mensajeAdmin && (
 											<div className="mt-6 rounded-[28px] bg-primary/5 border border-primary/10 p-6 text-gray-700 leading-relaxed">
-												<p>"{selectedGroup.mensajeAdmin}"</p>
+												<p>
+													"
+													{selectedGroup.mensajeAdmin}
+													"
+												</p>
 												<br />
 												<div>
 													<span className="text-end w-full block">
-														{selectedGroup.administrador?.name ?? ""}
+														{selectedGroup
+															.administrador
+															?.name ?? ""}
 													</span>
 													<span className="text-end w-full block font-bold text-sm">
-														{selectedGroup.administrador?.role ?? ""}
+														{selectedGroup
+															.administrador
+															?.role ?? ""}
 													</span>
 												</div>
 											</div>
@@ -364,10 +405,9 @@ export default function NuestroEquipo() {
 									animate={{ opacity: 1, y: 0 }}
 									transition={{
 										duration: 0.45,
-										delay: Math.min(index * 0.05, 0.4),
 									}}
 								>
-									<div className="relative w-full aspect-[3/4] bg-gray-200">
+									<div className="relative w-full aspect-3/4 bg-gray-200">
 										{member.image ? (
 											<ImageWithSkeleton
 												src={member.image}
@@ -380,13 +420,15 @@ export default function NuestroEquipo() {
 											<div className="w-full h-full flex items-center justify-center bg-primary/5">
 												<div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
 													<div className="text-primary font-bold text-lg">
-														{getInitials(member.name)}
+														{getInitials(
+															member.name,
+														)}
 													</div>
 												</div>
 											</div>
 										)}
 
-										<div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
+										<div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
 										<div className="absolute inset-x-0 bottom-0 p-5 transition-transform duration-300 group-hover:-translate-y-1">
 											<div className="text-white font-bold text-base leading-tight">
 												{member.name}

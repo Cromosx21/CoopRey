@@ -16,6 +16,8 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 .trae
+/.trae/
+.trae/
 
 # IDE
 .vscode/
@@ -34,3 +36,7 @@ coverage/
 public/build/
 /.pnp/
 /.pnp.js
+
+AGENTS.md
+Guia_Columnas_Libro_Reclamaciones.txt
+.gitignore

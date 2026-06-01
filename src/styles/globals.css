@@ -2,8 +2,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+	font-family: "AcuminVariableConcept";
+	src: url("./AcuminVariableConcept.otf") format("opentype");
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+}
+
 :root {
 	--font-size: 16px;
+	--font-sans: "AcuminVariableConcept", "Inter", sans-serif;
 	--background: #ffffff;
 	--foreground: oklch(0.145 0 0);
 	--card: #ffffff;
@@ -128,6 +137,7 @@
 
 	body {
 		@apply bg-background text-foreground;
+		font-family: var(--font-sans);
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}

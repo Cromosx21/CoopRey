@@ -233,6 +233,8 @@ export default function Header() {
 		setMobileExpandedSubMenu(getAutoExpandedSubKey(activeTop));
 	}, [isMobileMenuOpen, currentPage]);
 
+	const phoneNumber = "+51 979 585 886";
+
 	return (
 		<header
 			ref={headerRef}
@@ -251,7 +253,7 @@ export default function Header() {
 						>
 							<Phone className="w-4 h-4" />
 							<span className="hidden sm:inline">
-								066 284760 / 979 585 886
+								066 284760 / { phoneNumber }
 							</span>
 							<span className="sm:hidden">Contáctanos</span>
 						</a>
@@ -292,7 +294,6 @@ export default function Header() {
 								alt="Logo"
 								className="h-full"
 								loading="eager"
-								fetchPriority="high"
 								decoding="async"
 							/>
 						</div>

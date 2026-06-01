@@ -7,7 +7,7 @@ import { ctaBenefits } from "../../data/common";
 export function CTASection() {
 	return (
 		<section
-			className="relative py-32 overflow-hidden bg-emerald-600"
+			className="relative py-32 overflow-hidden bg-primary"
 			id="hazte-socio "
 		>
 			{/* Organic gradient background */}
