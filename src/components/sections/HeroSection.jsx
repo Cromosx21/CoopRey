@@ -1,53 +1,30 @@
-import React, { useEffect, useCallback, useState } from "react";
-import { motion } from "motion/react";
+import React, { useEffect, useCallback, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-
-const API_URL =
-	"https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnQIjTJeR5hQhhT6WenEWRNo3XF6H90ci3f_HoYRF1V7TCyE8upzeOa2rqrpyHq8IZoh5TURBurWZPfjZubrfk51wejZYbZaT9xtPDh_4KJZpWyqIG9Ughb_q5f8pg6OD4HjX80O8cSiodXTAafMRtGywb0ll2HSIYKnVEVpWGVzE8wVYUaq6Eg6PjkQwdoWCxrgv7_ofkHGQ2lLaw0l7V3u4l5bw2wZNCS8zYL-yhRt2h-Xx1uppmzkHOHJE4TzyidydpEZ5s84RJGHnZvDhXrRcj-wJg&lib=MszhlAdFZRzOWFEl8FepbDwqjHCp9OC0x";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import snapshot from "../../data/contentSnapshot.json";
+import { heroContentUrl } from "../../data/contentSources.js";
+import { useRemoteContent } from "../../hooks/useRemoteContent.js";
+import { getDriveImage, getDriveImageSet } from "../../utils/driveImages.js";
 
 export function HeroSection() {
-	const [heroSlides, setHeroSlides] = useState([]);
+	const [selectedIndex, setSelectedIndex] = useState(0);
+	const [firstImageLoaded, setFirstImageLoaded] = useState(false);
+	const { data } = useRemoteContent(
+		"cooprey:hero:v1",
+		heroContentUrl,
+		snapshot.hero,
+		snapshot.generatedAt
+	);
+	const heroSlides = useMemo(() => data.map((item, index) => ({
+		id: index + 1,
+		title: item.Nombre,
+		image: item.web,
+		imgmobil: item.celular
+	})), [data]);
 
 	const [emblaRef, emblaApi] = useEmblaCarousel({
 		loop: true,
 	});
-
-	// Convierte links de Google Drive
-	const convertDriveUrl = (url) => {
-		if (!url) return "";
-
-		const match = url.match(/\/d\/(.*?)\//);
-
-		if (!match) return "";
-
-		const fileId = match[1];
-
-		return `https://drive.google.com/thumbnail?id=${fileId}&sz=w2000`;
-	};
-
-	// Cargar data
-	useEffect(() => {
-		const fetchSlides = async () => {
-			try {
-				const response = await fetch(API_URL);
-				const data = await response.json();
-
-				const formattedSlides = data.map((item, index) => ({
-					id: index + 1,
-					title: item.Nombre,
-					image: convertDriveUrl(item.web),
-					imgmobil: convertDriveUrl(item.celular),
-				}));
-
-				setHeroSlides(formattedSlides);
-			} catch (error) {
-				console.error("Error loading slides:", error);
-			}
-		};
-
-		fetchSlides();
-	}, []);
 
 	useEffect(() => {
 		if (!emblaApi) return;
@@ -80,6 +57,7 @@ export function HeroSection() {
 		};
 
 		const handleSelect = () => {
+			setSelectedIndex(emblaApi.selectedScrollSnap());
 			startAutoplay();
 		};
 
@@ -91,10 +69,11 @@ export function HeroSection() {
 
 		document.addEventListener(
 			"visibilitychange",
-			handleVisibilityChange,
+				handleVisibilityChange
 		);
 
 		emblaApi.on("select", handleSelect);
+		emblaApi.on("reInit", handleSelect);
 		emblaApi.on("pointerDown", handlePointerDown);
 
 		return () => {
@@ -102,10 +81,11 @@ export function HeroSection() {
 
 			document.removeEventListener(
 				"visibilitychange",
-				handleVisibilityChange,
+					handleVisibilityChange
 			);
 
 			emblaApi.off("select", handleSelect);
+			emblaApi.off("reInit", handleSelect);
 			emblaApi.off("pointerDown", handlePointerDown);
 		};
 	}, [emblaApi]);
@@ -134,21 +114,27 @@ export function HeroSection() {
 							key={slide.id}
 							className="relative flex-[0_0_100%] w-full h-[80vh]"
 						>
-							<picture>
+							{(index === 0 || index === selectedIndex || (
+								firstImageLoaded && index === (selectedIndex + 1) % heroSlides.length
+							)) && <picture>
 								<source
 									media="(max-width: 768px)"
-									srcSet={slide.imgmobil}
+									srcSet={getDriveImageSet(slide.imgmobil || slide.image, [480, 768])}
+									sizes="100vw"
 								/>
 
-								<motion.img
-									src={slide.image}
+								<img
+									src={getDriveImage(slide.image, 1280)}
+									srcSet={getDriveImageSet(slide.image, [768, 1280, 1920])}
+									sizes="100vw"
 									alt={slide.title}
+									loading={index === selectedIndex ? "eager" : "lazy"}
+									fetchPriority={index === selectedIndex ? "high" : "low"}
+									decoding={index === selectedIndex ? "sync" : "async"}
+									onLoad={() => setFirstImageLoaded(true)}
 									className="absolute inset-0 w-full h-full object-cover"
-									initial={{ scale: 1.05, opacity: 0 }}
-									animate={{ scale: 1, opacity: 1 }}
-									transition={{ duration: 0.8 }}
 								/>
-							</picture>
+							</picture>}
 						</div>
 					))}
 				</div>
@@ -157,6 +143,7 @@ export function HeroSection() {
 				<button
 					type="button"
 					onClick={scrollPrev}
+						aria-label="Banner anterior"
 					className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 text-white items-center justify-center transition-colors cursor-pointer"
 				>
 					<ChevronLeft className="w-5 h-5" />
@@ -165,6 +152,7 @@ export function HeroSection() {
 				<button
 					type="button"
 					onClick={scrollNext}
+						aria-label="Siguiente banner"
 					className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 text-white items-center justify-center transition-colors cursor-pointer"
 				>
 					<ChevronRight className="w-5 h-5" />

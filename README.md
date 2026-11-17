@@ -9,7 +9,6 @@ Bienvenido al repositorio oficial del sitio web de la Cooperativa de Ahorro y Cr
 *   **Estados Financieros**: Visualización clara y gráfica de los estados financieros y ratios de la cooperativa.
 *   **Gestión de Documentos**: Acceso fácil a documentos institucionales y normativos.
 *   **Formularios Interactivos**: Libro de reclamaciones y contacto integrados.
-*   **Inicio de Sesión**: Acceso seguro para socios (Interfaz implementada, lógica de backend pendiente).
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -79,3 +78,27 @@ Las contribuciones son bienvenidas. Por favor, abre un "Issue" para discutir cam
 ## 📄 Licencia
 
 Este proyecto es propiedad de Cooperativa de Ahorro y Crédito Niño Rey. Todos los derechos reservados.
+
+## Imágenes y contenido externo
+
+El banner y las noticias muestran una copia local del contenido de Google al abrir la página.
+Los datos se actualizan en segundo plano y se guardan en el navegador durante cinco minutos.
+Si Google no responde, se mantiene el contenido disponible.
+
+Antes de publicar, actualiza la copia local y sus imágenes optimizadas:
+
+```bash
+npm run content:sync
+npm run build
+```
+
+Las publicaciones nuevas también se consultan en tiempo de ejecución. El comando de sincronización
+genera las versiones WebP locales para evitar depender de Google Drive en la primera visita.
+Si se reemplaza una imagen conservando su enlace de Drive, vuelve a sincronizar y publicar.
+
+Para reducir fotos WebP grandes añadidas al proyecto y comprobar la caché:
+
+```bash
+npm run images:optimize
+npm run test:images
+```

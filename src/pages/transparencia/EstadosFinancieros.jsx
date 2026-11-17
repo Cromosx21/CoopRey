@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const API_URL =
-	"https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnR8BpsIYju0v4B08cPU7l25Q3UtjjKmmv2Dt15yCNdgkPZUeD0anZ8XDAKcIjzGHAOWm7hSX8E7UaMy7ByX9QocNcydUlHfhfDSnEyMpYC7oh9xXcB-sH3pnbGDVUitiJEOx5lfBSXH9j4agSrGATAYwsSpD2qIVdlpJva95EPA3Jk2raExwpNiKDu239-NSh-X7WkOXzf3v4SaPOYWNzBMsgjB-eNJgMD6kwxaKNseR1zqdHC0dvG3BfFnWabASB8uAt8yNGx0tQ8IoaOJ4qwDPn3DqQ&lib=MbgIWBaQViUW9eK0LxihlVwqjHCp9OC0x";
+	"https://script.google.com/macros/s/AKfycbyhMpypyzNMVHvmoxSvZSjnDKF_JyMqn6GZqty59SylYy2rMHbbNQM3XArsSnKEYEDlPg/exec";
 
 export default function EstadosFinancieros() {
 	const [estadosFinancieros, setEstadosFinancieros] = useState([]);

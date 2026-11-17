@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import SectionHeading from "../../components/ui/SectionHeading.jsx";
-import { equipoPorAgencia } from "../../data/nosotros";
+import { equipoPorAgencia } from "../../data/nosotros.js";
 
 const EXCLUDED_ID = "directorio-coopac-2026";
 const DEFAULT_GROUP_ID = "oficina-principal";
@@ -20,18 +20,6 @@ function getInitials(fullName) {
 	if (!words.length) return "";
 	if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
 	return `${words[0][0]}${words[words.length - 1][0]}`.toUpperCase();
-}
-
-function prefetchImages(urls, prefetchedSet) {
-	const uniqueUrls = [...new Set(urls)].filter(
-		(url) => url && !prefetchedSet.has(url),
-	);
-	for (const url of uniqueUrls) {
-		prefetchedSet.add(url);
-		const img = new Image();
-		img.decoding = "async";
-		img.src = url;
-	}
 }
 
 // ─── Skeleton base con shimmer ───────────────────────────────────────────────
@@ -99,38 +87,33 @@ function ImageWithSkeleton({
 	skeletonClassName = "",
 	...props
 }) {
-	const [loaded, setLoaded] = useState(false);
-	const [errored, setErrored] = useState(false);
+	const imageRef = useRef(null);
+	const [loadedSrc, setLoadedSrc] = useState(null);
+	const [erroredSrc, setErroredSrc] = useState(null);
+	const imageSrc = erroredSrc === src ? "/images/LOGO.webp" : src;
+	const loaded = loadedSrc === imageSrc;
 
-	// Resetear estado al cambiar src (cambio de agencia)
 	useEffect(() => {
-		setLoaded(false);
-		setErrored(false);
-	}, [src]);
-
-	const handleLoad = useCallback(() => setLoaded(true), []);
-
-	const handleError = useCallback((e) => {
-		if (e.currentTarget.dataset.fallbackApplied) return;
-		e.currentTarget.dataset.fallbackApplied = "1";
-		e.currentTarget.src = "/images/LOGO.webp";
-		setErrored(true);
-	}, []);
+		if (imageRef.current?.complete && imageRef.current.naturalWidth > 0) {
+			setLoadedSrc(imageSrc);
+		}
+	}, [imageSrc]);
 
 	return (
 		<>
 			{/* Skeleton visible mientras la imagen no cargó */}
-			{!loaded && !errored && (
+			{!loaded && (
 				<Skeleton className={`absolute inset-0 ${skeletonClassName}`} />
 			)}
 			<img
-				src={src}
+				ref={imageRef}
+				src={imageSrc}
 				alt={alt}
 				className={`${className} transition-opacity duration-500 ${
 					loaded ? "opacity-100" : "opacity-0"
 				}`}
-				onLoad={handleLoad}
-				onError={handleError}
+				onLoad={() => setLoadedSrc(imageSrc)}
+				onError={() => setErroredSrc(src)}
 				{...props}
 			/>
 		</>
@@ -141,7 +124,6 @@ function ImageWithSkeleton({
 export default function NuestroEquipo() {
 	const panelRef = useRef(null);
 	const staffRef = useRef(null);
-	const prefetchedImagesRef = useRef(new Set());
 
 	const tabGroups = useMemo(
 		() => equipoPorAgencia.filter((g) => g.id !== EXCLUDED_ID),
@@ -176,34 +158,6 @@ export default function NuestroEquipo() {
 		const id = window.requestAnimationFrame(() => setPanelReady(true));
 		return () => window.cancelAnimationFrame(id);
 	}, [selectedGroupId]);
-
-	// Prefetch imágenes del grupo activo
-	useEffect(() => {
-		if (!selectedGroup) return;
-		const urls = [
-			selectedGroup.imagen,
-			selectedGroup.administrador?.image,
-			...selectedGroup.miembros.map((m) => m.image),
-		].filter(Boolean);
-
-		let cancelled = false;
-		const run = () => {
-			if (!cancelled) prefetchImages(urls, prefetchedImagesRef.current);
-		};
-
-		if ("requestIdleCallback" in window) {
-			const id = window.requestIdleCallback(run, { timeout: 1500 });
-			return () => {
-				cancelled = true;
-				window.cancelIdleCallback(id);
-			};
-		}
-		const id = window.setTimeout(run, 0);
-		return () => {
-			cancelled = true;
-			window.clearTimeout(id);
-		};
-	}, [selectedGroup]);
 
 	const scrollToPanel = useCallback(() => {
 		if (!panelRef.current) return;
@@ -282,7 +236,6 @@ export default function NuestroEquipo() {
 						</div>
 					</div>
 				</div>
-													fetchPriority="high"
 
 				{/* Panel principal — alterna skeleton ↔ contenido con AnimatePresence */}
 				<section ref={panelRef} className="scroll-mt-32">
@@ -316,6 +269,7 @@ export default function NuestroEquipo() {
 													alt={selectedGroup.titulo}
 													className="w-full h-full object-cover object-center"
 													loading="eager"
+													fetchPriority="high"
 													decoding="async"
 												/>
 											) : (

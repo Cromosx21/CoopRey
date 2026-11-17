@@ -1,0 +1,248 @@
+{
+	"generatedAt": "2026-11-01T00:49:04.330Z",
+	"hero": [
+		{
+			"Nombre": "Aniversario 1",
+			"web": "https://drive.google.com/file/d/1xqiIn9EPrIIjQRWq2807Lt8ZxduQgBX8/view?usp=drive_link",
+			"celular": "https://drive.google.com/file/d/1H5uUDUZYEDXD8rdxiyQprLDFDO70Jj5G/view?usp=drive_link"
+		},
+		{
+			"Nombre": "Aniversario 2",
+			"web": "https://drive.google.com/file/d/1z8TZTPHmEUBpv1m_zWd5VsyvySTlUkD6/view?usp=drive_link",
+			"celular": "https://drive.google.com/file/d/1A-xCz8Tp5IwB-_nOBXVG_vVHnzsbXWOZ/view?usp=drive_link"
+		},
+		{
+			"Nombre": "Aniversario 3",
+			"web": "https://drive.google.com/file/d/1LUDf0uBEuIjtcisqxztTQprupvyHqy3Y/view?usp=drive_link",
+			"celular": "https://drive.google.com/file/d/1Jc6w704Z9v6ZLu1hXwKjTN-175GPfc2J/view?usp=drive_link"
+		},
+		{
+			"Nombre": "Beneficios",
+			"web": "https://drive.google.com/file/d/1SFRYW071c8ky7fJyuEUxCjj2WetVjuwv/view?usp=drive_link",
+			"celular": "https://drive.google.com/file/d/1Efp8NjDGtY5rOTKYenhYP12urblzOhI3/view?usp=drive_link"
+		}
+	],
+	"news": [
+		{
+			"Título": "Ceremonia de Recategorización",
+			"Categoría": "OFICINA PRINCIPAL",
+			"Descripción": "Cerramos agosto celebrando el talento y crecimiento de nuestro equipo. 💚💛\r\nHoy queremos recordar con orgullo la Ceremonia de Recategorización, un momento que reconoce el esfuerzo, compromiso y desarrollo profesional de quienes siguen creciendo junto a nosotros.\r\n👏 Felicitamos a:\r\n🌟 Anabel Ruiz Chachayma — Oficina Principal\r\n🌟 Rosalina Condori Farfán — Oficina Principal\r\n🌟 Sandivel Quispe Gutiérrez — Oficina Principal\r\nCada nuevo nivel representa un logro, pero también nuevos retos y oportunidades para seguir avanzando.\r\n¡Felicitaciones por este merecido reconocimiento! 🎉\r\nEn Niño Rey  seguimos apostando por el crecimiento de nuestro talento y celebrando cada paso hacia la excelencia.",
+			"Fecha": "2026-08-14T05:00:00.000Z",
+			"Linck Imagen": "https://drive.google.com/file/d/1BpcT0dyY9e3X6jtyG-T5xiWPzCwkzKEo/view?usp=drive_link"
+		},
+		{
+			"Título": "YARQA ASPIY",
+			"Categoría": "Responsabilidad Social",
+			"Descripción": "Tradición que nos une. 🌿💧La Cooperativa de Ahorro y Crédito Niño Rey acompañó el tradicional Yarqa Aspiy 2026 en Quinua – Ayacucho, una faena comunal y ritual que reúne a familias, autoridades y comuneros en la limpieza de acequias, reservorios y otros espacios de la comunidad.\r\nEsta tradición representa el trabajo colectivo, el respeto por la naturaleza y el valor del agua como fuente de vida, fundamental para nuestras cosechas y el bienestar de nuestras comunidades. 🌱💚💛\r\nSeguimos acompañando y revalorando las costumbres que fortalecen nuestra identidad cultural y nos conectan con nuestras raíces.",
+			"Fecha": "2026-08-25T05:00:00.000Z",
+			"Linck Imagen": "https://drive.google.com/file/d/1IqttV5sFDnmiO62kLh7XaMP2IRP9pxQA/view?usp=drive_link"
+		},
+		{
+			"Título": "Celebramos un aniversario más, juntos y con orgullo",
+			"Categoría": "OFICINA PRINCIPAL",
+			"Descripción": "Con alegría y gratitud celebramos un aniversario más, reconociendo el esfuerzo, compromiso y dedicación de cada uno de los trabajadores que forman parte de nuestra institución. Esta fecha nos permite valorar el camino recorrido, los logros alcanzados y, sobre todo, el trabajo conjunto que nos impulsa a seguir creciendo y afrontando nuevos desafíos. A cada integrante de nuestra institución, gracias por ser parte de esta historia y por contribuir día a día con su esfuerzo y dedicación. ¡Feliz aniversario!",
+			"Fecha": "2026-09-16T05:00:00.000Z",
+			"Linck Imagen": "https://drive.google.com/file/d/10Cs8FQQzdMtxDiVj174aMAw8KFrx3H5Z/view?usp=drive_link"
+		}
+	],
+	"images": {
+		"1xqiIn9EPrIIjQRWq2807Lt8ZxduQgBX8": {
+			"480": {
+				"src": "/images/content/1xqiIn9EPrIIjQRWq2807Lt8ZxduQgBX8-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1xqiIn9EPrIIjQRWq2807Lt8ZxduQgBX8-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1xqiIn9EPrIIjQRWq2807Lt8ZxduQgBX8-1280.webp",
+				"width": 1280
+			},
+			"1920": {
+				"src": "/images/content/1xqiIn9EPrIIjQRWq2807Lt8ZxduQgBX8-1920.webp",
+				"width": 1620
+			}
+		},
+		"1H5uUDUZYEDXD8rdxiyQprLDFDO70Jj5G": {
+			"480": {
+				"src": "/images/content/1H5uUDUZYEDXD8rdxiyQprLDFDO70Jj5G-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1H5uUDUZYEDXD8rdxiyQprLDFDO70Jj5G-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1H5uUDUZYEDXD8rdxiyQprLDFDO70Jj5G-1280.webp",
+				"width": 1080
+			},
+			"1920": {
+				"src": "/images/content/1H5uUDUZYEDXD8rdxiyQprLDFDO70Jj5G-1920.webp",
+				"width": 1080
+			}
+		},
+		"1z8TZTPHmEUBpv1m_zWd5VsyvySTlUkD6": {
+			"480": {
+				"src": "/images/content/1z8TZTPHmEUBpv1m_zWd5VsyvySTlUkD6-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1z8TZTPHmEUBpv1m_zWd5VsyvySTlUkD6-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1z8TZTPHmEUBpv1m_zWd5VsyvySTlUkD6-1280.webp",
+				"width": 1280
+			},
+			"1920": {
+				"src": "/images/content/1z8TZTPHmEUBpv1m_zWd5VsyvySTlUkD6-1920.webp",
+				"width": 1620
+			}
+		},
+		"1A-xCz8Tp5IwB-_nOBXVG_vVHnzsbXWOZ": {
+			"480": {
+				"src": "/images/content/1A-xCz8Tp5IwB-_nOBXVG_vVHnzsbXWOZ-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1A-xCz8Tp5IwB-_nOBXVG_vVHnzsbXWOZ-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1A-xCz8Tp5IwB-_nOBXVG_vVHnzsbXWOZ-1280.webp",
+				"width": 1080
+			},
+			"1920": {
+				"src": "/images/content/1A-xCz8Tp5IwB-_nOBXVG_vVHnzsbXWOZ-1920.webp",
+				"width": 1080
+			}
+		},
+		"1LUDf0uBEuIjtcisqxztTQprupvyHqy3Y": {
+			"480": {
+				"src": "/images/content/1LUDf0uBEuIjtcisqxztTQprupvyHqy3Y-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1LUDf0uBEuIjtcisqxztTQprupvyHqy3Y-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1LUDf0uBEuIjtcisqxztTQprupvyHqy3Y-1280.webp",
+				"width": 1280
+			},
+			"1920": {
+				"src": "/images/content/1LUDf0uBEuIjtcisqxztTQprupvyHqy3Y-1920.webp",
+				"width": 1620
+			}
+		},
+		"1Jc6w704Z9v6ZLu1hXwKjTN-175GPfc2J": {
+			"480": {
+				"src": "/images/content/1Jc6w704Z9v6ZLu1hXwKjTN-175GPfc2J-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1Jc6w704Z9v6ZLu1hXwKjTN-175GPfc2J-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1Jc6w704Z9v6ZLu1hXwKjTN-175GPfc2J-1280.webp",
+				"width": 1080
+			},
+			"1920": {
+				"src": "/images/content/1Jc6w704Z9v6ZLu1hXwKjTN-175GPfc2J-1920.webp",
+				"width": 1080
+			}
+		},
+		"1SFRYW071c8ky7fJyuEUxCjj2WetVjuwv": {
+			"480": {
+				"src": "/images/content/1SFRYW071c8ky7fJyuEUxCjj2WetVjuwv-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1SFRYW071c8ky7fJyuEUxCjj2WetVjuwv-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1SFRYW071c8ky7fJyuEUxCjj2WetVjuwv-1280.webp",
+				"width": 1280
+			},
+			"1920": {
+				"src": "/images/content/1SFRYW071c8ky7fJyuEUxCjj2WetVjuwv-1920.webp",
+				"width": 1620
+			}
+		},
+		"1Efp8NjDGtY5rOTKYenhYP12urblzOhI3": {
+			"480": {
+				"src": "/images/content/1Efp8NjDGtY5rOTKYenhYP12urblzOhI3-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1Efp8NjDGtY5rOTKYenhYP12urblzOhI3-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1Efp8NjDGtY5rOTKYenhYP12urblzOhI3-1280.webp",
+				"width": 1080
+			},
+			"1920": {
+				"src": "/images/content/1Efp8NjDGtY5rOTKYenhYP12urblzOhI3-1920.webp",
+				"width": 1080
+			}
+		},
+		"1BpcT0dyY9e3X6jtyG-T5xiWPzCwkzKEo": {
+			"480": {
+				"src": "/images/content/1BpcT0dyY9e3X6jtyG-T5xiWPzCwkzKEo-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1BpcT0dyY9e3X6jtyG-T5xiWPzCwkzKEo-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1BpcT0dyY9e3X6jtyG-T5xiWPzCwkzKEo-1280.webp",
+				"width": 1280
+			},
+			"1920": {
+				"src": "/images/content/1BpcT0dyY9e3X6jtyG-T5xiWPzCwkzKEo-1920.webp",
+				"width": 1920
+			}
+		},
+		"1IqttV5sFDnmiO62kLh7XaMP2IRP9pxQA": {
+			"480": {
+				"src": "/images/content/1IqttV5sFDnmiO62kLh7XaMP2IRP9pxQA-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/1IqttV5sFDnmiO62kLh7XaMP2IRP9pxQA-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/1IqttV5sFDnmiO62kLh7XaMP2IRP9pxQA-1280.webp",
+				"width": 1280
+			},
+			"1920": {
+				"src": "/images/content/1IqttV5sFDnmiO62kLh7XaMP2IRP9pxQA-1920.webp",
+				"width": 1920
+			}
+		},
+		"10Cs8FQQzdMtxDiVj174aMAw8KFrx3H5Z": {
+			"480": {
+				"src": "/images/content/10Cs8FQQzdMtxDiVj174aMAw8KFrx3H5Z-480.webp",
+				"width": 480
+			},
+			"768": {
+				"src": "/images/content/10Cs8FQQzdMtxDiVj174aMAw8KFrx3H5Z-768.webp",
+				"width": 768
+			},
+			"1280": {
+				"src": "/images/content/10Cs8FQQzdMtxDiVj174aMAw8KFrx3H5Z-1280.webp",
+				"width": 1034
+			},
+			"1920": {
+				"src": "/images/content/10Cs8FQQzdMtxDiVj174aMAw8KFrx3H5Z-1920.webp",
+				"width": 1034
+			}
+		}
+	}
+}

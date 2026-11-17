@@ -57,6 +57,9 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
+		"content:sync": "node scripts/sync-public-content.mjs",
+		"images:optimize": "node scripts/optimize-images.mjs",
+		"test:images": "node --test scripts/image-loading.test.mjs",
 		"images:webp": "node scripts/convert-images-to-webp.mjs",
 		"preview": "vite preview"
 	}
